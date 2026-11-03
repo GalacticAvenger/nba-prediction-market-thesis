@@ -1,0 +1,134 @@
+{
+  "sample": {
+    "unique_fill_and_transfer_matches": 477,
+    "profile_design": "hash-ranked, balanced sample across month \u00d7 observable profile \u00d7 Activity-record-role cells; not population-representative",
+    "inventory_measure": "on-chain target-token balance at the start of the target transaction, before any same-transaction transfers or fills",
+    "prior_purchase_measure": "strictly earlier, second-resolution Activity API TRADE/BUY records for the same target token"
+  },
+  "high_activity_vs_other_sampled_profiles": {
+    "high_activity": {
+      "n": 98,
+      "pretransaction_inventory_positive": 83,
+      "positive_inventory_share": 0.8469387755102041,
+      "prior_buy_records_mean": 35.11224489795919,
+      "prior_buy_records_median": 11.0,
+      "share_with_prior_same_token_buy": 0.8775510204081632,
+      "n_with_prior_same_token_buy": 86,
+      "positive_share_with_prior_same_token_buy": 0.9534883720930233,
+      "n_without_recorded_prior_same_token_buy": 12,
+      "positive_share_without_recorded_prior_same_token_buy": 0.08333333333333333
+    },
+    "other_sampled_profiles": {
+      "n": 379,
+      "pretransaction_inventory_positive": 137,
+      "positive_inventory_share": 0.36147757255936674,
+      "prior_buy_records_mean": 1.2242744063324538,
+      "prior_buy_records_median": 0.0,
+      "share_with_prior_same_token_buy": 0.37730870712401055,
+      "n_with_prior_same_token_buy": 143,
+      "positive_share_with_prior_same_token_buy": 0.8811188811188811,
+      "n_without_recorded_prior_same_token_buy": 236,
+      "positive_share_without_recorded_prior_same_token_buy": 0.046610169491525424
+    }
+  },
+  "profile_results": [
+    {
+      "profile_stratum": "high_activity",
+      "unique_chain_matched_pairs": 98,
+      "positive_pretransaction_inventory": 83,
+      "positive_share": 0.8469387755102041,
+      "pairs_with_prior_same_token_buy": 86,
+      "share_with_prior_same_token_buy": 0.8775510204081632,
+      "mean_prior_same_token_buy_records": 35.11224489795919,
+      "median_prior_same_token_buy_records": 11.0,
+      "positive_inventory_share_given_prior_buy": 0.9534883720930233,
+      "positive_inventory_share_without_recorded_prior_buy": 0.08333333333333333,
+      "median_inventory_to_buy_ratio_if_positive": 9.809954857142857,
+      "mean_y_minus_price_pp": 2.0547380117346936,
+      "mean_y_minus_pstar_pp": 2.091399706736505
+    },
+    {
+      "profile_stratum": "low_activity_low_stake",
+      "unique_chain_matched_pairs": 91,
+      "positive_pretransaction_inventory": 34,
+      "positive_share": 0.37362637362637363,
+      "pairs_with_prior_same_token_buy": 35,
+      "share_with_prior_same_token_buy": 0.38461538461538464,
+      "mean_prior_same_token_buy_records": 1.043956043956044,
+      "median_prior_same_token_buy_records": 0.0,
+      "positive_inventory_share_given_prior_buy": 0.9428571428571428,
+      "positive_inventory_share_without_recorded_prior_buy": 0.017857142857142856,
+      "median_inventory_to_buy_ratio_if_positive": 0.7539338059574469,
+      "mean_y_minus_price_pp": -3.82953663934066,
+      "mean_y_minus_pstar_pp": -4.752528185578579
+    },
+    {
+      "profile_stratum": "maker_dominant",
+      "unique_chain_matched_pairs": 99,
+      "positive_pretransaction_inventory": 34,
+      "positive_share": 0.3434343434343434,
+      "pairs_with_prior_same_token_buy": 37,
+      "share_with_prior_same_token_buy": 0.37373737373737376,
+      "mean_prior_same_token_buy_records": 1.8383838383838385,
+      "median_prior_same_token_buy_records": 0.0,
+      "positive_inventory_share_given_prior_buy": 0.8378378378378378,
+      "positive_inventory_share_without_recorded_prior_buy": 0.04838709677419355,
+      "median_inventory_to_buy_ratio_if_positive": 2.298742219874222,
+      "mean_y_minus_price_pp": 0.5741326440404038,
+      "mean_y_minus_pstar_pp": -3.6140827871064087
+    },
+    {
+      "profile_stratum": "other",
+      "unique_chain_matched_pairs": 96,
+      "positive_pretransaction_inventory": 40,
+      "positive_share": 0.4166666666666667,
+      "pairs_with_prior_same_token_buy": 44,
+      "share_with_prior_same_token_buy": 0.4583333333333333,
+      "mean_prior_same_token_buy_records": 1.3645833333333333,
+      "median_prior_same_token_buy_records": 0.0,
+      "positive_inventory_share_given_prior_buy": 0.8409090909090909,
+      "positive_inventory_share_without_recorded_prior_buy": 0.057692307692307696,
+      "median_inventory_to_buy_ratio_if_positive": 1.414062510292969,
+      "mean_y_minus_price_pp": 3.9906308743750003,
+      "mean_y_minus_pstar_pp": 2.4422741852025247
+    },
+    {
+      "profile_stratum": "taker_dominant",
+      "unique_chain_matched_pairs": 93,
+      "positive_pretransaction_inventory": 29,
+      "positive_share": 0.3118279569892473,
+      "pairs_with_prior_same_token_buy": 27,
+      "share_with_prior_same_token_buy": 0.2903225806451613,
+      "mean_prior_same_token_buy_records": 0.6021505376344086,
+      "median_prior_same_token_buy_records": 0.0,
+      "positive_inventory_share_given_prior_buy": 0.9259259259259259,
+      "positive_inventory_share_without_recorded_prior_buy": 0.06060606060606061,
+      "median_inventory_to_buy_ratio_if_positive": 1.615666178623719,
+      "mean_y_minus_price_pp": -3.0352122391397853,
+      "mean_y_minus_pstar_pp": -4.215362711200384
+    }
+  ],
+  "outcomes_by_pretransaction_inventory": {
+    "no_positive_pretransaction_balance": {
+      "n": 257,
+      "mean_y_minus_price_pp": 0.43357939416342367,
+      "mean_y_minus_pstar_pp": -1.517792160681631,
+      "mean_purchase_price_pp": 11.23957235680934,
+      "mean_pstar_pp": 13.190943911654395
+    },
+    "positive_pretransaction_balance": {
+      "n": 220,
+      "mean_y_minus_price_pp": -0.4585838903181821,
+      "mean_y_minus_pstar_pp": -1.603704157354644,
+      "mean_purchase_price_pp": 12.2767657085,
+      "mean_pstar_pp": 13.421885975536462
+    }
+  },
+  "limits": [
+    "The sample is balanced by design across profile strata and is not population weighted.",
+    "Profile differences are descriptive and are not causal effects.",
+    "Prior Activity API buys measure recorded purchase opportunity, not complete prior trading; transfers, same-second ordering, and missing records can remain.",
+    "A prior same-token buy does not reveal cost basis or whether the position was losing, so it cannot identify loss chasing.",
+    "The inventory-performance comparisons are descriptive sample means without inferential intervals."
+  ]
+}

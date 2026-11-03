@@ -1,0 +1,18 @@
+{
+  "scope": "selection-free windows only; no game-end or OT conditioning",
+  "windows": "Knowable and final 5 regulation game-clock minutes",
+  "bands": [
+    "0.05\u20130.20",
+    "0.10\u20130.40"
+  ],
+  "estimators": [
+    "trade-weighted",
+    "first-entry (first eligible row per game per cell)",
+    "game-weighted (sensitivity)"
+  ],
+  "ci": "95% game-cluster bootstrap percentile interval; 2000 resamples",
+  "kalshi_games": 1211,
+  "polymarket_rows": 739884,
+  "polymarket_games": 1207,
+  "output": "data/interim/phase5/phase5_residual_outcome_estimators.csv"
+}

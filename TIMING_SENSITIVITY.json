@@ -1,0 +1,36 @@
+{
+  "status": "post-hoc sensitivity; does not replace the pre-specified primary",
+  "definition": "Preserves the existing Phase 2 interval exclusions and five-second restart buffer. For intervals containing a later foul/free-throw before the buffered endpoint, adds trades strictly before the first such PBP event. Existing eligible quiet timeout and quarter-break trades remain included.",
+  "inference": {
+    "draws": 10000,
+    "seed": 681103,
+    "unit": "game-cluster bootstrap"
+  },
+  "candidate_timeout_intervals_in_matched_games": 9636,
+  "intervals_with_foul_or_free_throw_before_buffered_endpoint": 531,
+  "current_primary_rule": {
+    "trades": 309318,
+    "games": 390,
+    "equal_game_price_minus_payoff": 0.023322305362109986,
+    "game_bootstrap_95_ci": [
+      -0.0046011036881309355,
+      0.0494583772322528
+    ]
+  },
+  "dynamic_cutoff_sensitivity": {
+    "trades": 343823,
+    "games": 411,
+    "equal_game_price_minus_payoff": 0.020364417469217945,
+    "game_bootstrap_95_ci": [
+      -0.0077307604048202855,
+      0.045890486125240645
+    ]
+  },
+  "added_pre_event_trades": 34505,
+  "games_with_added_pre_event_trades": 46,
+  "limitations": [
+    "The sensitivity retains Phase 2 interval-level exclusions and the five-second restart buffer, both of which use later event or restart information.",
+    "ESPN wall-clock timestamps have one-second resolution and their common absolute lag relative to market timestamps is unknown.",
+    "This is a post-hoc timing sensitivity, not a fully trade-time-identifiable estimate."
+  ]
+}

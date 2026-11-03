@@ -1,0 +1,190 @@
+{
+  "kalshi": {
+    "estimand": "fixed-prediction game-level OOF residual and gap summaries",
+    "venue": "kalshi",
+    "source": "data/interim/phase5/phase5_crossfit_selection_diagnostic_games.csv",
+    "filters": {
+      "price_band": "05_20",
+      "window_minutes": 10,
+      "coordinate": "price",
+      "bin_width": 0.05
+    },
+    "games": 561,
+    "trades": 532303,
+    "bootstrap": {
+      "cluster": "game",
+      "draws": 20000,
+      "seed": 334455,
+      "limitation": "Conditions on cross-fitted predictions; does not refit training folds. This differs from the original refit bootstrap and should be read as an inference sensitivity, not a replacement primary interval."
+    },
+    "observed_gap": {
+      "equal_game": {
+        "estimate": -0.06679159750416469,
+        "ci95_fixed_prediction_game_bootstrap": [
+          -0.07861511522024389,
+          -0.05373048864143767
+        ]
+      },
+      "trade_weighted": {
+        "estimate": -0.062434816260663537,
+        "ci95_fixed_prediction_game_bootstrap": [
+          -0.0840817163934862,
+          -0.036078621039225
+        ]
+      }
+    },
+    "base_gap": {
+      "equal_game": {
+        "estimate": -0.003955618196978024,
+        "ci95_fixed_prediction_game_bootstrap": [
+          -0.004744154073563038,
+          -0.0031670279128862204
+        ]
+      },
+      "trade_weighted": {
+        "estimate": -0.006184741238776047,
+        "ci95_fixed_prediction_game_bootstrap": [
+          -0.006999849464598137,
+          -0.005362228163414043
+        ]
+      }
+    },
+    "predicted_gap": {
+      "equal_game": {
+        "estimate": -0.05703755316926706,
+        "ci95_fixed_prediction_game_bootstrap": [
+          -0.05846204516900682,
+          -0.055619660674706355
+        ]
+      },
+      "trade_weighted": {
+        "estimate": -0.06240946446703535,
+        "ci95_fixed_prediction_game_bootstrap": [
+          -0.06390843471760253,
+          -0.06090961134657931
+        ]
+      }
+    },
+    "remainder": {
+      "equal_game": {
+        "estimate": -0.009754044334897585,
+        "ci95_fixed_prediction_game_bootstrap": [
+          -0.021655279256679573,
+          0.003499138020664832
+        ]
+      },
+      "trade_weighted": {
+        "estimate": -2.5351793628146238e-05,
+        "ci95_fixed_prediction_game_bootstrap": [
+          -0.022003033242720644,
+          0.026664648668363204
+        ]
+      }
+    },
+    "influence_sensitivity": {
+      "largest_absolute_weighted_remainder_contribution_game": "401810879",
+      "game_trade_share": 0.009962371055583005,
+      "game_level_remainder": 0.9218751134981422,
+      "weighted_remainder_contribution": 0.009184061947576188,
+      "leave_one_game_out_trade_weighted_remainder_range": [
+        -0.009302084559173229,
+        0.0008072279048255531
+      ],
+      "note": "Leave-one-game-out calculation holds all fitted cross-fit predictions fixed; it diagnoses target-sample concentration, not refitted model influence."
+    }
+  },
+  "polymarket": {
+    "estimand": "fixed-prediction game-level OOF residual and gap summaries",
+    "venue": "polymarket",
+    "source": "data/interim/phase2/polymarket_crossfit_selection_diagnostic_games.csv",
+    "filters": {
+      "price_band": "05_20",
+      "window_minutes": 10,
+      "coordinate": "price",
+      "bin_width": 0.05
+    },
+    "games": 265,
+    "trades": 49659,
+    "bootstrap": {
+      "cluster": "game",
+      "draws": 20000,
+      "seed": 334455,
+      "limitation": "Conditions on cross-fitted predictions; does not refit training folds. This differs from the original refit bootstrap and should be read as an inference sensitivity, not a replacement primary interval."
+    },
+    "observed_gap": {
+      "equal_game": {
+        "estimate": -0.031446045815072966,
+        "ci95_fixed_prediction_game_bootstrap": [
+          -0.06103735151555908,
+          0.0006694266491836054
+        ]
+      },
+      "trade_weighted": {
+        "estimate": -0.06406756104515793,
+        "ci95_fixed_prediction_game_bootstrap": [
+          -0.09338276020402152,
+          -0.025203736682101623
+        ]
+      }
+    },
+    "base_gap": {
+      "equal_game": {
+        "estimate": 0.000269948087736752,
+        "ci95_fixed_prediction_game_bootstrap": [
+          -0.0011766800158544463,
+          0.0017270901524346779
+        ]
+      },
+      "trade_weighted": {
+        "estimate": -0.001466235505597165,
+        "ci95_fixed_prediction_game_bootstrap": [
+          -0.0033244802953391445,
+          0.00043008805559729567
+        ]
+      }
+    },
+    "predicted_gap": {
+      "equal_game": {
+        "estimate": -0.06037422532068368,
+        "ci95_fixed_prediction_game_bootstrap": [
+          -0.0628424139846869,
+          -0.057894632133362954
+        ]
+      },
+      "trade_weighted": {
+        "estimate": -0.06388514325005698,
+        "ci95_fixed_prediction_game_bootstrap": [
+          -0.06620062133833622,
+          -0.06152228696241753
+        ]
+      }
+    },
+    "remainder": {
+      "equal_game": {
+        "estimate": 0.028928179505610756,
+        "ci95_fixed_prediction_game_bootstrap": [
+          -0.0012676591600365083,
+          0.06189429604921113
+        ]
+      },
+      "trade_weighted": {
+        "estimate": -0.00018241779510091427,
+        "ci95_fixed_prediction_game_bootstrap": [
+          -0.02986708562859701,
+          0.038951720131305795
+        ]
+      }
+    },
+    "influence_sensitivity": {
+      "largest_absolute_weighted_remainder_contribution_game": "401810879",
+      "game_trade_share": 0.013028856803399182,
+      "game_level_remainder": 0.9617011996479036,
+      "weighted_remainder_contribution": 0.012529867217869745,
+      "leave_one_game_out_trade_weighted_remainder_range": [
+        -0.012880097964970008,
+        0.0007102240373445212
+      ],
+      "note": "Leave-one-game-out calculation holds all fitted cross-fit predictions fixed; it diagnoses target-sample concentration, not refitted model influence."
+    }
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "sample": {
+    "target_buy_records": 137343,
+    "wallet_game_pairs": 39364,
+    "target_wallets": 11246,
+    "games": 642,
+    "prior_transaction_events": 5984171
+  },
+  "unit": "unique participant-wallet x transaction hash x NBA game after collapsing participant fill rows",
+  "features": [
+    "distinct prior transactions per active day",
+    "median and percentile transaction notional in USD",
+    "median within-active-day inter-transaction gap",
+    "shares of within-day gaps no longer than 5 or 30 seconds"
+  ],
+  "classification": {
+    "limited_prior_history": "fewer than 20 distinct transactions or fewer than 3 prior NBA games",
+    "rapid_cycle_proxy": "at least 20 transactions per active day and median within-day gap no more than 30 seconds",
+    "large_ticket_low_frequency_proxy": "median transaction notional at least $100 and no more than 5 transactions per active day, provided rapid-cycle rule does not apply",
+    "other_observed_style": "adequate history not satisfying either proxy rule"
+  },
+  "timing": "Every feature uses records strictly before the target game's first ESPN play and excludes the target game entirely.",
+  "limitations": [
+    "Rapid-cycle behavior is not verified automation; fast human trading, market-making, smart contracts, or multiple fills within one transaction can produce similar patterns.",
+    "Large-ticket/low-frequency behavior is not verified professional or retail status.",
+    "Dollar transaction notional is aggregated over a wallet's participant fills within a transaction and can contain multiple fill legs.",
+    "The extract covers assembled 2025-26 NBA-market activity only; off-platform activity and other markets are unobserved.",
+    "Thresholds are researcher-defined and the outcome associations are exploratory; see the full threshold grid.",
+    "The output target cohort consists of selected late-game longshot BUY records and is not representative of all account activity."
+  ],
+  "profile_counts": [
+    {
+      "execution_style_profile": "large_ticket_low_frequency_proxy",
+      "records": 336,
+      "wallets": 162,
+      "games": 187,
+      "avg_transactions_per_day": 3.4627423643611754,
+      "median_ticket_usd": 202.87122450276843,
+      "median_gap_seconds": 887.0
+    },
+    {
+      "execution_style_profile": "limited_prior_history",
+      "records": 15705,
+      "wallets": 7786,
+      "games": 620,
+      "avg_transactions_per_day": 20.81229576251717,
+      "median_ticket_usd": 6.5775,
+      "median_gap_seconds": 247.0
+    },
+    {
+      "execution_style_profile": "other_observed_style",
+      "records": 28583,
+      "wallets": 4436,
+      "games": 621,
+      "avg_transactions_per_day": 22.853240518496456,
+      "median_ticket_usd": 8.970749999999999,
+      "median_gap_seconds": 87.0
+    },
+    {
+      "execution_style_profile": "rapid_cycle_proxy",
+      "records": 92719,
+      "wallets": 965,
+      "games": 632,
+      "avg_transactions_per_day": 642.3593945260774,
+      "median_ticket_usd": 14.0,
+      "median_gap_seconds": 4.0
+    }
+  ]
+}

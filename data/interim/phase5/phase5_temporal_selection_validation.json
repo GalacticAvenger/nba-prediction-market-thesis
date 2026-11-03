@@ -1,0 +1,140 @@
+{
+  "estimand": "post-hoc chronological holdout validation of the retrospective-window selection adjustment",
+  "split": "first 70% of distinct Q4/OT game end timestamps for training; final 30% held out",
+  "cutoff_utc": "2026-02-25T03:25:56+00:00",
+  "training_games": 847,
+  "test_games_before_filters": 364,
+  "training_end_range_utc": [
+    "2025-10-22T02:59:51+00:00",
+    "2026-02-25T03:15:32+00:00"
+  ],
+  "test_end_range_utc": [
+    "2026-02-25T03:25:56+00:00",
+    "2026-04-13T03:05:51+00:00"
+  ],
+  "market_price_bands": {
+    "05_20": [
+      0.05,
+      0.2
+    ]
+  },
+  "coordinates": {
+    "05_20_price_0.05": {
+      "observed_gap": -0.04848789784402222,
+      "baseline_gap": -0.007710511484949263,
+      "selection_predicted_gap": -0.06734310753684859,
+      "remainder": 0.018855209692826367,
+      "trades": 161087,
+      "games": 137,
+      "training_games": 665,
+      "ci95": {
+        "observed_gap": [
+          -0.10053002685475682,
+          0.024828887958316507
+        ],
+        "baseline_gap": [
+          -0.0312520124711666,
+          0.01646672550861727
+        ],
+        "selection_predicted_gap": [
+          -0.08469360499303466,
+          -0.04766991038466537
+        ],
+        "remainder": [
+          -0.03677073816522581,
+          0.09408126290325203
+        ]
+      },
+      "successful_bootstrap_draws": 2000,
+      "interval": "two-way game bootstrap: refit on resampled training games and resample held-out games"
+    },
+    "05_20_price_0.10": {
+      "observed_gap": -0.04848789784402231,
+      "baseline_gap": -0.007215767238220967,
+      "selection_predicted_gap": -0.0671817229738217,
+      "remainder": 0.018693825129799384,
+      "trades": 161087,
+      "games": 137,
+      "training_games": 665,
+      "ci95": {
+        "observed_gap": [
+          -0.09932588113048138,
+          0.02446514302816357
+        ],
+        "baseline_gap": [
+          -0.03127783728401461,
+          0.018080505919846182
+        ],
+        "selection_predicted_gap": [
+          -0.08547451885003175,
+          -0.04630165494605249
+        ],
+        "remainder": [
+          -0.03750532492856657,
+          0.09318720611436626
+        ]
+      },
+      "successful_bootstrap_draws": 2000,
+      "interval": "two-way game bootstrap: refit on resampled training games and resample held-out games"
+    },
+    "05_20_pstar_0.05": {
+      "observed_gap": -0.11272150141041608,
+      "baseline_gap": -0.04573267404720644,
+      "selection_predicted_gap": -0.11986299051676945,
+      "remainder": 0.007141489106353359,
+      "trades": 161087,
+      "games": 137,
+      "training_games": 665,
+      "ci95": {
+        "observed_gap": [
+          -0.16547489305578997,
+          -0.04259792989345808
+        ],
+        "baseline_gap": [
+          -0.07541138017385607,
+          -0.01582374825641889
+        ],
+        "selection_predicted_gap": [
+          -0.1481235518763184,
+          -0.09216530349094473
+        ],
+        "remainder": [
+          -0.053458554357251324,
+          0.08269011830431551
+        ]
+      },
+      "successful_bootstrap_draws": 2000,
+      "interval": "two-way game bootstrap: refit on resampled training games and resample held-out games"
+    },
+    "05_20_pstar_0.10": {
+      "observed_gap": -0.11272150141041594,
+      "baseline_gap": -0.048053407148151844,
+      "selection_predicted_gap": -0.1232058260307229,
+      "remainder": 0.010484324620306962,
+      "trades": 161087,
+      "games": 137,
+      "training_games": 665,
+      "ci95": {
+        "observed_gap": [
+          -0.16555994891026699,
+          -0.04285272946288593
+        ],
+        "baseline_gap": [
+          -0.07787726411798618,
+          -0.016796403160903348
+        ],
+        "selection_predicted_gap": [
+          -0.14795459998066168,
+          -0.09618381058938161
+        ],
+        "remainder": [
+          -0.04675005450716429,
+          0.08474981442245008
+        ]
+      },
+      "successful_bootstrap_draws": 2000,
+      "interval": "two-way game bootstrap: refit on resampled training games and resample held-out games"
+    }
+  },
+  "interpretation_limit": "This is a post-hoc same-season transportability check, not an independent-season replication or causal estimate. The registered game-clock primary remains unchanged."
+}

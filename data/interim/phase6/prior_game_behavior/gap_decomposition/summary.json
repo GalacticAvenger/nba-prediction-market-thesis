@@ -1,0 +1,45 @@
+{
+  "data_file": "data/interim/phase6/prior_game_behavior/target_buys_with_prior_game_profiles.parquet",
+  "sample": {
+    "rows": 137343,
+    "wallets": 11246,
+    "games": 642,
+    "definition": "time-indexed prior-game profile BUY records in final five regulation minutes, 5-20 cent own-token price, and own-token P* below 50 percent"
+  },
+  "profile_definitions": {
+    "limited_prior_history": "under 20 prior NBA-market participant records or under 3 prior NBA games",
+    "high_prior_activity": "at least 20 prior records per prior active UTC day, after adequate history",
+    "maker_record_dominant": "at least 75 percent prior maker-role records, after high activity rule",
+    "taker_record_dominant": "at most 25 percent prior maker-role records, after high activity rule",
+    "established_mixed": "other adequately observed accounts"
+  },
+  "weights": {
+    "trade_count": "one per participant-side buy record",
+    "shares": "token shares purchased",
+    "usd_notional": "shares multiplied by execution price"
+  },
+  "gap_definitions": {
+    "price_minus_outcome": "execution price minus realized token payoff; positive is realized overpayment",
+    "price_minus_Pstar": "execution price minus estimated market-free benchmark",
+    "outcome_minus_Pstar": "realized token payoff minus estimated benchmark"
+  },
+  "estimators": {
+    "pooled": "aggregate weighted numerator divided by aggregate weight; additive profile contributions sum to total",
+    "equal_game": "within-game additive contributions averaged equally across games; profile contributions sum to total"
+  },
+  "bootstrap": {
+    "replicates": 2000,
+    "seed": 20261023,
+    "method": "two-way pigeonhole bootstrap over games and wallets with multiplicative cluster weights; percentile 95 percent intervals"
+  },
+  "limitations": [
+    "Accounting contribution and profile association are descriptive; they are not causal effects or counterfactual market-price impact.",
+    "Profiles are observable prior-season NBA-market behavior, not verified bot, retail, professional, or market-maker identities.",
+    "The unit is a participant-side Activity API BUY record, not a unique matched market transaction; one taker transaction can correspond to multiple maker fill records.",
+    "The selected final-five longshot BUY cohort is not representative of all trades or of each wallet's whole portfolio.",
+    "Profile-component confidence intervals are exploratory percentile intervals and are not adjusted for the many profile, weighting, outcome, and estimator combinations.",
+    "price minus realized payoff is noisy one-season calibration, not by itself an ex-ante mispricing measure.",
+    "P* is estimated and is not the true probability.",
+    "No historical 2025-26 Polymarket order-book midpoint series is assembled in this project; a third-party vendor advertises minute-level L2 history from August 2025, but coverage and licensing have not been audited. Comparable Kalshi wallet identities are unavailable."
+  ]
+}

@@ -1,0 +1,173 @@
+{
+  "design": "Common-support cell fixed-effect contrasts within game, regulation-minute, P* band, and participant role; two-way game/wallet clustered confidence intervals.",
+  "outcomes": {
+    "settlement_payoff_minus_cost": "Y-price, purchase outcome minus cost; not wallet P&L",
+    "outcome_minus_benchmark": "Y-P*, calibration residual among selected purchases"
+  },
+  "support_by_cutoff": [
+    {
+      "comparison": "high_activity_20_vs_other",
+      "eligible_rows": 137343,
+      "support_rows": 117253,
+      "support_cells": 4331,
+      "games": 624,
+      "wallets": 10997
+    },
+    {
+      "comparison": "high_activity_100_vs_other",
+      "eligible_rows": 137343,
+      "support_rows": 127622,
+      "support_cells": 4891,
+      "games": 623,
+      "wallets": 10810
+    },
+    {
+      "comparison": "high_activity_500_vs_other",
+      "eligible_rows": 137343,
+      "support_rows": 120648,
+      "support_cells": 4303,
+      "games": 610,
+      "wallets": 9190
+    },
+    {
+      "comparison": "maker_record_share_ge_0.50_vs_maker_record_share_lt_0.50",
+      "eligible_rows": 137343,
+      "support_rows": 109576,
+      "support_cells": 3973,
+      "games": 614,
+      "wallets": 10581
+    },
+    {
+      "comparison": "maker_record_share_ge_0.75_vs_maker_record_share_le_0.25",
+      "eligible_rows": 110494,
+      "support_rows": 62934,
+      "support_cells": 2573,
+      "games": 586,
+      "wallets": 7638
+    },
+    {
+      "comparison": "maker_record_share_ge_0.90_vs_maker_record_share_le_0.10",
+      "eligible_rows": 81609,
+      "support_rows": 22103,
+      "support_cells": 1195,
+      "games": 480,
+      "wallets": 4587
+    }
+  ],
+  "support_definition_sensitivity": [
+    {
+      "comparison": "high_activity_20_vs_other",
+      "clock_bin_seconds": 60,
+      "pstar_bin_scheme": "base_5c_then_10c",
+      "eligible_rows": 137343,
+      "support_rows": 117253,
+      "support_cells": 4331,
+      "games": 624
+    },
+    {
+      "comparison": "maker_75_vs_taker_75",
+      "clock_bin_seconds": 60,
+      "pstar_bin_scheme": "base_5c_then_10c",
+      "eligible_rows": 110494,
+      "support_rows": 62934,
+      "support_cells": 2573,
+      "games": 586
+    },
+    {
+      "comparison": "high_activity_20_vs_other",
+      "clock_bin_seconds": 60,
+      "pstar_bin_scheme": "fine_2_5c",
+      "eligible_rows": 137343,
+      "support_rows": 114612,
+      "support_cells": 4625,
+      "games": 624
+    },
+    {
+      "comparison": "maker_75_vs_taker_75",
+      "clock_bin_seconds": 60,
+      "pstar_bin_scheme": "fine_2_5c",
+      "eligible_rows": 110494,
+      "support_rows": 60272,
+      "support_cells": 2696,
+      "games": 585
+    },
+    {
+      "comparison": "high_activity_20_vs_other",
+      "clock_bin_seconds": 60,
+      "pstar_bin_scheme": "coarse_10c",
+      "eligible_rows": 137343,
+      "support_rows": 120953,
+      "support_cells": 3851,
+      "games": 624
+    },
+    {
+      "comparison": "maker_75_vs_taker_75",
+      "clock_bin_seconds": 60,
+      "pstar_bin_scheme": "coarse_10c",
+      "eligible_rows": 110494,
+      "support_rows": 67980,
+      "support_cells": 2387,
+      "games": 590
+    },
+    {
+      "comparison": "high_activity_20_vs_other",
+      "clock_bin_seconds": 30,
+      "pstar_bin_scheme": "base_5c_then_10c",
+      "eligible_rows": 137343,
+      "support_rows": 112868,
+      "support_cells": 4826,
+      "games": 622
+    },
+    {
+      "comparison": "maker_75_vs_taker_75",
+      "clock_bin_seconds": 30,
+      "pstar_bin_scheme": "base_5c_then_10c",
+      "eligible_rows": 110494,
+      "support_rows": 58443,
+      "support_cells": 2760,
+      "games": 583
+    },
+    {
+      "comparison": "high_activity_20_vs_other",
+      "clock_bin_seconds": 30,
+      "pstar_bin_scheme": "fine_2_5c",
+      "eligible_rows": 137343,
+      "support_rows": 111464,
+      "support_cells": 4993,
+      "games": 622
+    },
+    {
+      "comparison": "maker_75_vs_taker_75",
+      "clock_bin_seconds": 30,
+      "pstar_bin_scheme": "fine_2_5c",
+      "eligible_rows": 110494,
+      "support_rows": 57165,
+      "support_cells": 2828,
+      "games": 583
+    },
+    {
+      "comparison": "high_activity_20_vs_other",
+      "clock_bin_seconds": 30,
+      "pstar_bin_scheme": "coarse_10c",
+      "eligible_rows": 137343,
+      "support_rows": 115129,
+      "support_cells": 4567,
+      "games": 623
+    },
+    {
+      "comparison": "maker_75_vs_taker_75",
+      "clock_bin_seconds": 30,
+      "pstar_bin_scheme": "coarse_10c",
+      "eligible_rows": 110494,
+      "support_rows": 61400,
+      "support_cells": 2666,
+      "games": 585
+    }
+  ],
+  "limits": [
+    "These are sensitivity checks for exploratory profile contrasts, not preregistered confirmatory tests.",
+    "High-activity groups compare each threshold with all other observed accounts.",
+    "Maker/taker profiles are defined from observed in-game NBA participant-record share, not identity or automation.",
+    "P* is estimated and the screen is selected on clock, price, side, and P*."
+  ]
+}

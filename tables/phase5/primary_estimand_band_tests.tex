@@ -1,0 +1,20 @@
+\begin{table}[!htbp]
+\centering
+\small
+\caption{Pre-specified game-weighted primary and final-ten quiet results. Primary taker-cost test uses the same quote-valid trades for A, fee, and five-second half-spread; maker-cost results are conditional on historical eligibility.}
+\label{tab:primary-bands}
+\begin{tabular}{lrrrrr}
+\toprule
+Test & A & 95\% CI & p & Upper 95\% & Cost band [95\% CI] \\
+\midrule
+Final 5 primary: A = price − Y & 0.02332 & [-0.00527, 0.04937] & 0.0965 & 0.04513 & — \\
+Final 5 full-sample A > maker formula & 0.02332 & [-0.00527, 0.04937] & 0.0520 & — & 0.00168 [0.00161, 0.00174] \\
+Final 5 quote-valid subset: A = price − Y & 0.02235 & [-0.00546, 0.04894] & 0.1135 & 0.04500 & — \\
+Quote-valid A > taker band & 0.02235 & [-0.00546, 0.04894] & 0.2065 & — & 0.01080 [0.01051, 0.01110] \\
+Quote-valid A > maker formula band & 0.02235 & [-0.00546, 0.04894] & 0.0655 & — & 0.00166 [0.00160, 0.00173] \\
+Final 10 quiet: A = price − Y & 0.02321 & [0.00110, 0.04352] & 0.0290 & 0.03997 & — \\
+Final 10 quiet: A > taker band & 0.02321 & [0.00110, 0.04352] & 0.1345 & — & 0.01151 \\
+Final 10 quiet: A > maker band & 0.02321 & [0.00110, 0.04352] & 0.0175 & — & 0.00183 \\
+\bottomrule
+\end{tabular}
+\end{table}

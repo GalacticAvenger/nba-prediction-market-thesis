@@ -1,0 +1,232 @@
+{
+  "estimand": "A = longshot price - realized longshot outcome; game-weighted mean of within-game means",
+  "scope": "final five regulation minutes, quiet stoppage, folded longshot price 0.05-0.20; cached Phase 5 primary rows",
+  "units": "dollars per contract; multiply by 100 for price points per $1 contract",
+  "fees": {
+    "taker_rate": 0.07,
+    "maker_rate": 0.0175,
+    "rounding": "large-size is the unrounded formula limit; observed-size row rounding is a conservative per-trade approximation, not an observed fee, because a source row is not proven to equal one fee-assessed order and an order may have multiple fills",
+    "maker_eligibility": "historical KXNBAGAME eligibility unresolved; maker figures conditional"
+  },
+  "quote_rule": "five-second quote valid only when both inferred sides are observed, uncrossed, and spread is finite/nonnegative",
+  "bootstrap": {
+    "cluster": "game",
+    "draws": 2000,
+    "seed": 9142026,
+    "interval": "percentile 95% CI"
+  },
+  "primary_full_sample": {
+    "sample": "full_sample",
+    "trades": 309318,
+    "games": 390,
+    "estimates": {
+      "A": {
+        "estimate": 0.023322305362109996,
+        "ci95": [
+          -0.005272232253076125,
+          0.049367062872444696
+        ],
+        "upper95_one_sided": 0.04513205013655819,
+        "zero_two_sided_bootstrap_p": 0.0965
+      },
+      "taker_fee_large": {
+        "estimate": 0.0067084061465911326,
+        "ci95": [
+          0.006440643962912044,
+          0.006961885923858712
+        ]
+      },
+      "maker_fee_large": {
+        "estimate": 0.0016771015366477831,
+        "ci95": [
+          0.001610160990728011,
+          0.001740471480964678
+        ]
+      },
+      "taker_fee_observed_size": {
+        "estimate": 0.007141800603189728,
+        "ci95": [
+          0.006870701633433632,
+          0.00740599171896264
+        ]
+      },
+      "maker_fee_observed_size": {
+        "estimate": 0.0022715009373497855,
+        "ci95": [
+          0.0021873497388434564,
+          0.002356254832117256
+        ]
+      },
+      "net_taker_fee_only_large": {
+        "estimate": 0.01661389921551886,
+        "ci95": [
+          -0.011813831274778376,
+          0.04265315890863671
+        ],
+        "one_sided_p_net_gt_zero": 0.114
+      },
+      "net_maker_large": {
+        "estimate": 0.02164520382546216,
+        "ci95": [
+          -0.0068880122725823185,
+          0.04772660341352081
+        ],
+        "one_sided_p_net_gt_zero": 0.052
+      },
+      "net_taker_fee_only_observed_size": {
+        "estimate": 0.016180504758920237,
+        "ci95": [
+          -0.01223368301022197,
+          0.04222313212189832
+        ],
+        "one_sided_p_net_gt_zero": 0.122
+      },
+      "net_maker_observed_size": {
+        "estimate": 0.021050804424760185,
+        "ci95": [
+          -0.007466464114058468,
+          0.04718153086813716
+        ],
+        "one_sided_p_net_gt_zero": 0.0575
+      }
+    }
+  },
+  "quote_valid_subset": {
+    "sample": "quote_valid_subset",
+    "trades": 251686,
+    "games": 376,
+    "estimates": {
+      "A": {
+        "estimate": 0.022345259725116855,
+        "ci95": [
+          -0.00545891060364704,
+          0.04894073583311635
+        ],
+        "upper95_one_sided": 0.04499779887766111,
+        "zero_two_sided_bootstrap_p": 0.1135
+      },
+      "taker_fee_large": {
+        "estimate": 0.006644309142643402,
+        "ci95": [
+          0.006380378247963037,
+          0.006903324164500952
+        ]
+      },
+      "maker_fee_large": {
+        "estimate": 0.0016610772856608504,
+        "ci95": [
+          0.0015950945619907593,
+          0.001725831041125238
+        ]
+      },
+      "taker_fee_observed_size": {
+        "estimate": 0.0070664158537388205,
+        "ci95": [
+          0.006790517924807925,
+          0.007341255353359826
+        ]
+      },
+      "maker_fee_observed_size": {
+        "estimate": 0.0022282424356766485,
+        "ci95": [
+          0.0021472195223586395,
+          0.002309451709740002
+        ]
+      },
+      "net_taker_fee_only_large": {
+        "estimate": 0.015700950582473474,
+        "ci95": [
+          -0.012079715421242948,
+          0.04231431633983548
+        ],
+        "one_sided_p_net_gt_zero": 0.123
+      },
+      "net_maker_large": {
+        "estimate": 0.020684182439456016,
+        "ci95": [
+          -0.007114247614744656,
+          0.047298291032066675
+        ],
+        "one_sided_p_net_gt_zero": 0.0655
+      },
+      "net_taker_fee_only_observed_size": {
+        "estimate": 0.015278843871378038,
+        "ci95": [
+          -0.012485399680171495,
+          0.04190386649063605
+        ],
+        "one_sided_p_net_gt_zero": 0.131
+      },
+      "net_maker_observed_size": {
+        "estimate": 0.020117017289440216,
+        "ci95": [
+          -0.007659027003909794,
+          0.04675940196618747
+        ],
+        "one_sided_p_net_gt_zero": 0.069
+      },
+      "half_spread": {
+        "estimate": 0.00416058583691463,
+        "ci95": [
+          0.003990784222445553,
+          0.0043380241917115436
+        ]
+      },
+      "taker_band_large": {
+        "estimate": 0.010804894979558034,
+        "ci95": [
+          0.01050873575680916,
+          0.011100866457305883
+        ]
+      },
+      "maker_band_large": {
+        "estimate": 0.0016610772856608504,
+        "ci95": [
+          0.0015950945619907593,
+          0.001725831041125238
+        ]
+      },
+      "taker_band_observed_size": {
+        "estimate": 0.011227001690653448,
+        "ci95": [
+          0.010920165013056782,
+          0.0115370885322556
+        ]
+      },
+      "maker_band_observed_size": {
+        "estimate": 0.0022282424356766485,
+        "ci95": [
+          0.0021472195223586395,
+          0.002309451709740002
+        ]
+      },
+      "net_taker_large": {
+        "estimate": 0.01154036474555883,
+        "ci95": [
+          -0.016157757867813243,
+          0.03820192357930299
+        ],
+        "one_sided_p_net_gt_zero": 0.2065
+      },
+      "net_taker_observed_size": {
+        "estimate": 0.011118258034463403,
+        "ci95": [
+          -0.016566661536726025,
+          0.0378033590431178
+        ],
+        "one_sided_p_net_gt_zero": 0.2165
+      }
+    }
+  },
+  "coverage": {
+    "trades_total": 309318,
+    "trades_quote_valid": 251686,
+    "trade_share_quote_valid": 0.813680419503553,
+    "games_total": 390,
+    "games_quote_valid": 376,
+    "game_share_with_quote_valid_trade": 0.9641025641025641,
+    "median_trade_size_contracts": 51.0,
+    "trade_rows_missing_positive_size": 0
+  },
+  "interpretation_rule": "Counterfactual per-contract cost comparison, not realized strategy P&L. Full sample reports A and fee-only components because half-spread is missing on invalid-quote trades; total taker-cost/net estimates are restricted to the same quote-valid observations as A. Net A-cost and its CI resample paired per-game means of A and that same row-level cost."
+}

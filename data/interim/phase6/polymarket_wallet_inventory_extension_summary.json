@@ -1,0 +1,223 @@
+{
+  "original_pairs": 210,
+  "extension_pairs": 346,
+  "overlap_pairs": 0,
+  "combined_pairs": 556,
+  "unique_fill_transfer_matches": 477,
+  "ambiguous_or_unmatched": 79,
+  "positive_inventory_before_matched_transfer": 221,
+  "interpretation": "Descriptive estimates for two hash-ranked, stratified validation samples. They are not population estimates, and the match-restricted inventory rate is reported alongside worst-case bounds for unresolved matches.",
+  "profile_strata": [
+    {
+      "profile_stratum": "high_activity",
+      "sampled_pairs": 112,
+      "matched_pairs": 98,
+      "ambiguous_or_unmatched": 14,
+      "positive_pretransfer_inventory_among_matches": 83,
+      "positive_share_among_matches": 0.8469387755102041,
+      "worst_case_positive_share_all_sampled_lower": 0.7410714285714286,
+      "worst_case_positive_share_all_sampled_upper": 0.8660714285714286,
+      "positive_balance_at_least_10pct_of_buy_size": 79,
+      "positive_balance_at_least_buy_size": 64,
+      "median_balance_to_buy_ratio_among_positive_matches": 9.809954857142857
+    },
+    {
+      "profile_stratum": "low_activity_low_stake",
+      "sampled_pairs": 111,
+      "matched_pairs": 91,
+      "ambiguous_or_unmatched": 20,
+      "positive_pretransfer_inventory_among_matches": 35,
+      "positive_share_among_matches": 0.38461538461538464,
+      "worst_case_positive_share_all_sampled_lower": 0.3153153153153153,
+      "worst_case_positive_share_all_sampled_upper": 0.4954954954954955,
+      "positive_balance_at_least_10pct_of_buy_size": 25,
+      "positive_balance_at_least_buy_size": 16,
+      "median_balance_to_buy_ratio_among_positive_matches": 0.8404255319148937
+    },
+    {
+      "profile_stratum": "maker_dominant",
+      "sampled_pairs": 112,
+      "matched_pairs": 99,
+      "ambiguous_or_unmatched": 13,
+      "positive_pretransfer_inventory_among_matches": 34,
+      "positive_share_among_matches": 0.3434343434343434,
+      "worst_case_positive_share_all_sampled_lower": 0.30357142857142855,
+      "worst_case_positive_share_all_sampled_upper": 0.41964285714285715,
+      "positive_balance_at_least_10pct_of_buy_size": 31,
+      "positive_balance_at_least_buy_size": 22,
+      "median_balance_to_buy_ratio_among_positive_matches": 2.298742219874222
+    },
+    {
+      "profile_stratum": "other",
+      "sampled_pairs": 112,
+      "matched_pairs": 96,
+      "ambiguous_or_unmatched": 16,
+      "positive_pretransfer_inventory_among_matches": 40,
+      "positive_share_among_matches": 0.4166666666666667,
+      "worst_case_positive_share_all_sampled_lower": 0.35714285714285715,
+      "worst_case_positive_share_all_sampled_upper": 0.5,
+      "positive_balance_at_least_10pct_of_buy_size": 35,
+      "positive_balance_at_least_buy_size": 27,
+      "median_balance_to_buy_ratio_among_positive_matches": 1.414062510292969
+    },
+    {
+      "profile_stratum": "taker_dominant",
+      "sampled_pairs": 109,
+      "matched_pairs": 93,
+      "ambiguous_or_unmatched": 16,
+      "positive_pretransfer_inventory_among_matches": 29,
+      "positive_share_among_matches": 0.3118279569892473,
+      "worst_case_positive_share_all_sampled_lower": 0.26605504587155965,
+      "worst_case_positive_share_all_sampled_upper": 0.41284403669724773,
+      "positive_balance_at_least_10pct_of_buy_size": 27,
+      "positive_balance_at_least_buy_size": 19,
+      "median_balance_to_buy_ratio_among_positive_matches": 1.615666178623719
+    }
+  ],
+  "purchase_outcomes_by_preexisting_inventory": {
+    "not_preexisting": {
+      "n": 256,
+      "mean_realized_outcome": 0.1171875,
+      "mean_purchase_price": 0.11205351936328126,
+      "mean_market_free_Pstar": 0.13208555051546,
+      "mean_Y_minus_price_percentage_points": 0.5133980636718743,
+      "mean_Y_minus_Pstar_percentage_points": -1.4898050515460022
+    },
+    "preexisting": {
+      "n": 221,
+      "mean_realized_outcome": 0.11764705882352941,
+      "mean_purchase_price": 0.1231171247,
+      "mean_market_free_Pstar": 0.13400440754377485,
+      "mean_Y_minus_price_percentage_points": -0.5470065876470598,
+      "mean_Y_minus_Pstar_percentage_points": -1.6357348720245444
+    },
+    "by_profile_stratum": [
+      {
+        "profile_stratum": "high_activity",
+        "preexisting_inventory": false,
+        "n": 15,
+        "mean_realized_outcome": 0.13333333333333333,
+        "mean_purchase_price": 0.10486666650000001,
+        "mean_market_free_Pstar": 0.11958249703704289,
+        "mean_Y_minus_price_percentage_points": 2.846666683333332,
+        "mean_Y_minus_Pstar_percentage_points": 1.3750836296290454
+      },
+      {
+        "profile_stratum": "high_activity",
+        "preexisting_inventory": true,
+        "n": 83,
+        "mean_realized_outcome": 0.14457831325301204,
+        "mean_purchase_price": 0.12546212953012048,
+        "mean_market_free_Pstar": 0.12236976905834436,
+        "mean_Y_minus_price_percentage_points": 1.9116183722891564,
+        "mean_Y_minus_Pstar_percentage_points": 2.220854419466768
+      },
+      {
+        "profile_stratum": "low_activity_low_stake",
+        "preexisting_inventory": false,
+        "n": 56,
+        "mean_realized_outcome": 0.07142857142857142,
+        "mean_purchase_price": 0.11748593536964284,
+        "mean_market_free_Pstar": 0.12683830422474682,
+        "mean_Y_minus_price_percentage_points": -4.605736394107144,
+        "mean_Y_minus_Pstar_percentage_points": -5.54097327961754
+      },
+      {
+        "profile_stratum": "low_activity_low_stake",
+        "preexisting_inventory": true,
+        "n": 35,
+        "mean_realized_outcome": 0.08571428571428572,
+        "mean_purchase_price": 0.11159045603142857,
+        "mean_market_free_Pstar": 0.1206244460654481,
+        "mean_Y_minus_price_percentage_points": -2.5876170317142866,
+        "mean_Y_minus_Pstar_percentage_points": -3.4910160351162407
+      },
+      {
+        "profile_stratum": "maker_dominant",
+        "preexisting_inventory": false,
+        "n": 65,
+        "mean_realized_outcome": 0.12307692307692308,
+        "mean_purchase_price": 0.10357805939230769,
+        "mean_market_free_Pstar": 0.14858582497078754,
+        "mean_Y_minus_price_percentage_points": 1.9498863684615386,
+        "mean_Y_minus_Pstar_percentage_points": -2.5508901893864477
+      },
+      {
+        "profile_stratum": "maker_dominant",
+        "preexisting_inventory": true,
+        "n": 34,
+        "mean_realized_outcome": 0.08823529411764706,
+        "mean_purchase_price": 0.10879514182058825,
+        "mean_market_free_Pstar": 0.14470186282747505,
+        "mean_Y_minus_price_percentage_points": -2.055984770294118,
+        "mean_Y_minus_Pstar_percentage_points": -5.6466568709828024
+      },
+      {
+        "profile_stratum": "other",
+        "preexisting_inventory": false,
+        "n": 56,
+        "mean_realized_outcome": 0.17857142857142858,
+        "mean_purchase_price": 0.12071065781071429,
+        "mean_market_free_Pstar": 0.13706614770869713,
+        "mean_Y_minus_price_percentage_points": 5.786077076071429,
+        "mean_Y_minus_Pstar_percentage_points": 4.150528086273146
+      },
+      {
+        "profile_stratum": "other",
+        "preexisting_inventory": true,
+        "n": 40,
+        "mean_realized_outcome": 0.15,
+        "mean_purchase_price": 0.13522993808,
+        "mean_market_free_Pstar": 0.14949281276296345,
+        "mean_Y_minus_price_percentage_points": 1.4770061919999997,
+        "mean_Y_minus_Pstar_percentage_points": 0.050718723703655766
+      },
+      {
+        "profile_stratum": "taker_dominant",
+        "preexisting_inventory": false,
+        "n": 64,
+        "mean_realized_outcome": 0.09375,
+        "mean_purchase_price": 0.1100174668890625,
+        "mean_market_free_Pstar": 0.11849118039106359,
+        "mean_Y_minus_price_percentage_points": -1.6267466889062498,
+        "mean_Y_minus_Pstar_percentage_points": -2.4741180391063584
+      },
+      {
+        "profile_stratum": "taker_dominant",
+        "preexisting_inventory": true,
+        "n": 29,
+        "mean_realized_outcome": 0.06896551724137931,
+        "mean_purchase_price": 0.13040101729310344,
+        "mean_market_free_Pstar": 0.14954661297890642,
+        "mean_Y_minus_price_percentage_points": -6.143550005172414,
+        "mean_Y_minus_Pstar_percentage_points": -8.058109573752711
+      }
+    ],
+    "interpretation": "Descriptive only: the selected wallet-market sample is stratified and is not a representative sample or causal comparison."
+  },
+  "redemption_validation": {
+    "nonoverlapping_positive_redemption_rows": 144,
+    "activity_payouts_matching_onchain_PayoutRedemption": 144,
+    "recorded_trade_merge_net_equals_claim": 122,
+    "recorded_trade_merge_comparisons": 144,
+    "interpretation": "The payout field is validated against the matching on-chain payout event; trade/merge equality remains an incomplete-ledger diagnostic and does not validate the full position."
+  },
+  "high_activity_vs_other_sample_bounds": {
+    "high_activity_sampled": 112,
+    "high_activity_known_positive": 83,
+    "high_activity_unresolved": 14,
+    "high_activity_positive_share_bounds_if_unresolved_are_all_zero_or_all_one": [
+      0.7410714285714286,
+      0.8660714285714286
+    ],
+    "other_profiles_sampled": 444,
+    "other_profiles_known_positive": 138,
+    "other_profiles_unresolved": 65,
+    "other_profiles_positive_share_bounds_if_unresolved_are_all_zero_or_all_one": [
+      0.3108108108108108,
+      0.4572072072072072
+    ],
+    "minimum_gap_high_minus_other_under_worst_case_match_status": 0.2838642213642214,
+    "note": "Bounds cover unresolved receipt joins within these stratified samples only; they do not cover sampling uncertainty or identify population prevalence."
+  }
+}

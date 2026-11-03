@@ -1,0 +1,124 @@
+{
+  "a_paper_window": {
+    "n": 43167,
+    "games": 128,
+    "price_bins": 97,
+    "alpha": 29.068363636736375,
+    "beta": 0.3131359001483595,
+    "alpha_boundary": false,
+    "weighted_sse": 1.5051910853010984,
+    "mean_y_minus_p": 0.03995251001922765,
+    "mean_abs_calibration_gap_bin_weighted": 0.06751337827507123
+  },
+  "a_full_season": {
+    "n": 130988,
+    "games": 445,
+    "price_bins": 99,
+    "alpha": 2.487831277779694,
+    "beta": 1.0583998980476845,
+    "alpha_boundary": false,
+    "weighted_sse": 255.07343878881173,
+    "mean_y_minus_p": 0.0318119217027514,
+    "mean_abs_calibration_gap_bin_weighted": 0.06222675114096179
+  },
+  "b_paper_window": {
+    "n": 2069181,
+    "games": 336,
+    "price_bins": 99,
+    "alpha": 1.121749892447879,
+    "beta": 0.9301461836305526,
+    "alpha_boundary": false,
+    "weighted_sse": 2238.8435882312965,
+    "mean_y_minus_p": 0.027289164166885354,
+    "mean_abs_calibration_gap_bin_weighted": 0.03460693459915024
+  },
+  "b_full_season": {
+    "n": 7689937,
+    "games": 1211,
+    "price_bins": 99,
+    "alpha": 1.052713431046588,
+    "beta": 0.9445515674838472,
+    "alpha_boundary": false,
+    "weighted_sse": 2891.2749522508457,
+    "mean_y_minus_p": 0.016954910033723295,
+    "mean_abs_calibration_gap_bin_weighted": 0.02181611915083601
+  },
+  "c_decomposition": {
+    "paper_window": {
+      "n": 43167,
+      "games": 128,
+      "pooled_mean_y_minus_p": 0.03995251001922765,
+      "groups": [
+        {
+          "post_game": false,
+          "trades": 36742,
+          "trade_share": 0.8511594505061737,
+          "mean_y_minus_p": 0.04616841761471886,
+          "signed_gap_contribution": 0.03929668496768365,
+          "signed_gap_share": 0.983584884873857,
+          "absolute_gap_contribution": 0.0660212662450483,
+          "absolute_gap_share": 0.9778990169334499
+        },
+        {
+          "post_game": true,
+          "trades": 6425,
+          "trade_share": 0.1488405494938263,
+          "mean_y_minus_p": 0.004406225680933857,
+          "signed_gap_contribution": 0.0006558250515440042,
+          "signed_gap_share": 0.016415115126143017,
+          "absolute_gap_contribution": 0.0014921120300229354,
+          "absolute_gap_share": 0.022100983066550017
+        }
+      ]
+    },
+    "full_season": {
+      "n": 130988,
+      "games": 445,
+      "pooled_mean_y_minus_p": 0.0318119217027514,
+      "groups": [
+        {
+          "post_game": false,
+          "trades": 105565,
+          "trade_share": 0.8059135187956149,
+          "mean_y_minus_p": 0.038785582342632505,
+          "signed_gap_contribution": 0.03125773314377718,
+          "signed_gap_share": 0.9825792178117205,
+          "absolute_gap_contribution": 0.060226659918582004,
+          "absolute_gap_share": 0.9678580162758458
+        },
+        {
+          "post_game": true,
+          "trades": 25423,
+          "trade_share": 0.19408648120438513,
+          "mean_y_minus_p": 0.0028548951736616477,
+          "signed_gap_contribution": 0.0005541885589742298,
+          "signed_gap_share": 0.01742078218827937,
+          "absolute_gap_contribution": 0.0020000912223797898,
+          "absolute_gap_share": 0.032141983724154236
+        }
+      ]
+    }
+  },
+  "postgame_price_distribution": {
+    "rows": 78321,
+    "games": 1129,
+    "selected_team_coordinate": {
+      "min": 0.01,
+      "p25": 0.010000000000000009,
+      "median": 0.99,
+      "p75": 0.99,
+      "max": 0.99,
+      "rows_price_0_03_to_0_97_inclusive": 391,
+      "share_price_0_03_to_0_97_inclusive": 0.004992275379527841
+    },
+    "market_yes_price": {
+      "min": 0.01,
+      "p25": 0.99,
+      "median": 0.99,
+      "p75": 0.99,
+      "max": 0.99,
+      "rows_price_0_03_to_0_97_inclusive": 391,
+      "share_price_0_03_to_0_97_inclusive": 0.004992275379527841
+    }
+  }
+}

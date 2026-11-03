@@ -1,0 +1,116 @@
+phase2:
+  quiet_window_end_buffer_seconds: 5
+  quiet_window_sensitivity_seconds:
+  - 0
+  - 5
+  - 10
+phase3:
+  training_seasons:
+  - 2016
+  - 2025
+  selection_holdout_season: 2025
+  market_sample_season: 2026
+  selection_metric: final5_holdout_brier
+  selected_model: lightgbm_monotone
+  selected_possession_feature: false
+  robustness_models:
+  - lightgbm_monotone_with_possession
+  - spline_logistic_without_possession
+  state_grid_seconds: 10
+  output_grid_seconds: 1
+  random_seed: 17
+phase4:
+  locked: true
+  locked_at: 2026-10-21
+  sample:
+    market_season: 2026
+    market_season_type: regular_season_standings
+    late_window_predicate: src/game_windows.py:is_final_regulation_window
+    windows_minutes:
+    - 5
+    - 10
+    price_floor: 0.03
+    price_ceiling: 0.97
+    price_bins:
+    - 0.03
+    - 0.05
+    - 0.1
+    - 0.2
+    - 0.35
+    - 0.5
+    - 0.65
+    - 0.8
+    - 0.9
+    - 0.97
+    price_bin_convention: left_closed_right_open_except_last_bin_closed_at_0.97
+    tau_bucket_edges_seconds:
+    - 0
+    - 5
+    - 15
+    - 30
+    - 60
+    - 120
+    - 300
+    - inf
+    selected_team_assignment:
+      method: random_home_or_away_once_per_game
+      seed: 17
+      file: data/interim/phase4/selected_team_by_game.csv
+      other_market_coordinate: complement_price_and_flip_side
+  primary_estimand:
+    contract_side: folded_longshot
+    price_band:
+    - 0.05
+    - 0.2
+    window_minutes: 5
+    stoppage: quiet
+    game_weighted: true
+  stoppages:
+    quiet_window_end_buffer_seconds: 5
+    sensitivity_buffers_seconds:
+    - 0
+    - 5
+    - 10
+    timeout_restart: next_prompt_shot_rebound_or_turnover_minus_game_clock_difference
+    timeout_exclude_score_review_challenge: true
+    timeout_exclude_foul_or_free_throw_before_restart: true
+    include_event_free_period_breaks: true
+    exclude_free_throw_trips_and_foul_to_free_throw_stretches: true
+  quotes:
+    trade_inference_lookback_seconds: 5
+    require_both_sides_observed: true
+    candles_use: validation_only
+    crossed_pairs: undetermined
+    undetermined_quotes_excluded_from_mid: true
+  power:
+    minimum_games_per_cell_flag: 150
+    primary_games: 390
+    primary_trade_rows: 309318
+    mde_80pct_two_sided: 0.046148522936570735
+    binomial_variance_forecast: market_free_Pstar_by_game
+    bootstrap_draws_for_outcome_analysis: 2000
+  wallet_classification_thresholds:
+    reaction_latency_seconds:
+    - 5
+    - 10
+    - 20
+    trades_per_active_day:
+    - 20
+    - 100
+    - 500
+    maker_share:
+    - 0.5
+    - 0.75
+    - 0.9
+  secondary_estimand:
+    window_minutes: 10
+  outcome_tests:
+    zero_test: two_sided_A_equals_zero
+    band_tests:
+    - one_sided_A_above_taker_band
+    - one_sided_A_above_maker_band
+    confidence_interval: 95_percent_upper_bound
+    classification:
+    - significant_and_above_band
+    - significant_but_not_shown_above_band
+    - not_significant

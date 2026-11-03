@@ -1,0 +1,178 @@
+{
+  "design": "Common-support OLS contrasts with game, final-five regulation-minute, fixed P* band, and participant-role fixed effects; two-way game/wallet clustered standard errors.",
+  "support_cells": 4331,
+  "support_keys": [
+    "game_id",
+    "minute",
+    "pbin",
+    "role"
+  ],
+  "support_rows": 117253,
+  "support_share_of_screen": 0.8537238883670809,
+  "group_summaries": [
+    {
+      "comparison": "high_activity_vs_other_accounts",
+      "support_rows": 117253,
+      "support_cells": 4331,
+      "eligible_rows": 137343,
+      "support_share_of_eligible": 0.8537238883670809,
+      "groups": [
+        {
+          "high_activity": false,
+          "rows": 27819,
+          "wallets": 9266,
+          "games": 624,
+          "mean_y_minus_price": -0.0167453346445451,
+          "mean_y_minus_pstar": -0.035731303050487224,
+          "mean_price_minus_pstar": -0.01898596840594213
+        },
+        {
+          "high_activity": true,
+          "rows": 89434,
+          "wallets": 1731,
+          "games": 624,
+          "mean_y_minus_price": -0.004271139767922715,
+          "mean_y_minus_pstar": -0.02749306795948846,
+          "mean_price_minus_pstar": -0.023221928191565745
+        }
+      ]
+    },
+    {
+      "comparison": "maker_dominant_vs_taker_dominant",
+      "support_rows": 62934,
+      "support_cells": 2573,
+      "eligible_rows": 110494,
+      "support_share_of_eligible": 0.5695693883830796,
+      "groups": [
+        {
+          "maker_dominant": false,
+          "rows": 25647,
+          "wallets": 6485,
+          "games": 586,
+          "mean_y_minus_price": -0.014154055344219598,
+          "mean_y_minus_pstar": -0.03436565303409133,
+          "mean_price_minus_pstar": -0.020211597689871734
+        },
+        {
+          "maker_dominant": true,
+          "rows": 37287,
+          "wallets": 1153,
+          "games": 586,
+          "mean_y_minus_price": 0.006756440457792259,
+          "mean_y_minus_pstar": -0.027260928764382016,
+          "mean_price_minus_pstar": -0.03401736922217427
+        }
+      ]
+    }
+  ],
+  "results": [
+    {
+      "comparison": "high_activity_vs_other_accounts",
+      "outcome": "settlement_payoff_minus_cost",
+      "estimate": -0.00012244541079500757,
+      "se_two_way_cluster": 0.001153109924473395,
+      "ci95_low": -0.002382540862762862,
+      "ci95_high": 0.002137650041172847,
+      "rows": 117253,
+      "cells": 4331,
+      "games": 624,
+      "wallets": 10997,
+      "clusters": {
+        "game": 624,
+        "wallet": 10997,
+        "intersection": 36970
+      }
+    },
+    {
+      "comparison": "high_activity_vs_other_accounts",
+      "outcome": "outcome_minus_benchmark",
+      "estimate": -0.0009727334389860438,
+      "se_two_way_cluster": 0.0011317080174119618,
+      "ci95_low": -0.0031908811531134885,
+      "ci95_high": 0.001245414275141401,
+      "rows": 117253,
+      "cells": 4331,
+      "games": 624,
+      "wallets": 10997,
+      "clusters": {
+        "game": 624,
+        "wallet": 10997,
+        "intersection": 36970
+      }
+    },
+    {
+      "comparison": "high_activity_vs_other_accounts",
+      "outcome": "benchmark_overpayment",
+      "estimate": -0.0008502880281910346,
+      "se_two_way_cluster": 0.0005974491616145898,
+      "ci95_low": -0.0020212883849556303,
+      "ci95_high": 0.0003207123285735613,
+      "rows": 117253,
+      "cells": 4331,
+      "games": 624,
+      "wallets": 10997,
+      "clusters": {
+        "game": 624,
+        "wallet": 10997,
+        "intersection": 36970
+      }
+    },
+    {
+      "comparison": "maker_dominant_vs_taker_dominant",
+      "outcome": "settlement_payoff_minus_cost",
+      "estimate": 0.003462392218653955,
+      "se_two_way_cluster": 0.0006083632032503696,
+      "ci95_low": 0.0022700003402832307,
+      "ci95_high": 0.0046547840970246794,
+      "rows": 62934,
+      "cells": 2573,
+      "games": 586,
+      "wallets": 7638,
+      "clusters": {
+        "game": 586,
+        "wallet": 7638,
+        "intersection": 22290
+      }
+    },
+    {
+      "comparison": "maker_dominant_vs_taker_dominant",
+      "outcome": "outcome_minus_benchmark",
+      "estimate": -1.4601517816655668e-06,
+      "se_two_way_cluster": 0.0001727181471571711,
+      "ci95_low": -0.0003399877202097209,
+      "ci95_high": 0.00033706741664638973,
+      "rows": 62934,
+      "cells": 2573,
+      "games": 586,
+      "wallets": 7638,
+      "clusters": {
+        "game": 586,
+        "wallet": 7638,
+        "intersection": 22290
+      }
+    },
+    {
+      "comparison": "maker_dominant_vs_taker_dominant",
+      "outcome": "benchmark_overpayment",
+      "estimate": -0.003463852370435621,
+      "se_two_way_cluster": 0.000553045217282399,
+      "ci95_low": -0.004547820996309123,
+      "ci95_high": -0.0023798837445621187,
+      "rows": 62934,
+      "cells": 2573,
+      "games": 586,
+      "wallets": 7638,
+      "clusters": {
+        "game": 586,
+        "wallet": 7638,
+        "intersection": 22290
+      }
+    }
+  ],
+  "limitations": [
+    "This is a conditional association, not a causal effect or identity classification.",
+    "The comparison is high-activity versus a heterogeneous remainder; activity profiles can overlap with other behavioral dimensions.",
+    "P* is estimated, and the target cohort is selected on price, clock, side, and P*.",
+    "The two-way cluster sandwich uses game, wallet, and their intersection; intervals are asymptotic."
+  ]
+}

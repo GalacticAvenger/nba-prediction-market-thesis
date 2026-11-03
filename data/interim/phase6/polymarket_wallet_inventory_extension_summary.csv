@@ -1,0 +1,6 @@
+profile_stratum,sampled_pairs,matched_pairs,ambiguous_or_unmatched,positive_pretransfer_inventory_among_matches,positive_share_among_matches,worst_case_positive_share_all_sampled_lower,worst_case_positive_share_all_sampled_upper,positive_balance_at_least_10pct_of_buy_size,positive_balance_at_least_buy_size,median_balance_to_buy_ratio_among_positive_matches
+high_activity,112,98,14,83,0.8469387755102041,0.7410714285714286,0.8660714285714286,79,64,9.809954857142857
+low_activity_low_stake,111,91,20,35,0.38461538461538464,0.3153153153153153,0.4954954954954955,25,16,0.8404255319148937
+maker_dominant,112,99,13,34,0.3434343434343434,0.30357142857142855,0.41964285714285715,31,22,2.298742219874222
+other,112,96,16,40,0.4166666666666667,0.35714285714285715,0.5,35,27,1.414062510292969
+taker_dominant,109,93,16,29,0.3118279569892473,0.26605504587155965,0.41284403669724773,27,19,1.615666178623719

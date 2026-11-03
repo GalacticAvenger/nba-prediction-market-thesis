@@ -1,0 +1,916 @@
+{
+  "estimand": "five-fold cross-fitted selection adjustment in realized-last-play windows across market-price bands",
+  "market_price_bands": {
+    "05_20": [
+      0.05,
+      0.2
+    ],
+    "10_40": [
+      0.1,
+      0.4
+    ]
+  },
+  "window_minutes_sensitivity": [
+    5,
+    10,
+    15
+  ],
+  "base": "all in-game Q4/OT trades before each game last ESPN play, restricted separately to each target market-price band and common market/P* support",
+  "method": "Within fixed probability bins, estimate q=P(Y=1|p), pi1=P(D|Y=1,p), pi0=P(D|Y=0,p) on four folds of games, using Jeffreys Beta(0.5,0.5) smoothing to stabilize sparse outcome/bin cells. Predict held-out selected-window calibration as q*pi1/[q*pi1+(1-q)*pi0].",
+  "why": "The original formula substitutes p for q and therefore assumes the full base sample is calibrated. This version estimates q out of game and tests that assumption separately.",
+  "folds": 5,
+  "bin_width_sensitivity": [
+    0.05,
+    0.1
+  ],
+  "coordinates": {
+    "05_20_5m_price_0.050": {
+      "trades": 209971,
+      "games": 357,
+      "bin_width": 0.05,
+      "market_price_band": [
+        0.05,
+        0.2
+      ],
+      "observed_gap": -0.06102156964533199,
+      "observed_gap_ci95": [
+        -0.08660863062511395,
+        -0.02819102143517537
+      ],
+      "baseline_gap_on_target_mix": -0.005602060918798225,
+      "baseline_gap_ci95": [
+        -0.02858205158769957,
+        0.01951024271013358
+      ],
+      "selection_predicted_gap": -0.06093046015764801,
+      "selection_predicted_gap_ci95": [
+        -0.08720376810838054,
+        -0.030010840380901717
+      ],
+      "unexplained_remainder": -9.110948768396207e-05,
+      "remainder_ci95": [
+        -0.002484003794137544,
+        0.003721908163662822
+      ],
+      "selection_shift_from_base": -0.05532839923884979,
+      "selection_shift_ci95": [
+        -0.0875050684925665,
+        -0.021912361554583547
+      ],
+      "game_cluster_bootstrap_draws": 2000,
+      "successful_bootstrap_draws": 2000,
+      "interval_note": "game-cluster bootstrap refits conditional win rates and selection probabilities in every draw"
+    },
+    "05_20_5m_price_0.100": {
+      "trades": 209971,
+      "games": 357,
+      "bin_width": 0.1,
+      "market_price_band": [
+        0.05,
+        0.2
+      ],
+      "observed_gap": -0.06102156964533199,
+      "observed_gap_ci95": [
+        -0.08849261124309424,
+        -0.027724885683117796
+      ],
+      "baseline_gap_on_target_mix": -0.00484372660430118,
+      "baseline_gap_ci95": [
+        -0.02809907076820021,
+        0.01839937317065965
+      ],
+      "selection_predicted_gap": -0.06097253976054564,
+      "selection_predicted_gap_ci95": [
+        -0.08880629681773987,
+        -0.028314370988613523
+      ],
+      "unexplained_remainder": -4.902988478633927e-05,
+      "remainder_ci95": [
+        -0.0024532505485050956,
+        0.002933144881896822
+      ],
+      "selection_shift_from_base": -0.05612881315624446,
+      "selection_shift_ci95": [
+        -0.08495350899411329,
+        -0.023834913040314647
+      ],
+      "game_cluster_bootstrap_draws": 2000,
+      "successful_bootstrap_draws": 2000,
+      "interval_note": "game-cluster bootstrap refits conditional win rates and selection probabilities in every draw"
+    },
+    "05_20_5m_pstar_0.050": {
+      "trades": 209971,
+      "games": 357,
+      "bin_width": 0.05,
+      "market_price_band": [
+        0.05,
+        0.2
+      ],
+      "observed_gap": -0.1582884861524918,
+      "observed_gap_ci95": [
+        -0.19058990602301015,
+        -0.12325515901757539
+      ],
+      "baseline_gap_on_target_mix": -0.07770016542016835,
+      "baseline_gap_ci95": [
+        -0.10617354898215728,
+        -0.04607734113128144
+      ],
+      "selection_predicted_gap": -0.15488219939189043,
+      "selection_predicted_gap_ci95": [
+        -0.1865401811406746,
+        -0.120727087043415
+      ],
+      "unexplained_remainder": -0.0034062867606013754,
+      "remainder_ci95": [
+        -0.01985500235822873,
+        0.00944561835204016
+      ],
+      "selection_shift_from_base": -0.07718203397172209,
+      "selection_shift_ci95": [
+        -0.11168301067383297,
+        -0.042376913766729744
+      ],
+      "game_cluster_bootstrap_draws": 2000,
+      "successful_bootstrap_draws": 2000,
+      "interval_note": "game-cluster bootstrap refits conditional win rates and selection probabilities in every draw"
+    },
+    "05_20_5m_pstar_0.100": {
+      "trades": 209971,
+      "games": 357,
+      "bin_width": 0.1,
+      "market_price_band": [
+        0.05,
+        0.2
+      ],
+      "observed_gap": -0.1582884861524918,
+      "observed_gap_ci95": [
+        -0.19057273195997007,
+        -0.12528373460255662
+      ],
+      "baseline_gap_on_target_mix": -0.0766324796887759,
+      "baseline_gap_ci95": [
+        -0.10512493245397458,
+        -0.04644489189630709
+      ],
+      "selection_predicted_gap": -0.15357358589260459,
+      "selection_predicted_gap_ci95": [
+        -0.18545316836903897,
+        -0.11966104210481454
+      ],
+      "unexplained_remainder": -0.004714900259887228,
+      "remainder_ci95": [
+        -0.017989820238007676,
+        0.0025301829917765747
+      ],
+      "selection_shift_from_base": -0.07694110620382869,
+      "selection_shift_ci95": [
+        -0.1137175492659166,
+        -0.04288650635117956
+      ],
+      "game_cluster_bootstrap_draws": 2000,
+      "successful_bootstrap_draws": 2000,
+      "interval_note": "game-cluster bootstrap refits conditional win rates and selection probabilities in every draw"
+    },
+    "05_20_10m_price_0.050": {
+      "trades": 532303,
+      "games": 561,
+      "bin_width": 0.05,
+      "market_price_band": [
+        0.05,
+        0.2
+      ],
+      "observed_gap": -0.06243481626066358,
+      "observed_gap_ci95": [
+        -0.08319058068087012,
+        -0.03643684517641935
+      ],
+      "baseline_gap_on_target_mix": -0.006184741238776073,
+      "baseline_gap_ci95": [
+        -0.029299892060327966,
+        0.019315343084999183
+      ],
+      "selection_predicted_gap": -0.06240946446703538,
+      "selection_predicted_gap_ci95": [
+        -0.08334347890921195,
+        -0.03711771662234092
+      ],
+      "unexplained_remainder": -2.5351793628184683e-05,
+      "remainder_ci95": [
+        -0.0014318480626496278,
+        0.0016911204414772868
+      ],
+      "selection_shift_from_base": -0.056224723228259305,
+      "selection_shift_ci95": [
+        -0.07999470019450505,
+        -0.03108130780559785
+      ],
+      "game_cluster_bootstrap_draws": 2000,
+      "successful_bootstrap_draws": 2000,
+      "interval_note": "game-cluster bootstrap refits conditional win rates and selection probabilities in every draw"
+    },
+    "05_20_10m_price_0.100": {
+      "trades": 532303,
+      "games": 561,
+      "bin_width": 0.1,
+      "market_price_band": [
+        0.05,
+        0.2
+      ],
+      "observed_gap": -0.06243481626066358,
+      "observed_gap_ci95": [
+        -0.0848787542406104,
+        -0.035851717353913376
+      ],
+      "baseline_gap_on_target_mix": -0.0058369594701299776,
+      "baseline_gap_ci95": [
+        -0.029951015191179424,
+        0.01789262680566316
+      ],
+      "selection_predicted_gap": -0.06253485828749955,
+      "selection_predicted_gap_ci95": [
+        -0.08456114099943603,
+        -0.0363406557388144
+      ],
+      "unexplained_remainder": 0.00010004202683597332,
+      "remainder_ci95": [
+        -0.001141286254065643,
+        0.0018458281047288724
+      ],
+      "selection_shift_from_base": -0.05669789881736957,
+      "selection_shift_ci95": [
+        -0.0807864635645805,
+        -0.03300938470682234
+      ],
+      "game_cluster_bootstrap_draws": 2000,
+      "successful_bootstrap_draws": 2000,
+      "interval_note": "game-cluster bootstrap refits conditional win rates and selection probabilities in every draw"
+    },
+    "05_20_10m_pstar_0.050": {
+      "trades": 532303,
+      "games": 561,
+      "bin_width": 0.05,
+      "market_price_band": [
+        0.05,
+        0.2
+      ],
+      "observed_gap": -0.12076790765710065,
+      "observed_gap_ci95": [
+        -0.14219090635922105,
+        -0.09459511457244092
+      ],
+      "baseline_gap_on_target_mix": -0.05149025038692796,
+      "baseline_gap_ci95": [
+        -0.07467198854413158,
+        -0.023782052409021034
+      ],
+      "selection_predicted_gap": -0.12126575106631032,
+      "selection_predicted_gap_ci95": [
+        -0.14140646847324911,
+        -0.09870105642316307
+      ],
+      "unexplained_remainder": 0.0004978434092096718,
+      "remainder_ci95": [
+        -0.005462268118663491,
+        0.008353647944598272
+      ],
+      "selection_shift_from_base": -0.06977550067938236,
+      "selection_shift_ci95": [
+        -0.09670185219216032,
+        -0.046564859328664165
+      ],
+      "game_cluster_bootstrap_draws": 2000,
+      "successful_bootstrap_draws": 2000,
+      "interval_note": "game-cluster bootstrap refits conditional win rates and selection probabilities in every draw"
+    },
+    "05_20_10m_pstar_0.100": {
+      "trades": 532303,
+      "games": 561,
+      "bin_width": 0.1,
+      "market_price_band": [
+        0.05,
+        0.2
+      ],
+      "observed_gap": -0.12076790765710065,
+      "observed_gap_ci95": [
+        -0.14315784991096983,
+        -0.09627767309440863
+      ],
+      "baseline_gap_on_target_mix": -0.051224244794473656,
+      "baseline_gap_ci95": [
+        -0.0759293326406609,
+        -0.02551052883468753
+      ],
+      "selection_predicted_gap": -0.11957210381764179,
+      "selection_predicted_gap_ci95": [
+        -0.1414479571109686,
+        -0.09707634739438796
+      ],
+      "unexplained_remainder": -0.0011958038394588623,
+      "remainder_ci95": [
+        -0.005856541318190596,
+        0.003189063361537269
+      ],
+      "selection_shift_from_base": -0.06834785902316813,
+      "selection_shift_ci95": [
+        -0.09580748605860497,
+        -0.04441777709372199
+      ],
+      "game_cluster_bootstrap_draws": 2000,
+      "successful_bootstrap_draws": 2000,
+      "interval_note": "game-cluster bootstrap refits conditional win rates and selection probabilities in every draw"
+    },
+    "05_20_15m_price_0.050": {
+      "trades": 861250,
+      "games": 693,
+      "bin_width": 0.05,
+      "market_price_band": [
+        0.05,
+        0.2
+      ],
+      "observed_gap": -0.056407709724238024,
+      "observed_gap_ci95": [
+        -0.07740213931861983,
+        -0.02925493190240693
+      ],
+      "baseline_gap_on_target_mix": -0.006479493686737155,
+      "baseline_gap_ci95": [
+        -0.029770938813676425,
+        0.019407620407400714
+      ],
+      "selection_predicted_gap": -0.05634701128840066,
+      "selection_predicted_gap_ci95": [
+        -0.07713894748204114,
+        -0.02981754619359115
+      ],
+      "unexplained_remainder": -6.069843583736366e-05,
+      "remainder_ci95": [
+        -0.0012369431144527196,
+        0.0016818544197559372
+      ],
+      "selection_shift_from_base": -0.049867517601663504,
+      "selection_shift_ci95": [
+        -0.07201908272363826,
+        -0.02631752150081286
+      ],
+      "game_cluster_bootstrap_draws": 2000,
+      "successful_bootstrap_draws": 2000,
+      "interval_note": "game-cluster bootstrap refits conditional win rates and selection probabilities in every draw"
+    },
+    "05_20_15m_price_0.100": {
+      "trades": 861250,
+      "games": 693,
+      "bin_width": 0.1,
+      "market_price_band": [
+        0.05,
+        0.2
+      ],
+      "observed_gap": -0.056407709724238024,
+      "observed_gap_ci95": [
+        -0.07846658263999667,
+        -0.029794679607730412
+      ],
+      "baseline_gap_on_target_mix": -0.006152555220029354,
+      "baseline_gap_ci95": [
+        -0.03013567497640606,
+        0.017558008938127284
+      ],
+      "selection_predicted_gap": -0.05641524213727266,
+      "selection_predicted_gap_ci95": [
+        -0.07855740102494228,
+        -0.030224769058882155
+      ],
+      "unexplained_remainder": 7.532413034628978e-06,
+      "remainder_ci95": [
+        -0.0010743682846144952,
+        0.0017750863877753612
+      ],
+      "selection_shift_from_base": -0.05026268691724331,
+      "selection_shift_ci95": [
+        -0.07198458880309153,
+        -0.028698660319678052
+      ],
+      "game_cluster_bootstrap_draws": 2000,
+      "successful_bootstrap_draws": 2000,
+      "interval_note": "game-cluster bootstrap refits conditional win rates and selection probabilities in every draw"
+    },
+    "05_20_15m_pstar_0.050": {
+      "trades": 861250,
+      "games": 693,
+      "bin_width": 0.05,
+      "market_price_band": [
+        0.05,
+        0.2
+      ],
+      "observed_gap": -0.09871140168599753,
+      "observed_gap_ci95": [
+        -0.12070472484438795,
+        -0.07228591027204281
+      ],
+      "baseline_gap_on_target_mix": -0.040162502052569535,
+      "baseline_gap_ci95": [
+        -0.06298379695382397,
+        -0.013245261335964686
+      ],
+      "selection_predicted_gap": -0.09903184009439074,
+      "selection_predicted_gap_ci95": [
+        -0.12024717888983043,
+        -0.07416395012376384
+      ],
+      "unexplained_remainder": 0.00032043840839321707,
+      "remainder_ci95": [
+        -0.003389758924771491,
+        0.004284717911886891
+      ],
+      "selection_shift_from_base": -0.058869338041821206,
+      "selection_shift_ci95": [
+        -0.08232029309950674,
+        -0.03628642400416302
+      ],
+      "game_cluster_bootstrap_draws": 2000,
+      "successful_bootstrap_draws": 2000,
+      "interval_note": "game-cluster bootstrap refits conditional win rates and selection probabilities in every draw"
+    },
+    "05_20_15m_pstar_0.100": {
+      "trades": 861250,
+      "games": 693,
+      "bin_width": 0.1,
+      "market_price_band": [
+        0.05,
+        0.2
+      ],
+      "observed_gap": -0.09871140168599753,
+      "observed_gap_ci95": [
+        -0.1216283628069287,
+        -0.07336552371286051
+      ],
+      "baseline_gap_on_target_mix": -0.03964495797683238,
+      "baseline_gap_ci95": [
+        -0.06318348102694064,
+        -0.013906507059072254
+      ],
+      "selection_predicted_gap": -0.09813057446832821,
+      "selection_predicted_gap_ci95": [
+        -0.12007286593521273,
+        -0.07438367242966397
+      ],
+      "unexplained_remainder": -0.0005808272176693238,
+      "remainder_ci95": [
+        -0.003497114857188657,
+        0.0024415672162577144
+      ],
+      "selection_shift_from_base": -0.05848561649149583,
+      "selection_shift_ci95": [
+        -0.08355068584438319,
+        -0.03618609497168846
+      ],
+      "game_cluster_bootstrap_draws": 2000,
+      "successful_bootstrap_draws": 2000,
+      "interval_note": "game-cluster bootstrap refits conditional win rates and selection probabilities in every draw"
+    },
+    "10_40_5m_price_0.050": {
+      "trades": 244097,
+      "games": 265,
+      "bin_width": 0.05,
+      "market_price_band": [
+        0.1,
+        0.4
+      ],
+      "observed_gap": -0.11799870543267635,
+      "observed_gap_ci95": [
+        -0.15547953096259434,
+        -0.07348537538434521
+      ],
+      "baseline_gap_on_target_mix": -0.0076358513454975125,
+      "baseline_gap_ci95": [
+        -0.034064521205448,
+        0.01862514748541387
+      ],
+      "selection_predicted_gap": -0.1154749679183987,
+      "selection_predicted_gap_ci95": [
+        -0.1539533266021237,
+        -0.07208286464841172
+      ],
+      "unexplained_remainder": -0.0025237375142776494,
+      "remainder_ci95": [
+        -0.008661442507992929,
+        0.004304745808945326
+      ],
+      "selection_shift_from_base": -0.10783911657290118,
+      "selection_shift_ci95": [
+        -0.14910586991377742,
+        -0.06360008944277705
+      ],
+      "game_cluster_bootstrap_draws": 2000,
+      "successful_bootstrap_draws": 2000,
+      "interval_note": "game-cluster bootstrap refits conditional win rates and selection probabilities in every draw"
+    },
+    "10_40_5m_price_0.100": {
+      "trades": 244097,
+      "games": 265,
+      "bin_width": 0.1,
+      "market_price_band": [
+        0.1,
+        0.4
+      ],
+      "observed_gap": -0.11799870543267635,
+      "observed_gap_ci95": [
+        -0.15753990108108348,
+        -0.07183449293040564
+      ],
+      "baseline_gap_on_target_mix": -0.006032764400066281,
+      "baseline_gap_ci95": [
+        -0.03336246362970526,
+        0.02128675736715954
+      ],
+      "selection_predicted_gap": -0.11476876717566832,
+      "selection_predicted_gap_ci95": [
+        -0.15570046408000673,
+        -0.06864339661244684
+      ],
+      "unexplained_remainder": -0.0032299382570080124,
+      "remainder_ci95": [
+        -0.009213263699535209,
+        0.0026454213751746503
+      ],
+      "selection_shift_from_base": -0.10873600277560204,
+      "selection_shift_ci95": [
+        -0.14968872408200784,
+        -0.0614403552113155
+      ],
+      "game_cluster_bootstrap_draws": 2000,
+      "successful_bootstrap_draws": 2000,
+      "interval_note": "game-cluster bootstrap refits conditional win rates and selection probabilities in every draw"
+    },
+    "10_40_5m_pstar_0.050": {
+      "trades": 244097,
+      "games": 265,
+      "bin_width": 0.05,
+      "market_price_band": [
+        0.1,
+        0.4
+      ],
+      "observed_gap": -0.16883836933189705,
+      "observed_gap_ci95": [
+        -0.21225065430619838,
+        -0.12304019343550583
+      ],
+      "baseline_gap_on_target_mix": -0.0440832727042639,
+      "baseline_gap_ci95": [
+        -0.0742634243931005,
+        -0.013905313177809955
+      ],
+      "selection_predicted_gap": -0.16090278049087264,
+      "selection_predicted_gap_ci95": [
+        -0.2027444457210366,
+        -0.1107855829132276
+      ],
+      "unexplained_remainder": -0.007935588841024405,
+      "remainder_ci95": [
+        -0.031035854328889213,
+        0.006319322114811536
+      ],
+      "selection_shift_from_base": -0.11681950778660874,
+      "selection_shift_ci95": [
+        -0.16080222638806232,
+        -0.06584836795205179
+      ],
+      "game_cluster_bootstrap_draws": 2000,
+      "successful_bootstrap_draws": 2000,
+      "interval_note": "game-cluster bootstrap refits conditional win rates and selection probabilities in every draw"
+    },
+    "10_40_5m_pstar_0.100": {
+      "trades": 244097,
+      "games": 265,
+      "bin_width": 0.1,
+      "market_price_band": [
+        0.1,
+        0.4
+      ],
+      "observed_gap": -0.16883836933189705,
+      "observed_gap_ci95": [
+        -0.21219817994624304,
+        -0.12534024973760058
+      ],
+      "baseline_gap_on_target_mix": -0.04083190542894521,
+      "baseline_gap_ci95": [
+        -0.0707563392093479,
+        -0.011535625427279024
+      ],
+      "selection_predicted_gap": -0.1650645017650014,
+      "selection_predicted_gap_ci95": [
+        -0.206928640417033,
+        -0.12157482063624876
+      ],
+      "unexplained_remainder": -0.0037738675668956586,
+      "remainder_ci95": [
+        -0.01851764248958737,
+        0.007071488144817561
+      ],
+      "selection_shift_from_base": -0.12423259633605618,
+      "selection_shift_ci95": [
+        -0.16828612707117915,
+        -0.08237089798890179
+      ],
+      "game_cluster_bootstrap_draws": 2000,
+      "successful_bootstrap_draws": 2000,
+      "interval_note": "game-cluster bootstrap refits conditional win rates and selection probabilities in every draw"
+    },
+    "10_40_10m_price_0.050": {
+      "trades": 678974,
+      "games": 450,
+      "bin_width": 0.05,
+      "market_price_band": [
+        0.1,
+        0.4
+      ],
+      "observed_gap": -0.08993556454297219,
+      "observed_gap_ci95": [
+        -0.12254210427475906,
+        -0.05692850966890825
+      ],
+      "baseline_gap_on_target_mix": -0.007100002047682962,
+      "baseline_gap_ci95": [
+        -0.03356405239818739,
+        0.019592340783679486
+      ],
+      "selection_predicted_gap": -0.08993826303373627,
+      "selection_predicted_gap_ci95": [
+        -0.12257784159138492,
+        -0.056855570248445
+      ],
+      "unexplained_remainder": 2.6984907640684915e-06,
+      "remainder_ci95": [
+        -0.0027168449481767437,
+        0.003219934927962092
+      ],
+      "selection_shift_from_base": -0.0828382609860533,
+      "selection_shift_ci95": [
+        -0.11335940654200304,
+        -0.05144156608688836
+      ],
+      "game_cluster_bootstrap_draws": 2000,
+      "successful_bootstrap_draws": 2000,
+      "interval_note": "game-cluster bootstrap refits conditional win rates and selection probabilities in every draw"
+    },
+    "10_40_10m_price_0.100": {
+      "trades": 678974,
+      "games": 450,
+      "bin_width": 0.1,
+      "market_price_band": [
+        0.1,
+        0.4
+      ],
+      "observed_gap": -0.08993556454297219,
+      "observed_gap_ci95": [
+        -0.12112312840933516,
+        -0.05513301236934942
+      ],
+      "baseline_gap_on_target_mix": -0.006362638263720875,
+      "baseline_gap_ci95": [
+        -0.0344445420713126,
+        0.021078669199671937
+      ],
+      "selection_predicted_gap": -0.08990897251835443,
+      "selection_predicted_gap_ci95": [
+        -0.12143450556402119,
+        -0.054824845161933526
+      ],
+      "unexplained_remainder": -2.659202461775754e-05,
+      "remainder_ci95": [
+        -0.0024559795113105218,
+        0.002963420034737037
+      ],
+      "selection_shift_from_base": -0.08354633425463356,
+      "selection_shift_ci95": [
+        -0.11286149249869984,
+        -0.05203786294308375
+      ],
+      "game_cluster_bootstrap_draws": 2000,
+      "successful_bootstrap_draws": 2000,
+      "interval_note": "game-cluster bootstrap refits conditional win rates and selection probabilities in every draw"
+    },
+    "10_40_10m_pstar_0.050": {
+      "trades": 678974,
+      "games": 450,
+      "bin_width": 0.05,
+      "market_price_band": [
+        0.1,
+        0.4
+      ],
+      "observed_gap": -0.10843418814769143,
+      "observed_gap_ci95": [
+        -0.14120489739582912,
+        -0.07351122621284499
+      ],
+      "baseline_gap_on_target_mix": -0.019807044176061394,
+      "baseline_gap_ci95": [
+        -0.04751055030156182,
+        0.00854236364122927
+      ],
+      "selection_predicted_gap": -0.10801973646219733,
+      "selection_predicted_gap_ci95": [
+        -0.14005530457743295,
+        -0.07320620854127802
+      ],
+      "unexplained_remainder": -0.00041445168549411674,
+      "remainder_ci95": [
+        -0.006823540462433513,
+        0.00527941574186073
+      ],
+      "selection_shift_from_base": -0.08821269228613593,
+      "selection_shift_ci95": [
+        -0.11803572181561499,
+        -0.05495798922728053
+      ],
+      "game_cluster_bootstrap_draws": 2000,
+      "successful_bootstrap_draws": 2000,
+      "interval_note": "game-cluster bootstrap refits conditional win rates and selection probabilities in every draw"
+    },
+    "10_40_10m_pstar_0.100": {
+      "trades": 678974,
+      "games": 450,
+      "bin_width": 0.1,
+      "market_price_band": [
+        0.1,
+        0.4
+      ],
+      "observed_gap": -0.10843418814769143,
+      "observed_gap_ci95": [
+        -0.14134297775178706,
+        -0.07526439624771006
+      ],
+      "baseline_gap_on_target_mix": -0.01872773518020334,
+      "baseline_gap_ci95": [
+        -0.04619481884646702,
+        0.008188960328020821
+      ],
+      "selection_predicted_gap": -0.1086933618347649,
+      "selection_predicted_gap_ci95": [
+        -0.14106329042633856,
+        -0.07664851633339637
+      ],
+      "unexplained_remainder": 0.0002591736870734838,
+      "remainder_ci95": [
+        -0.004983284424758862,
+        0.005158646382649751
+      ],
+      "selection_shift_from_base": -0.08996562665456156,
+      "selection_shift_ci95": [
+        -0.12073642613919373,
+        -0.05892261643623446
+      ],
+      "game_cluster_bootstrap_draws": 2000,
+      "successful_bootstrap_draws": 2000,
+      "interval_note": "game-cluster bootstrap refits conditional win rates and selection probabilities in every draw"
+    },
+    "10_40_15m_price_0.050": {
+      "trades": 1127100,
+      "games": 580,
+      "bin_width": 0.05,
+      "market_price_band": [
+        0.1,
+        0.4
+      ],
+      "observed_gap": -0.07370542099192619,
+      "observed_gap_ci95": [
+        -0.10331921443143638,
+        -0.04343762634395939
+      ],
+      "baseline_gap_on_target_mix": -0.006903507839354907,
+      "baseline_gap_ci95": [
+        -0.03367806081387494,
+        0.019679846400095156
+      ],
+      "selection_predicted_gap": -0.074118275748957,
+      "selection_predicted_gap_ci95": [
+        -0.1030148194593792,
+        -0.04475222373880488
+      ],
+      "unexplained_remainder": 0.00041285475703080956,
+      "remainder_ci95": [
+        -0.001191502725006574,
+        0.0026249652929537758
+      ],
+      "selection_shift_from_base": -0.0672147679096021,
+      "selection_shift_ci95": [
+        -0.09337975624593599,
+        -0.041054529947057765
+      ],
+      "game_cluster_bootstrap_draws": 2000,
+      "successful_bootstrap_draws": 2000,
+      "interval_note": "game-cluster bootstrap refits conditional win rates and selection probabilities in every draw"
+    },
+    "10_40_15m_price_0.100": {
+      "trades": 1127100,
+      "games": 580,
+      "bin_width": 0.1,
+      "market_price_band": [
+        0.1,
+        0.4
+      ],
+      "observed_gap": -0.07370542099192619,
+      "observed_gap_ci95": [
+        -0.10323466666361669,
+        -0.041577672822529006
+      ],
+      "baseline_gap_on_target_mix": -0.006276168203930775,
+      "baseline_gap_ci95": [
+        -0.03451396210819811,
+        0.021089836588520164
+      ],
+      "selection_predicted_gap": -0.07410517993801746,
+      "selection_predicted_gap_ci95": [
+        -0.10408696058850427,
+        -0.042106467286668905
+      ],
+      "unexplained_remainder": 0.00039975894609127607,
+      "remainder_ci95": [
+        -0.0010609097927973545,
+        0.0027380626642042
+      ],
+      "selection_shift_from_base": -0.06782901173408669,
+      "selection_shift_ci95": [
+        -0.09509972964291492,
+        -0.04106250482855615
+      ],
+      "game_cluster_bootstrap_draws": 2000,
+      "successful_bootstrap_draws": 2000,
+      "interval_note": "game-cluster bootstrap refits conditional win rates and selection probabilities in every draw"
+    },
+    "10_40_15m_pstar_0.050": {
+      "trades": 1127100,
+      "games": 580,
+      "bin_width": 0.05,
+      "market_price_band": [
+        0.1,
+        0.4
+      ],
+      "observed_gap": -0.08300948732192015,
+      "observed_gap_ci95": [
+        -0.11420747157774644,
+        -0.052716053273485386
+      ],
+      "baseline_gap_on_target_mix": -0.013465756461192793,
+      "baseline_gap_ci95": [
+        -0.04100851232411182,
+        0.014445979033637512
+      ],
+      "selection_predicted_gap": -0.08299843703811223,
+      "selection_predicted_gap_ci95": [
+        -0.11403495639085266,
+        -0.05296770567019619
+      ],
+      "unexplained_remainder": -1.1050283807922602e-05,
+      "remainder_ci95": [
+        -0.003482061523485122,
+        0.0034840005465257553
+      ],
+      "selection_shift_from_base": -0.06953268057691944,
+      "selection_shift_ci95": [
+        -0.09556119505960581,
+        -0.04162342059773804
+      ],
+      "game_cluster_bootstrap_draws": 2000,
+      "successful_bootstrap_draws": 2000,
+      "interval_note": "game-cluster bootstrap refits conditional win rates and selection probabilities in every draw"
+    },
+    "10_40_15m_pstar_0.100": {
+      "trades": 1127100,
+      "games": 580,
+      "bin_width": 0.1,
+      "market_price_band": [
+        0.1,
+        0.4
+      ],
+      "observed_gap": -0.08300948732192015,
+      "observed_gap_ci95": [
+        -0.1129167218463223,
+        -0.051554650304706316
+      ],
+      "baseline_gap_on_target_mix": -0.0127617307511373,
+      "baseline_gap_ci95": [
+        -0.03934814090510111,
+        0.014272211114814033
+      ],
+      "selection_predicted_gap": -0.08336391652378983,
+      "selection_predicted_gap_ci95": [
+        -0.1133219209720073,
+        -0.05236009302900536
+      ],
+      "unexplained_remainder": 0.00035442920186965946,
+      "remainder_ci95": [
+        -0.0024533349036120916,
+        0.003457312494580425
+      ],
+      "selection_shift_from_base": -0.07060218577265252,
+      "selection_shift_ci95": [
+        -0.09733033289816795,
+        -0.04477059574184507
+      ],
+      "game_cluster_bootstrap_draws": 2000,
+      "successful_bootstrap_draws": 2000,
+      "interval_note": "game-cluster bootstrap refits conditional win rates and selection probabilities in every draw"
+    }
+  }
+}
