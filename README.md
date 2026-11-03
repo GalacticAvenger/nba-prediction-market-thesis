@@ -2,15 +2,18 @@
 
 Working thesis on late-game NBA prediction-market pricing. [Read the current draft](Current_Thesis_Draft.md) · [Word version](Current_Thesis_Draft.docx)
 
-## Main results
+## Main finding
 
-| Analysis | Estimate (percentage points) | Sample |
+| Sample and estimator | Price − payoff (pp; 95% CI) | Trades · games |
 |---|---:|---:|
-| Pre-specified primary: price − realized payoff | **+2.33** (95% CI −0.53 to +4.94; p = 0.0965) | 309,318 trades · 390 games |
-| Post-hoc timing sensitivity | +2.04 (95% CI −0.77 to +4.59) | 343,823 trades · 411 games |
-| Quote-valid gap after estimated taker fee and half-spread | +1.15 (95% CI −1.62 to +3.82) | 251,686 trades · 376 games |
+| Final five, equal-game | **+3.44** (+1.76 to +5.01) | 1,681,533 · 684 |
+| Final five, pooled trade | +1.28 (−2.39 to +4.41) | 1,681,533 · 684 |
+| Final five, first entry per game | −0.60 (−3.26 to +1.89) | 684 · 684 |
+| Final five quiet stoppages, equal-game | +2.33 (−0.53 to +4.94) | 309,318 · 390 |
 
-The primary estimate is inconclusive. Its timeout screening and restart buffer use later event information, so the implemented sample is not fully identifiable at trade time. Cost results are counterfactual per-contract estimates, not realized trading profit.
+Equal-game and pooled-trade estimates use the full final-five 5–20¢ longshot sample but weight it differently; first-entry uses one trade per game. The game-weighted point estimate remains between +3.41 and +3.57 when any one game is omitted. Intervals are nominal and unadjusted across estimands. The quiet-stoppage interval includes zero, and timeout/restart filtering uses some later play-by-play information; its contrast with the full final-five estimate is descriptive, not causal.
+
+![Final-five longshot estimates by estimator](figures/phase5/final5_estimand_comparison.png)
 
 ### Retrospective-window selection check
 
@@ -55,6 +58,7 @@ The observation-count convention is unresolved, so this is a qualified compariso
 
 ## Tables and analysis files
 
+- [Matched-band final-five estimates](data/interim/phase5/phase5_final5_longshot_weighting.csv) · [recompute script](src/phase5_final5_longshot_weighting.py)
 - LaTeX tables: [primary and cost checks](tables/phase5/primary_estimand_band_tests.tex) · [paired residuals](tables/phase5/paired_residuals.tex) · [weighting sensitivity](tables/phase5/weighting_sensitivity.tex) · [calibration comparison](tables/phase5/replication_5a_d.tex)
 - [Analysis guide and reproduction limits](ANALYSIS_README.md) · [detailed results](RESULTS.md) · [Polymarket results](RESULTS_POLYMARKET.md) · [corrections and deviations](DEVIATIONS.md)
 
