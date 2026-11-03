@@ -5,8 +5,8 @@ Run from the project root:
         --output advisor_handoff_2026-11-03/TIMING_SENSITIVITY.json
 
 Requires the existing Phase 2 PBP/timeout cache and Phase 5 late-trade cache.
-This is an exploratory timing sensitivity, not a replacement for the
-pre-specified primary analysis.
+This is an exploratory timing sensitivity, a sensitivity analysis for the
+project-designated outcome estimate.
 """
 from __future__ import annotations
 
@@ -129,7 +129,7 @@ def main() -> None:
         }
 
     result = {
-        "status": "post-hoc sensitivity; does not replace the pre-specified primary",
+        "status": "post-hoc sensitivity to timeout eligibility; exact project-designated outcome-estimator/filter chronology is unverified",
         "definition": (
             "Preserves the existing Phase 2 interval exclusions and five-second restart buffer. "
             "For intervals containing a later foul/free-throw before the buffered endpoint, "

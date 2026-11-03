@@ -20,19 +20,25 @@
    the near-zero random-fold remainder is specific to trade weighting; the
    game-weighted and chronological holdout audits are less decisive. This is
    an outcome-conditioned measurement result, not a causal account of trader
-   behavior or ex-ante profits. A
+   behavior or ex-ante profits. A new post hoc matched-game comparison finds a
+   +3.89-point clock-minus-realized-end mean difference across 557 games
+   (95% CI +2.16 to +5.67), but the median difference is −0.09 and only 29%
+   of games are positive. The overtime-excluded diagnostic falls to +0.56
+   points and is outcome-dependent, so it is not confirmatory. A
    market-price-independent P* placebo shows similar curvature
    (α=1.482 [1.316, 1.703]), and the selection formula curve has α=1.350
    [1.216, 1.523].
-2. The pre-specified primary is the game-weighted final-five quiet-stoppage
-   estimate: A=price−Y is 2.33 price points [−0.53, 4.94], with one-sided
+2. The project-designated outcome estimate is the game-weighted final-five
+   quiet-stoppage estimate; its exact estimator and filter chronology is not
+   verified by a dated protocol: A=price−Y is 2.33 price points [−0.53, 4.94], with one-sided
    95% upper bound 4.51; its two-sided bootstrap test does not reject A=0
    (p=.0965). The planning MDE was 4.61 points at 80% power, so the interval
    does not exclude a gap near four to five points. On the quote-valid subset,
    the same-observation taker band is
    1.08 points [1.05, 1.11] and A minus cost is 1.15 [−1.62, 3.82]
    (one-sided p=.2065). First-entry and trade-weighted estimates are
-   sensitivities; the original pre-specified game-weighted estimate is primary.
+   sensitivities; the project record does not verify that this exact estimator
+   and its timeout/restart filters were fixed before outcome analysis.
    A manual remapping audit of the postponed GSW–MIN fixture found no
    qualifying trades under the primary or the headline 5–20¢ realized-end
    filters, so this omitted event does not change either headline estimate.
@@ -67,7 +73,7 @@ Describe the replicated curve as a result of a window anchored to the realized
 game end, and avoid attributing an error to Moshrefi's implementation. The
 selection and residual sections below give the methods and limits.
 
-Phases 1 through 4 were completed on 2026-10-21. Phase 5a's realized-end benchmark produces a similar fitted curvature but is not an exact replication because the paper's sample count cannot be reconciled. Phases 5b–5h are complete. Calibration fits are trade-weighted publication fits. For the pre-registered final-five quiet outcome estimand, game-weighting is primary; first-entry and trade-weighting are sensitivities. The separate 10–40¢ table retains first-entry as its headline under the earlier amendment and shows game- and trade-weighted sensitivities. The regenerated [weighting_sensitivity.tex](tables/phase5/weighting_sensitivity.tex) now labels the pre-specified primary correctly; it reports first-entry upper bounds as a sensitivity and omits the old mismatched cost-band tests.
+Phases 1 through 4 were completed on 2026-10-21. Phase 5a's realized-end benchmark produces a similar fitted curvature but is not an exact replication because the paper's sample count cannot be reconciled. Phases 5b–5h are complete. Calibration fits are trade-weighted publication fits. For the project-designated final-five quiet outcome, game-weighting is the reported estimator; no dated protocol verifies when its exact estimator and filters were fixed. The separate 10–40¢ table retains first-entry as its headline under the earlier amendment and shows game- and trade-weighted sensitivities. The regenerated [weighting_sensitivity.tex](tables/phase5/weighting_sensitivity.tex) reports the project-designated game-weighted estimate; it reports first-entry upper bounds as a sensitivity and omits the old mismatched cost-band tests.
 
 **Literature-positioning update (2026-10-22):** Moshrefi (2026) already reports
 expiry-related calibration changes in Kalshi sports markets, and a newly
@@ -343,7 +349,7 @@ The selected-team coordinate does not remove the (d)-window fit curvature (α=1.
 
 ### Primary estimand and calibration cells (5b)
 
-The pre-specified primary final-five quiet-stoppage sample has **309,318 trades across 390 games**. Using the Phase 4 seed-17 contract assignment, folded to the longshot side, the primary game-weighted estimate is A=`price − Y` **0.02332** (95% game-cluster bootstrap CI **[−0.00527, 0.04937]**). Equivalently, `Y − price = −0.02332` [−0.04937, 0.00527]. Mean longshot price is 0.11697; trade-weighted win frequency is 0.10346. The final-ten quiet-stoppage game-weighted estimate is secondary: A=0.02321 [0.00110, 0.04352], 520,103 trades, 622 games. Bootstrap draws: 2,000; primary seed 9142026. First-entry and trade-weighted quiet estimates are sensitivities.
+The project-designated final-five quiet-stoppage sample has **309,318 trade rows across 390 games**; its exact estimator and filter chronology is not independently verified. Using the Phase 4 seed-17 contract assignment, folded to the longshot side, the primary game-weighted estimate is A=`price − Y` **0.02332** (95% game-cluster bootstrap CI **[−0.00527, 0.04937]**). Equivalently, `Y − price = −0.02332` [−0.04937, 0.00527]. Mean longshot price is 0.11697; trade-weighted win frequency is 0.10346. The final-ten quiet-stoppage game-weighted estimate is secondary: A=0.02321 [0.00110, 0.04352], 520,103 trades, 622 games. Bootstrap draws: 2,000; primary seed 9142026. First-entry and trade-weighted quiet estimates are sensitivities.
 
 The other game-weighted calibration-cell output covers final 5/final 10, quiet/running, selected-contract price bin × tau bucket. It contains 258 populated cells with game-equal estimates and game-clustered 95% CIs: [phase5b_calibration_cells.csv](data/interim/phase5/phase5b_calibration_cells.csv). These cell fits are secondary calibration summaries; the trade-weighted publication fits headline calibration, while first-entry remains a sensitivity for quiet outcomes and the headline estimator for the separate 10–40¢ table under the earlier amendment.
 
@@ -353,7 +359,7 @@ Define `A = price − Y` for the folded longshot contract, so positive A is over
 
 A post-hoc dynamic timeout-cutoff sensitivity was computed from the cached Phase 2 PBP and Phase 5 late-trade data on 2026-11-03. It preserves the Phase 2 interval exclusions and the five-second restart buffer, but includes trades strictly before the first later foul/free-throw in intervals that the primary rule excluded in full. The baseline reproduces 309,318 trades / 390 games and +2.332 price points. The dynamic-cutoff sample adds 34,505 pre-event trades across 46 games and yields +2.036 points (411 games; 10,000-draw game-bootstrap 95% CI −0.773 to +4.589). The estimate remains inconclusive. This is a post-hoc sensitivity, not a replacement primary or a fully trade-time-identifiable estimate: it retains retrospective Phase 2 interval exclusions, the restart buffer, and uncertain common timestamp lag. Reproduce with `python src/phase5_dynamic_timeout_sensitivity.py --output timing_sensitivity.json`; The machine-readable summary is included as `TIMING_SENSITIVITY.json` in the advisor handoff package.
 
-The earlier Phase 5f band figures paired the full-sample A distribution with mean spread from only quote-valid rows; that denominator mismatch is superseded by the same-observation comparison in “Primary estimates, residuals, and fee bands” below. The pre-specified A=0 result remains a two-sided game-clustered bootstrap p=.0965. Historical KXNBAGAME maker-fee eligibility is unresolved, so all maker-formula comparisons are conditional.
+The earlier Phase 5f band figures paired the full-sample A distribution with mean spread from only quote-valid rows; that denominator mismatch is superseded by the same-observation comparison in “Primary estimates, residuals, and fee bands” below. The project-designated A=0 test has a two-sided game-clustered bootstrap p=.0965. Historical KXNBAGAME maker-fee eligibility is unresolved, so all maker-formula comparisons are conditional.
 
 ### Event decay shape (5c) and benchmark-free drift (5e)
 
@@ -454,13 +460,13 @@ All confidence intervals below are 95% game-cluster bootstrap intervals (2,000 d
 
 ### Figures and tables
 
-Figures: [pre-specified primary estimate and cost sensitivity](figures/phase5/registered_primary_estimate.pdf), [Kalshi/Polymarket calibration curves](figures/phase5/calibration_market_vs_pstar.pdf), [Kalshi/Polymarket Prelec α by window](figures/phase5/prelec_alpha_by_window.pdf), [wall-time distribution](figures/phase5/longshot_wall_time_distribution.pdf), and [5c response / 5e drift](figures/phase5/event_response_and_drift.pdf).
+Figures: [project-designated quiet-stoppage estimate and cost sensitivity](figures/phase5/quiet_stoppage_estimate_cost_sensitivity.pdf), [paired window contrast](figures/phase5/paired_window_contrast.png), [game-level paired-difference distribution](figures/phase5/paired_window_difference_ecdf.png), [Kalshi/Polymarket calibration curves](figures/phase5/calibration_market_vs_pstar.pdf), [Kalshi/Polymarket Prelec α by window](figures/phase5/prelec_alpha_by_window.pdf), [wall-time distribution](figures/phase5/longshot_wall_time_distribution.pdf), and [5c response / 5e drift](figures/phase5/event_response_and_drift.pdf).
 
 Tables: [5a replication](tables/phase5/replication_5a_d.tex), [P* placebo fits](tables/phase5/pstar_placebo.tex), [wall time and overtime](tables/phase5/mechanism_walltime_overtime.tex), [primary estimand and fee bands](tables/phase5/primary_estimand_band_tests.tex), [paired residuals](tables/phase5/paired_residuals.tex), and [Moshrefi 10–40¢ claim](tables/phase5/moshrefi_10_40_claim.tex), [weighting sensitivity](tables/phase5/weighting_sensitivity.tex), and [Kalshi/Polymarket mechanism comparison](tables/phase5/mechanism_platform_comparison.tex).
 
 ### Estimator comparisons
 
-For every 10–40¢ window and both sources, the linked table headlines first-entry estimates and shows pre-registered game-weighted and pooled trade-weighted sensitivity columns for win rate and Y−p, with counts and 95% game-clustered CIs. The primary and final-10 quiet rows report A=p−Y in the same order. Knowable calibration has 36 rows: nine bins × two probability sources × trade-weighted/first-entry; each row includes mean P, observed Y, trade/game counts, and game-clustered 95% CIs. Source: [weighting_sensitivity.tex](tables/phase5/weighting_sensitivity.tex), [phase5_weighting_estimators.csv](data/interim/phase5/phase5_weighting/phase5_weighting_estimators.csv), and [phase5_knowable_weighting_bins.csv](data/interim/phase5/phase5_weighting/phase5_knowable_weighting_bins.csv). The weighting amendment is recorded in [DEVIATIONS.md](DEVIATIONS.md).
+For every 10–40¢ window and both sources, the linked table headlines first-entry estimates and shows project-designated game-weighted and pooled trade-weighted sensitivity columns for win rate and Y−p, with counts and 95% game-clustered CIs. The primary and final-10 quiet rows report A=p−Y in the same order. Knowable calibration has 36 rows: nine bins × two probability sources × trade-weighted/first-entry; each row includes mean P, observed Y, trade/game counts, and game-clustered 95% CIs. Source: [weighting_sensitivity.tex](tables/phase5/weighting_sensitivity.tex), [phase5_weighting_estimators.csv](data/interim/phase5/phase5_weighting/phase5_weighting_estimators.csv), and [phase5_knowable_weighting_bins.csv](data/interim/phase5/phase5_weighting/phase5_knowable_weighting_bins.csv). The weighting amendment is recorded in [DEVIATIONS.md](DEVIATIONS.md).
 
 ### 5a qualified benchmark comparison and calibration fits
 
@@ -495,7 +501,7 @@ The corrected in-game-only knowable sample has 2,615,732 trades / 1,210 games. M
 
 ### Primary estimates, residuals, and fee bands
 
-The pre-specified primary is the **game-weighted** final-five quiet longshot estimate: A_market=price−Y is 0.02332 [−0.00527, 0.04937], across 309,318 trades / 390 games; two-sided bootstrap p(A=0)=0.0965 and one-sided 95% upper bound is 0.04513. A_P*=P*−Y is 0.04398 [0.01493, 0.07137], as a benchmark sensitivity. The trade-weighted and first-entry estimates are sensitivities. The final-ten quiet sample is secondary (520,103 trades / 622 games): A_market=0.02321 [0.00110, 0.04352]; A_P*=0.03513 [0.01301, 0.05609]. The paired price−P* figures previously displayed for market-price bands are UNINTERPRETABLE and removed from thesis tables because the bands condition on market value. P* and market outcomes are folded to the same selected-team contract side. Source: [paired_residuals.tex](tables/phase5/paired_residuals.tex).
+The project-designated outcome estimate is the **game-weighted** final-five quiet longshot estimate; its exact specification chronology is unverified: A_market=price−Y is 0.02332 [−0.00527, 0.04937], across 309,318 trades / 390 games; two-sided bootstrap p(A=0)=0.0965 and one-sided 95% upper bound is 0.04513. A_P*=P*−Y is 0.04398 [0.01493, 0.07137], as a benchmark sensitivity. The trade-weighted and first-entry estimates are sensitivities. The final-ten quiet sample is secondary (520,103 trades / 622 games): A_market=0.02321 [0.00110, 0.04352]; A_P*=0.03513 [0.01301, 0.05609]. The paired price−P* figures previously displayed for market-price bands are UNINTERPRETABLE and removed from thesis tables because the bands condition on market value. P* and market outcomes are folded to the same selected-team contract side. Source: [paired_residuals.tex](tables/phase5/paired_residuals.tex).
 
 ### Constant timestamp-offset sensitivity
 
@@ -511,7 +517,7 @@ The band is defined by market price; P* is evaluated on those same trades. Value
 
 Knowable-window calibration bins for trade-weighted and first-entry observations, including trade/game counts, mean probability, observed frequency, and 95% clustered intervals, are in [phase5_knowable_weighting_bins.csv](data/interim/phase5/phase5_weighting/phase5_knowable_weighting_bins.csv). The full knowable sample contains 2,615,732 trades / 1,210 games.
 
-First-entry sensitivity estimates (95% two-sided CI; one-sided 95% upper bound): primary final-five quiet A_market=.01154 [−.01918,.04136]; U=.03729; A_P*=.02418 [−.00640,.05465]; U=.05023. Final-ten quiet A_market=.01613 [−.00671,.03880]; U=.03590; A_P*=.02182 [−.00223,.04476]; U=.04247. These are sensitivity estimates, not the pre-specified primary. The regenerated [weighting_sensitivity.tex](tables/phase5/weighting_sensitivity.tex) shows these first-entry upper bounds separately; its prior first-entry-primary caption and cost tests with mismatched quote coverage have been removed. The separate 10–40¢ table still headlines first-entry by the earlier estimator amendment.
+First-entry sensitivity estimates (95% two-sided CI; one-sided 95% upper bound): primary final-five quiet A_market=.01154 [−.01918,.04136]; U=.03729; A_P*=.02418 [−.00640,.05465]; U=.05023. Final-ten quiet A_market=.01613 [−.00671,.03880]; U=.03590; A_P*=.02182 [−.00223,.04476]; U=.04247. These are sensitivity estimates, not the project-designated game-weighted outcome estimate. The regenerated [weighting_sensitivity.tex](tables/phase5/weighting_sensitivity.tex) shows these first-entry upper bounds separately; its prior first-entry-primary caption and cost tests with mismatched quote coverage have been removed. The separate 10–40¢ table still headlines first-entry by the earlier estimator amendment.
 
 ### Selection diagnostics and mechanisms
 
@@ -722,7 +728,7 @@ January 24 was separately remapped to its ESPN completed-game record for
 January 25 and its 29,336 in-game market rows were aligned in a sidecar.
 It contributes zero final-five quiet-stoppage longshot trades and zero
 5–20¢ trades in the ten-minute realized-end window; adding it therefore does
-not alter the pre-specified primary or headline selection diagnostic. This
+not alter the project-designated quiet-stoppage estimate or headline selection diagnostic. This
 resolves the linkage question without changing the canonical sample. Details
 and reproduction are in [DEVIATIONS.md](DEVIATIONS.md) and
 `make phase5-postponed-game-sensitivity`.
@@ -1343,11 +1349,11 @@ validation. Full estimates are in
 [`phase5_crossfit_benchmark_sensitivity.csv`](data/interim/phase5/phase5_crossfit_benchmark_sensitivity.csv).
 Reproduce with `make phase5-crossfit-benchmark-sensitivity`.
 
-The pre-specified primary Kalshi estimate was also recalculated after excluding
+The project-designated quiet-stoppage Kalshi estimate was also recalculated after excluding
 games with more than five backward ESPN wall-clock steps. The full sample's
 equal-game overpricing estimate was +2.33 points (390 games; diagnostic
 10,000-draw bootstrap 95% CI −0.52 to +4.97); excluding flagged games gave
-+2.43 points (291 games; CI −0.73 to +5.29). The registered 2,000-draw
++2.43 points (291 games; CI −0.73 to +5.29). The original 2,000-draw
 interval remains −0.53 to +4.94. Thus the point estimate barely changes,
 while uncertainty increases. In 390 leave-one-game-out estimates, every estimate remained
 positive and ranged from +2.29 to +2.58 points. This says no single game or

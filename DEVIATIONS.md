@@ -201,6 +201,10 @@ because fill rows need not match fee-assessed orders. No execution or strategy
 P&L is inferred. See `src/phase5_primary_costs.py` and
 `data/interim/phase5/phase5_primary_costs.json`.
 
+### Specification chronology clarification (2026-11-03)
+
+Earlier notes in this file described the final-five quiet-stoppage game-weighted estimate as registered or pre-registered. A later review found no dated protocol in the project record that verifies when the exact `p − Y` estimator and timeout/restart filters were fixed. The current thesis therefore calls this estimate project-designated, not independently verified as preregistered. This clarification supersedes any earlier wording that implies the surviving record independently establishes those exact choices.
+
 ## Reproduction and sample-extension inventory
 
 `make phase5` provides the Phase 5 cached-data runner, with a preflight for

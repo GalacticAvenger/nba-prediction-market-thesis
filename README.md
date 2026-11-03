@@ -23,13 +23,17 @@ The cross-fitted model reproduces the pooled retrospective gap, but equal-game a
 
 ![Paired game-level difference between clock and realized-end windows](figures/phase5/paired_window_contrast.png)
 
+![Distribution of game-level paired window differences, showing the mean and median](figures/phase5/paired_window_difference_ecdf.png)
+
 ![Final-five game-equal and pooled estimates across price bands](figures/phase5/final5_estimand_comparison.png)
+
+![Project-designated quiet-stoppage estimate and estimated cost sensitivity](figures/phase5/quiet_stoppage_estimate_cost_sensitivity.png)
 
 ## Analysis materials
 
 - [Analysis and reproduction guide](ANALYSIS_README.md) · [Detailed results](RESULTS.md) · [Polymarket results](RESULTS_POLYMARKET.md)
 - [Cross-fit diagnostic](data/interim/phase5/phase5_crossfit_selection_diagnostic.json) · [Inference audit](data/interim/phase5/phase5_selection_inference_audit.json) · [Chronological validation](data/interim/phase5/phase5_temporal_selection_validation.json)
-- [Paired window comparison](data/interim/phase5/phase5_paired_window_contrast.json) · [Planned-primary cost results](data/interim/phase5/phase5_primary_costs.json) · [Weighting contrasts](data/interim/phase5/phase5_final5_estimand_contrasts.csv)
+- [Paired window comparison](data/interim/phase5/phase5_paired_window_contrast.json) · [Per-game paired differences](data/interim/phase5/phase5_paired_window_game_differences.csv) · [Project-designated quiet-stoppage cost results](data/interim/phase5/phase5_primary_costs.json) · [Weighting contrasts](data/interim/phase5/phase5_final5_estimand_contrasts.csv)
 - [Paired comparison code](src/phase5_paired_window_contrast.py) · [Cross-fit code](src/phase5_crossfit_selection_diagnostic.py) · [Weighting-audit code](src/phase5_weighting_audit.py) · [Specification status](SPECIFICATION_STATUS.md) · [Corrections and deviations](DEVIATIONS.md)
 - [Earlier draft v1](archive/v1_2026-11-03/Current_Thesis_Draft_v1.md) · [Draft v2](archive/v2_2026-11-03/Current_Thesis_Draft_v2.md) · [Draft v3](archive/v3_2026-11-03/Current_Thesis_Draft_v3.md) · [Draft v4](archive/v4_2026-11-03/Current_Thesis_Draft_v4.md)
 

@@ -22,6 +22,7 @@ Weighting contrasts are secondary. In the full final-five 5–20¢ cohort, the g
 - `THESIS_STRATEGY.md`, `WALLET_STUDY.md`, `RECON.md`, `PREDICTIONS.md`, `PROSPECTIVE_POLYMARKET_PROTOCOL.md`, `SPECIFICATION_STATUS.md`: project design and source documentation.
 - `src/*.py`, `config.yaml`, `requirements.txt`, and `Makefile`: analysis code and settings.
 - `data/interim/phase5/phase5_crossfit_selection_diagnostic.json`, `phase5_selection_inference_audit.json`, `phase5_temporal_selection_validation.json`, `phase5_paired_window_contrast.json`, and `phase5_primary_costs.json`: main result summaries.
+- `phase5_paired_window_game_differences.csv`: one row per game and window pair, used for the empirical distribution figure.
 
 ## Reproduction
 
@@ -33,7 +34,7 @@ python github_release/src/phase5_paired_window_contrast.py \
   --output-dir github_release/data/interim/phase5
 ```
 
-The paired window bootstrap resamples the common games jointly for each pair of window estimates (20,000 draws; fixed seeds recorded in the JSON). The source script records both the mean paired difference and its median, plus an overtime-excluded diagnostic. The latter is labeled as post-outcome-selected and is not used for confirmatory inference.
+The paired window bootstrap resamples the common games jointly for each pair of window estimates (20,000 draws; fixed seeds recorded in the JSON). The source script records per-game differences, the mean and median paired difference, and an overtime-excluded diagnostic. The latter is labeled as post-outcome-selected and is not used for confirmatory inference. The ECDF figure displays the full per-game distribution without smoothing or trimming.
 
 The retrospective cross-fit, inference audit, and chronological validation can be rerun with `make phase5-crossfit-selection-diagnostic`, `make phase5-selection-inference-audit`, and `make phase5-temporal-selection-validation` in the full source workspace. The weighting audit uses 10,000 paired game-bootstrap draws (seeds 6102126 and 6102127). Its intervals are nominal and are not adjusted across price bands or estimands.
 

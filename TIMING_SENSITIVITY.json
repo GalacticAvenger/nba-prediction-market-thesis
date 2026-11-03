@@ -1,5 +1,5 @@
 {
-  "status": "post-hoc sensitivity; does not replace the pre-specified primary",
+  "status": "post-hoc sensitivity; the project-designated quiet-stoppage outcome estimate has unverified exact estimator/filter chronology",
   "definition": "Preserves the existing Phase 2 interval exclusions and five-second restart buffer. For intervals containing a later foul/free-throw before the buffered endpoint, adds trades strictly before the first such PBP event. Existing eligible quiet timeout and quarter-break trades remain included.",
   "inference": {
     "draws": 10000,
