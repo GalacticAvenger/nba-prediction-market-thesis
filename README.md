@@ -1,6 +1,6 @@
 # Late-game NBA prediction markets
 
-Working thesis on late-game NBA prediction-market pricing. [Read the current draft](Current_Thesis_Draft.md) · [Word version](Current_Thesis_Draft.docx)
+Working thesis on late-game NBA prediction-market pricing. [Read the current draft](Current_Thesis_Draft.md) · [Word version](Current_Thesis_Draft.docx) · [PDF version](Current_Thesis_Draft.pdf)
 
 ## Main finding
 
