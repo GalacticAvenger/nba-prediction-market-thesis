@@ -1,65 +1,45 @@
 # Late-game NBA prediction markets
 
-Working thesis on late-game NBA prediction-market pricing. [Read the current draft](Current_Thesis_Draft.md) · [Word version](Current_Thesis_Draft.docx) · [PDF version](Current_Thesis_Draft.pdf)
+Working thesis and analysis package. [Current draft (PDF)](Current_Thesis_Draft.pdf) · [Word](Current_Thesis_Draft.docx) · [Markdown](Current_Thesis_Draft.md)
 
-## Main finding
+## Main final-five results
 
-| Sample and estimator | Price − payoff (pp; 95% CI) | Trades · games |
+| Price band / estimator | Price − payoff (pp; nominal 95% CI) | Band cohort rows · games |
 |---|---:|---:|
-| Final five, equal-game | **+3.44** (+1.76 to +5.01) | 1,681,533 · 684 |
-| Final five, pooled trade | +1.28 (−2.39 to +4.41) | 1,681,533 · 684 |
-| Final five, first entry per game | −0.60 (−3.26 to +1.89) | 684 · 684 |
-| Final five quiet stoppages, equal-game | +2.33 (−0.53 to +4.94) | 309,318 · 390 |
+| 5–20¢, game-equal | **+3.44** (+1.74 to +5.03) | 1,681,533 · 684 |
+| 5–20¢, pooled trade rows | +1.28 (−2.32 to +4.43) | 1,681,533 · 684 |
+| 5–20¢, earliest-timestamp tie-group mean | −0.62 (−3.25 to +1.90) | 1,681,533 · 684 |
+| 10–40¢, game-equal | **+7.62** (+5.68 to +9.52) | 2,455,553 · 579 |
+| 10–40¢, pooled trade rows | +0.76 (−2.71 to +4.25) | 2,455,553 · 579 |
+| 10–40¢, earliest-timestamp tie-group mean | +0.46 (−2.82 to +3.80) | 2,455,553 · 579 |
 
-Equal-game and pooled-trade estimates use the full final-five 5–20¢ longshot sample but weight it differently; first-entry uses one trade per game. The game-weighted point estimate remains between +3.41 and +3.57 when any one game is omitted. Intervals are nominal and unadjusted across estimands. The quiet-stoppage interval includes zero, and timeout/restart filtering uses some later play-by-play information; its contrast with the full final-five estimate is descriptive, not causal.
+The earliest-timestamp mean averages 1,918 rows (5–20¢) and 1,230 rows (10–40¢); the other estimators use all band cohort rows.
 
-![Final-five longshot estimates by estimator](figures/phase5/final5_estimand_comparison.png)
+![Final-five game-equal and pooled estimates across price bands](figures/phase5/final5_estimand_comparison.png)
 
-### Retrospective-window selection check
+| Paired contrast | Difference (pp; nominal 95% CI) |
+|---|---:|
+| 5–20¢: game-equal − pooled | +2.16 (−0.15 to +4.87) |
+| 10–40¢: game-equal − pooled | +6.86 (+4.78 to +9.17) |
 
-| Venue, final 10 minutes before last play | Observed win rate − price | Selection-model prediction | Remainder | Sample |
-|---|---:|---:|---:|---:|
-| Kalshi | −6.24 | −6.24 | 0.00 | 532,303 trades · 561 games |
-| Polymarket | −6.41 | −6.39 | −0.02 | 49,659 fills · 265 games |
+The 5–20¢ paired contrast includes zero. The 10–40¢ contrast is an unadjusted sensitivity result; the bands overlap and estimator chronology is not fully verified. Price bands cover 684/1,211 (56.5%) and 579/1,211 (47.8%) games with any final-five trade, respectively. Timestamps tie in 322/684 and 200/579 games at the earliest eligible row; see the draft for the tie audit. These are descriptive price-outcome summaries, not evidence of live mispricing or profitability.
 
-These pooled results are sensitive to weighting and chronology. The equal-game remainder is −0.98 points for Kalshi (95% CI −2.17 to +0.35) and +2.89 for Polymarket (−0.13 to +6.19). A later-game Kalshi holdout gives +1.89 (−3.68 to +9.41). This is predictive accounting, not causal evidence.
+At Q4 0:00, 10 focal-band rows and 17,866 rows in the 10–40¢ band occur after the last ESPN Q4 play. Trimming them barely changes the focal result; the broader-band paired contrast remains positive (+6.71 pp, nominal 95% CI +4.57 to +9.04). Because timestamps do not establish whether play had ended, this is a sensitivity check rather than a correction.
 
-### Calibration comparison
+## Retrospective selection check
 
-| Sample | Prelec curvature α (95% CI) | Trades · games |
+| Venue, final 10 minutes before last play | Observed win rate − price | Model prediction |
 |---|---:|---:|
-| Moshrefi near-expiry reference | 1.516 | 327,473 |
-| Thesis, March 1–May 15 | 1.674 (1.125 to 2.499) | 659,214 · 334 |
-| Thesis, full regular season | 1.526 (1.311 to 1.856) | 2,524,781 · 1,202 |
+| Kalshi | −6.24 pp | −6.24 pp |
+| Polymarket | −6.41 pp | −6.39 pp |
 
-The observation-count convention is unresolved, so this is a qualified comparison, not an exact replication.
+This post-hoc pooled fit is less decisive under equal-game and later-game checks. It is predictive accounting, not causal evidence.
 
-## Figures
+## Other useful materials
 
-### Primary estimate and cost sensitivity
+- [Analysis and reproduction guide](ANALYSIS_README.md) · [Detailed results](RESULTS.md) · [Polymarket results](RESULTS_POLYMARKET.md)
+- [Paired estimator contrasts](data/interim/phase5/phase5_final5_estimand_contrasts.csv) · [Clock-zero sensitivity](data/interim/phase5/phase5_clock_zero_edge_sensitivity.csv) · [Game diagnostics](data/interim/phase5/phase5_final5_game_diagnostics.csv) · [Trade-count deciles](data/interim/phase5/phase5_final5_trade_row_deciles.csv)
+- [Weighting-audit code](src/phase5_weighting_audit.py) · [Clock-zero audit code](src/phase5_clock_zero_edge_audit.py) · [Specification status](SPECIFICATION_STATUS.md) · [Corrections and deviations](DEVIATIONS.md)
+- [Earlier draft v1](archive/v1_2026-11-03/Current_Thesis_Draft_v1.md) · [Prior draft v2](archive/v2_2026-11-03/Current_Thesis_Draft_v2.md)
 
-![Primary estimate and cost sensitivity](figures/phase5/prespecified_primary_estimate.png)
-
-### Retrospective-window selection validation
-
-![Cross-fitted selection validation](figures/phase5/crossfit_selection_validation.png)
-
-### Market calibration versus game-state benchmark
-
-![Calibration by window](figures/phase5/calibration_market_vs_pstar.png)
-
-### Curvature by window
-
-![Prelec curvature by window](figures/phase5/prelec_alpha_by_window.png)
-
-### Event response and price drift
-
-![Event response and drift](figures/phase5/event_response_and_drift.png)
-
-## Tables and analysis files
-
-- [Matched-band final-five estimates](data/interim/phase5/phase5_final5_longshot_weighting.csv) · [recompute script](src/phase5_final5_longshot_weighting.py)
-- LaTeX tables: [primary and cost checks](tables/phase5/primary_estimand_band_tests.tex) · [paired residuals](tables/phase5/paired_residuals.tex) · [weighting sensitivity](tables/phase5/weighting_sensitivity.tex) · [calibration comparison](tables/phase5/replication_5a_d.tex)
-- [Analysis guide and reproduction limits](ANALYSIS_README.md) · [detailed results](RESULTS.md) · [Polymarket results](RESULTS_POLYMARKET.md) · [corrections and deviations](DEVIATIONS.md)
-
-The repository includes code and compact result summaries. The approximately 38 GB raw and intermediate data cache is not included, so full reproduction requires those local inputs. The repository is private and has no license selected.
+The repository contains code and selected summaries but omits approximately 38 GB of raw/intermediate caches. Full reproduction requires the original project workspace inputs.

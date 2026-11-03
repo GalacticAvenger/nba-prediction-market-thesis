@@ -1,48 +1,40 @@
 # Senior thesis analysis package
 
-Prepared on November 3, 2026. This repository accompanies `Current_Thesis_Draft.docx` and is intended to make the completed analysis legible and reproducible. The thesis is a working draft; it is not a final submission. Version 1 is preserved in `archive/v1_2026-11-03/`.
+Prepared November 3, 2026. This repository accompanies `Current_Thesis_Draft.docx` and preserves the earlier manuscript snapshots. Version 1 is in `archive/v1_2026-11-03/`; the draft immediately before the current weighting/tie revision is in `archive/v2_2026-11-03/`.
 
-## Main finding
+## Key result and limits
 
-For 5–20¢ Kalshi longshot trades in the final five regulation minutes, the equal-game price-minus-payoff estimate is +3.44 percentage points (nominal 95% game-bootstrap CI +1.76 to +5.01; 1,681,533 trades; 684 games). The pooled-trade estimator on those rows is +1.28 (−2.39 to +4.41); the first-entry estimator, using one trade per game, is −0.60 (−3.26 to +1.89). Only the unadjusted equal-game interval excludes zero. Leave-one-game-out game-weighted estimates range from +3.41 to +3.57 points. Because the estimator chronology is not fully documented, treat these intervals as descriptive rather than confirmatory.
+The final-five 5–20¢ sample has a +3.44 pp game-equal estimate (nominal 95% game-bootstrap CI +1.74 to +5.03; 1,681,533 rows; 684 games) and +1.28 pp pooled-trade estimate (−2.32 to +4.43). Their paired contrast is +2.16 pp (−0.15 to +4.87), which includes zero. In the separately listed 10–40¢ band, the estimates are +7.62 game-equal and +0.76 pooled; the paired contrast is +6.86 (+4.78 to +9.17). This latter interval is an unadjusted sensitivity result, not independent confirmation. The bands overlap. Both estimands condition on a game having at least one eligible final-five trade.
 
-The narrower quiet-stoppage estimate is +2.33 points (−0.53 to +4.94; 309,318 trades; 390 games). It is inconclusive, and timeout/restart filters use later event information. Its contrast with the full final-five estimate is descriptive, not a causal stoppage effect. The same-observation gap after estimated taker fees and half-spread is +1.15 points (−1.62 to +3.82; 251,686 quote-valid trades / 376 games); this is counterfactual cost accounting, not realized profit.
+The earlier first-row-per-game estimate depended on input row order when multiple trades shared the earliest timestamp. The revised tie-group mean averages all rows at that timestamp before averaging across games: 1,918 earliest-timestamp rows in the 5–20¢ cohort and 1,230 in 10–40¢. Timestamp precision does not identify within-timestamp order. The full cohort counts (1,681,533 and 2,455,553) apply to the game-equal and pooled estimators.
 
-A separate post-hoc model predicts the pooled trade-weighted gap in the ten minutes before the final ESPN play on Kalshi and Polymarket. Equal-game and chronological holdout results are less decisive. This is predictive accounting, not causal identification or evidence prices were correct during play.
+A separate alignment sensitivity check finds 10 Q4 0:00 rows in the focal band and 17,866 in 10–40¢ after the last ESPN Q4 play. Trimming those rows leaves the focal contrast unchanged; the 10–40¢ contrast moves from +6.86 to +6.71 pp (nominal 95% CI +4.57 to +9.04). The trim is diagnostic because these timestamps alone do not establish when play ended.
 
-## Included
+The separate quiet-stoppage estimate is +2.33 pp (−0.53 to +4.94; 309,318 trade rows; 390 games); its timeout/restart filters use some later event information. The retrospective-end cross-fit is post hoc. None of these establishes live mispricing, causal effects, or realized profitability.
 
-- `Current_Thesis_Draft.md` and `.docx`: revised working manuscript. `archive/v1_2026-11-03/` preserves the previous version.
-- `RESULTS.md`, `RESULTS_POLYMARKET.md`, `DEVIATIONS.md`: detailed research record, platform results, and corrections. Read the correction notes and supersession labels before using old values.
-- `THESIS_STRATEGY.md`, `WALLET_STUDY.md`, `RECON.md`, `PREDICTIONS.md`, `PROSPECTIVE_POLYMARKET_PROTOCOL.md`, `SPECIFICATION_STATUS.md`: design, claim, source, and exploratory-analysis documentation.
-- `src/*.py`, including `phase5_final5_longshot_weighting.py`, `phase5_dynamic_timeout_sensitivity.py`, `config.yaml`, `requirements.txt`, and `Makefile`: analysis source and settings. Generated Python bytecode is omitted.
-- Final Phase 5 tables and figures, selected machine-readable CSV/JSON summaries for Phase 5 and the later wallet analyses, and `TIMING_SENSITIVITY.json`, the post-hoc dynamic timeout sensitivity output.
-- Original proposal PDF for context.
+## Contents
 
-The earlier two-page update and AI-generated research summary are not included as canonical analysis: they are short summaries and the AI summary is not a substitute for the current working draft. Project notes describe the quiet-stoppage estimate as planned, but I have not verified a dated protocol fixing the exact estimator and timeout/restart filters before results. The manuscript discloses this and does not describe the result as independently verified confirmatory evidence.
+- `Current_Thesis_Draft.md`, `.docx`, `.pdf`: current working manuscript.
+- `archive/`: preserved prior manuscripts.
+- `RESULTS.md`, `RESULTS_POLYMARKET.md`, `DEVIATIONS.md`: analysis record, platform results, and corrections.
+- `THESIS_STRATEGY.md`, `WALLET_STUDY.md`, `RECON.md`, `PREDICTIONS.md`, `PROSPECTIVE_POLYMARKET_PROTOCOL.md`, `SPECIFICATION_STATUS.md`: research design and data/source documentation.
+- `src/*.py`, `config.yaml`, `requirements.txt`, and `Makefile`: analysis source and settings.
+- `data/interim/phase5/phase5_final5_estimand_contrasts.csv`: both bands’ estimates and paired game-bootstrap contrasts.
+- `data/interim/phase5/phase5_final5_estimand_diagnostics.json`: coverage, tie, leave-one-game-out, and trade-count diagnostics.
+- `data/interim/phase5/phase5_final5_game_diagnostics.csv`: game-level inputs underlying the weighting summaries.
+- `data/interim/phase5/phase5_final5_trade_row_deciles.csv`: exploratory trade-count deciles.
+- `data/interim/phase5/phase5_clock_zero_edge_sensitivity.csv`: paired estimates with and without Q4 0:00 rows timestamped after the last ESPN Q4 play.
 
-## Data and reproduction
+## Reproduction
 
-The source workspace contains approximately 38 GB of raw and intermediate data across roughly 100,000 files. Those caches are not included in this repository. Main market and Polymarket inputs cover the 2025–26 season; ESPN play-by-play training data cover earlier seasons. Reproduction requires the cached files noted in `RESULTS.md` and `RESULTS_POLYMARKET.md`.
+The source workspace contains approximately 38 GB of raw/intermediate data, which are not included here. Full reproduction requires those cached inputs. With the Phase 5 late-trade panel available, run:
 
-With the project’s existing cache in place, run `make phase5` from the project root to regenerate the core Phase 5 analyses, figures, and tables. This cached-data workflow does not fetch source data. Recompute the matched-band final-five weighting comparison with `python src/phase5_final5_longshot_weighting.py --input <path-to-phase5_late_trades.parquet> --output data/interim/phase5/phase5_final5_longshot_weighting.csv` from the release folder. The post-hoc timing sensitivity can be regenerated with `python src/phase5_dynamic_timeout_sensitivity.py --output timing_sensitivity.json`. The wallet-profile analysis can be reproduced from its cached inputs with `make phase6-wallet-execution-style-analysis`, `make phase6-wallet-execution-style-decomposition`, `make phase6-taker-flow-impact`, and `make phase6-wallet-inventory-opportunity`. Targets that retrieve wallet histories or call the Polygon RPC require network access and are not needed to reproduce the main Phase 5 estimates.
+```sh
+python src/phase5_weighting_audit.py \
+  --input /path/to/phase5_late_trades.parquet \
+  --output-dir data/interim/phase5
+```
 
-No result in this package should be read without its sample definition, weighting, and correction status. In particular:
+The weighting analysis uses 10,000 paired game-cluster bootstrap draws for each band (seeds 6102126 and 6102127). The optional clock-zero alignment check can be regenerated with `src/phase5_clock_zero_edge_audit.py`, supplying both the late-trade cache and `pbp_derived_regular.parquet`; it uses the same draws and seeds for paired contrasts. Its percentile intervals are nominal and not adjusted for multiple comparisons. The weighting identity is descriptive, not causal. Other core Phase 5 analyses can be regenerated with `make phase5` from the complete project workspace; this release copy alone does not contain all inputs needed by that target.
 
-1. Equal-game, pooled-trade, and first-entry final-five estimates differ materially; the thesis reports them side by side and does not treat them as interchangeable.
-2. The Moshrefi comparison is qualified; the observation-count convention is unresolved.
-3. Overtime-excluded estimates are invalid for inference because overtime status depends on the realized path.
-4. A historical Polymarket winner-mapping error affected earlier residual estimates; only corrected token-based results are current.
-5. Market-price-minus-P* results within market-price-selected bands are marked uninterpretable and are excluded from claims.
-6. Polymarket account labels are observable proxies; wallet analyses are exploratory, selected, and not causal.
-
-## Quick file map
-
-- `tables/phase5/`: primary estimand, cost, calibration, selection, and sensitivity tables.
-- `figures/phase5/`: calibration, primary-estimate, event-response, and selection figures.
-- `data/interim/phase5/`: selected CSV/JSON result summaries and analysis caches in the original project; the large Parquet caches are not in this package.
-- `data/interim/phase6/`: selected wallet-analysis summaries; complete original cached inputs remain in the project workspace.
-
-## Curvature sample labels
-
-The full-season final-ten-minute Kalshi fit is α=1.526 (95% CI 1.311–1.856; 2,524,781 trades / 1,202 games). The paper-date comparison window (March 1–May 15, 2026) is α=1.674 (95% CI 1.125–2.499; 659,214 trades / 334 games). The paper’s reported 327,473-observation convention remains unreconciled. These are distinct samples; see the corrected opening summary and detailed tables in `RESULTS.md`.
+No result should be interpreted without its sample, outcome, weighting rule, and correction status. In particular, market-price-minus-`P*` estimates within market-price-selected bands are not used as claims; the Moshrefi comparison is not an exact replication; Polymarket account labels are observable proxies; and wallet analyses remain exploratory.

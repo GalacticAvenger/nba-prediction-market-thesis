@@ -1,0 +1,88 @@
+{
+  "5_20c": {
+    "band": "5_20c",
+    "eligible_trade_rows": 1681533,
+    "panel_games": 1211,
+    "games_with_at_least_one_late5_trade": 1211,
+    "eligible_games": 684,
+    "share_of_late5_trade_games_with_band_trade": 0.564822460776218,
+    "mean_eligible_trade_rows_per_game": 2458.3815789473683,
+    "median_eligible_trade_rows_per_game": 1794.5,
+    "top_1_game_share_of_trade_rows": 0.011095827438414828,
+    "top_5_games_share_of_trade_rows": 0.04758039241573017,
+    "top_10_games_share_of_trade_rows": 0.08376166272086245,
+    "equal_game_minus_pooled_trade_row_pp": 2.15984215781819,
+    "equal_minus_pooled_covariance_identity_pp": 2.1598421578181903,
+    "leave_one_game_out_equal_game_range_pp": [
+      3.413968311452827,
+      3.5729768756157383
+    ],
+    "leave_one_game_out_pooled_trade_row_range_pp": [
+      1.1708658591188832,
+      2.2447796737577983
+    ],
+    "pearson_log_trade_rows_vs_game_gap": -0.01477192235729447,
+    "pearson_log_trade_rows_vs_game_gap_ci95": [
+      -0.08520638227371333,
+      0.06697581667284745
+    ],
+    "spearman_log_trade_rows_vs_game_gap": 0.3222520727556087,
+    "spearman_log_trade_rows_vs_game_gap_ci95": [
+      0.24569766033336027,
+      0.3960917135761948
+    ],
+    "games_with_multiple_rows_at_earliest_timestamp": 322,
+    "games_with_different_outcomes_across_earliest_timestamp_ties": 123,
+    "max_rows_tied_at_earliest_timestamp": 41,
+    "single_row_tie_break_point_bound_pp": [
+      -0.918128654970761,
+      -0.3143274853801175
+    ],
+    "bootstrap_draws": 10000,
+    "seed": 6102126,
+    "interpretation": "Descriptive, post hoc estimand audit; intervals are nominal and unadjusted across bands and estimands."
+  },
+  "10_40c": {
+    "band": "10_40c",
+    "eligible_trade_rows": 2455553,
+    "panel_games": 1211,
+    "games_with_at_least_one_late5_trade": 1211,
+    "eligible_games": 579,
+    "share_of_late5_trade_games_with_band_trade": 0.47811725846407926,
+    "mean_eligible_trade_rows_per_game": 4241.024179620034,
+    "median_eligible_trade_rows_per_game": 3416.0,
+    "top_1_game_share_of_trade_rows": 0.01225833854940211,
+    "top_5_games_share_of_trade_rows": 0.04704968697478735,
+    "top_10_games_share_of_trade_rows": 0.08045804753552459,
+    "equal_game_minus_pooled_trade_row_pp": 6.861690579701599,
+    "equal_minus_pooled_covariance_identity_pp": 6.8616905797016,
+    "leave_one_game_out_equal_game_range_pp": [
+      7.579121610405082,
+      7.772678673341262
+    ],
+    "leave_one_game_out_pooled_trade_row_range_pp": [
+      0.6046967334082524,
+      1.638475364574648
+    ],
+    "pearson_log_trade_rows_vs_game_gap": -0.20193216656035984,
+    "pearson_log_trade_rows_vs_game_gap_ci95": [
+      -0.24587072988993736,
+      -0.15788553105370576
+    ],
+    "spearman_log_trade_rows_vs_game_gap": -0.08903976829264404,
+    "spearman_log_trade_rows_vs_game_gap_ci95": [
+      -0.17351242683738552,
+      -0.0026027040295386293
+    ],
+    "games_with_multiple_rows_at_earliest_timestamp": 200,
+    "games_with_different_outcomes_across_earliest_timestamp_ties": 68,
+    "max_rows_tied_at_earliest_timestamp": 25,
+    "single_row_tie_break_point_bound_pp": [
+      0.3056994818652851,
+      0.6165803108808291
+    ],
+    "bootstrap_draws": 10000,
+    "seed": 6102127,
+    "interpretation": "Descriptive, post hoc estimand audit; intervals are nominal and unadjusted across bands and estimands."
+  }
+}
