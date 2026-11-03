@@ -1,0 +1,179 @@
+{
+  "estimand": "same-game equal-weighted difference in mean longshot Y-price across retrospective and game-clock windows",
+  "price_band": [
+    0.05,
+    0.2
+  ],
+  "market_and_pstar_common_support": [
+    0.03,
+    0.97
+  ],
+  "windows": {
+    "5-minute realized-end": "Five wall-clock minutes before each game\u2019s last ESPN play.",
+    "10-minute realized-end": "Ten wall-clock minutes before each game\u2019s last ESPN play.",
+    "final-five regulation clock": "Q4 game clock from 5:00 through 0:00; overtime excluded."
+  },
+  "status": "Post-hoc descriptive paired comparison. It holds the market-price band, common-support rule, and game identity fixed, but compares different trade rows and game states. It cannot isolate a causal effect of window construction.",
+  "results": [
+    {
+      "comparison": "5-minute realized-end vs final-five regulation clock",
+      "overtime_games_excluded": false,
+      "paired_games": 356,
+      "retrospective_rows": 209934,
+      "clock_window_rows": 665604,
+      "retrospective_game_equal_y_minus_p_pp": -6.585976496689742,
+      "retrospective_game_equal_ci95_pp": [
+        -7.889463520104514,
+        -5.098622434225135
+      ],
+      "clock_window_game_equal_y_minus_p_pp": 0.44192202583677853,
+      "clock_window_game_equal_ci95_pp": [
+        -2.399153222521632,
+        3.4424947869924325
+      ],
+      "paired_clock_minus_retrospective_pp": 7.027898522526521,
+      "paired_clock_minus_retrospective_ci95_pp": [
+        4.26143861462067,
+        9.945015661231333
+      ],
+      "paired_difference_median_pp": -1.0953239294650565,
+      "paired_difference_median_ci95_pp": [
+        -1.4877425572364587,
+        -0.5770186335403715
+      ],
+      "share_games_clock_minus_retrospective_positive": 0.351123595505618,
+      "leave_one_game_out_mean_difference_range_pp": [
+        6.765738022534585,
+        7.312465629095409
+      ],
+      "retrospective_trade_weighted_y_minus_p_pp": -6.102308344527327,
+      "clock_window_trade_weighted_y_minus_p_pp": 2.5969194896665284,
+      "bootstrap": {
+        "cluster": "game",
+        "draws": 20000,
+        "seed": 20261108
+      },
+      "interpretation": "Post-hoc paired descriptive contrast; the windows contain different trades and game states, so the difference is not a causal effect of window definition."
+    },
+    {
+      "comparison": "10-minute realized-end vs final-five regulation clock",
+      "overtime_games_excluded": false,
+      "paired_games": 557,
+      "retrospective_rows": 531413,
+      "clock_window_rows": 893400,
+      "retrospective_game_equal_y_minus_p_pp": -6.681025102528361,
+      "retrospective_game_equal_ci95_pp": [
+        -7.862569765009993,
+        -5.390233741197987
+      ],
+      "clock_window_game_equal_y_minus_p_pp": -2.790022827485353,
+      "clock_window_game_equal_ci95_pp": [
+        -4.718663865027294,
+        -0.7603292845259811
+      ],
+      "paired_clock_minus_retrospective_pp": 3.8910022750430096,
+      "paired_clock_minus_retrospective_ci95_pp": [
+        2.162882954408845,
+        5.667759551857973
+      ],
+      "paired_difference_median_pp": -0.09048342008868282,
+      "paired_difference_median_ci95_pp": [
+        -0.310279667422525,
+        0.0
+      ],
+      "share_games_clock_minus_retrospective_positive": 0.29084380610412924,
+      "leave_one_game_out_mean_difference_range_pp": [
+        3.7116017022260555,
+        4.067405893596048
+      ],
+      "retrospective_trade_weighted_y_minus_p_pp": -6.239457822823305,
+      "clock_window_trade_weighted_y_minus_p_pp": -0.4106346541302888,
+      "bootstrap": {
+        "cluster": "game",
+        "draws": 20000,
+        "seed": 20261113
+      },
+      "interpretation": "Post-hoc paired descriptive contrast; the windows contain different trades and game states, so the difference is not a causal effect of window definition."
+    },
+    {
+      "comparison": "5-minute realized-end vs final-five regulation clock",
+      "overtime_games_excluded": true,
+      "paired_games": 312,
+      "retrospective_rows": 175126,
+      "clock_window_rows": 576606,
+      "retrospective_game_equal_y_minus_p_pp": -6.8915288720850425,
+      "retrospective_game_equal_ci95_pp": [
+        -8.208779684186757,
+        -5.3630730380617955
+      ],
+      "clock_window_game_equal_y_minus_p_pp": -4.055445306387898,
+      "clock_window_game_equal_ci95_pp": [
+        -6.276381653548434,
+        -1.6290230727453132
+      ],
+      "paired_clock_minus_retrospective_pp": 2.836083565697144,
+      "paired_clock_minus_retrospective_ci95_pp": [
+        1.055722073573342,
+        4.762595303060638
+      ],
+      "paired_difference_median_pp": -1.2621306637083398,
+      "paired_difference_median_ci95_pp": [
+        -1.795029448490764,
+        -0.6438595755768245
+      ],
+      "share_games_clock_minus_retrospective_positive": 0.3173076923076923,
+      "leave_one_game_out_mean_difference_range_pp": [
+        2.5487365198242657,
+        2.9470072552541637
+      ],
+      "retrospective_trade_weighted_y_minus_p_pp": -6.400231833080183,
+      "clock_window_trade_weighted_y_minus_p_pp": -2.674339150130245,
+      "bootstrap": {
+        "cluster": "game",
+        "draws": 20000,
+        "seed": 20261109
+      },
+      "interpretation": "Post-hoc paired descriptive contrast; the windows contain different trades and game states, so the difference is not a causal effect of window definition."
+    },
+    {
+      "comparison": "10-minute realized-end vs final-five regulation clock",
+      "overtime_games_excluded": true,
+      "paired_games": 506,
+      "retrospective_rows": 457905,
+      "clock_window_rows": 790947,
+      "retrospective_game_equal_y_minus_p_pp": -6.839911857216031,
+      "retrospective_game_equal_ci95_pp": [
+        -8.038724312294105,
+        -5.552328111850955
+      ],
+      "clock_window_game_equal_y_minus_p_pp": -6.2846154242834755,
+      "clock_window_game_equal_ci95_pp": [
+        -7.701064810297861,
+        -4.785458769534477
+      ],
+      "paired_clock_minus_retrospective_pp": 0.5552964329325553,
+      "paired_clock_minus_retrospective_ci95_pp": [
+        -0.15952507679627023,
+        1.303354259362381
+      ],
+      "paired_difference_median_pp": -0.17761110795924406,
+      "paired_difference_median_ci95_pp": [
+        -0.3331086439214492,
+        -0.015355522145692191
+      ],
+      "share_games_clock_minus_retrospective_positive": 0.25889328063241107,
+      "leave_one_game_out_mean_difference_range_pp": [
+        0.4164704555057794,
+        0.663596375487164
+      ],
+      "retrospective_trade_weighted_y_minus_p_pp": -6.611915135235474,
+      "clock_window_trade_weighted_y_minus_p_pp": -4.922436016572539,
+      "bootstrap": {
+        "cluster": "game",
+        "draws": 20000,
+        "seed": 20261114
+      },
+      "interpretation": "Post-hoc paired descriptive contrast; the windows contain different trades and game states, so the difference is not a causal effect of window definition."
+    }
+  ]
+}
