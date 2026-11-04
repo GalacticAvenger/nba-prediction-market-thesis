@@ -2,7 +2,7 @@
 
 ## Phase 4 amendments approved before Phase 5 outcomes (2026-10-21)
 
-Before any outcome-based Phase 5 result was computed, Sam amended the locked plan:
+Before any outcome-based Phase 5 result was computed, the locked plan was amended:
 
 1. The Phase 4 proposed practical-zero margin (3.23 price points) is wider than
    the approximately one-point fee band and could label economically meaningful
@@ -29,8 +29,8 @@ spline logistic without possession remain robustness specifications.
 
 ## Phase 3 model-selection rule and possession feature
 
-The first Phase 3 report selected by overall holdout Brier. Per Sam's instruction,
-the selection was rerun using final-five-minute 2024–25 holdout Brier because P* is
+The first Phase 3 report selected by overall holdout Brier. The model selection
+was rerun using final-five-minute 2024–25 holdout Brier because P* is
 used late in games. Monotone LightGBM without possession is the main specification
 (0.063906); spline logistic without possession is retained as robustness (0.064237).
 Adding reconstructed possession lowers holdout final-five Brier by only 0.000257 and
@@ -120,7 +120,7 @@ not the reported Phase 5a estimates.
 
 ## Phase 5a benchmark definition and limits (2026-10-21)
 
-Sam clarified that Moshrefi's close is intended to coincide with game end. Recorded Kalshi `close_time` is a median 14.25 minutes after last ESPN play, so the recorded-close version (a) is only a diagnostic. The earlier post-game explanation is rejected. Version (d) uses the last ESPN play as game end, the prior `[0,10)` wall-clock minutes, in-game rows, each market's YES price/outcome, and the date scope including playoffs. Its paper-date sample is 958,727 trades. Restricting to regular-season games, the closer product-scope comparison has 659,214 trades across 334 games, versus the 327,473 reference used for the paper's near-expiry estimate. Splitting by ticker side gives 315,062 home-YES and 344,152 away-YES rows (333 games each), which suggests a possible market-side or trade-unit convention behind the approximate factor-of-two difference. This remains an unverified explanation: side-specific fitted curves differ, and the preprint does not publish a row-level count rule that resolves it. The combined regular-season isotonic α is 1.526 [1.311, 1.856], β=1.197 [1.090, 1.373], versus the reference α=1.516, β=1.182. Keep this as a qualified curve-shape comparison, not an exact replication. Other candidate differences include market/date filters, source coverage, and timing. Quick checks and game-clustered intervals are reported in RESULTS.md and `data/interim/phase5/phase5_quick_checks.json`.
+The comparison follows Moshrefi's stated convention that the market close coincides with game end. Recorded Kalshi `close_time` is a median 14.25 minutes after last ESPN play, so the recorded-close version (a) is only a diagnostic. The earlier post-game explanation is rejected. Version (d) uses the last ESPN play as game end, the prior `[0,10)` wall-clock minutes, in-game rows, each market's YES price/outcome, and the date scope including playoffs. Its paper-date sample is 958,727 trades. Restricting to regular-season games, the closer product-scope comparison has 659,214 trades across 334 games, versus the 327,473 reference used for the paper's near-expiry estimate. Splitting by ticker side gives 315,062 home-YES and 344,152 away-YES rows (333 games each), which suggests a possible market-side or trade-unit convention behind the approximate factor-of-two difference. This remains an unverified explanation: side-specific fitted curves differ, and the preprint does not publish a row-level count rule that resolves it. The combined regular-season isotonic α is 1.526 [1.311, 1.856], β=1.197 [1.090, 1.373], versus the reference α=1.516, β=1.182. This is a qualified curve-shape comparison, not an exact replication. Other candidate differences include market/date filters, source coverage, and timing. Quick checks and game-clustered intervals are reported in RESULTS.md and `data/interim/phase5/phase5_quick_checks.json`.
 
 ## Phase 5 estimator weighting amendment (2026-10-22)
 
@@ -129,8 +129,8 @@ averages observations within a game, so the per-trade weight depends inversely
 on that game's eventual trade count in the cell. This uses future trading
 intensity and is not a stopping-time/typical-trade estimator; retain that
 interpretive limitation. The prior 2026-10-22 amendment made first-entry the
-headline for the 10–40¢ table and quiet estimates. Sam has now clarified that
-the originally registered game-weighted **final-five quiet-stoppage estimand
+headline for the 10–40¢ table and quiet estimates. The originally registered
+game-weighted **final-five quiet-stoppage estimand
 is primary**; first-entry and pooled trade-weighted values are sensitivities
 for that primary. The 10–40¢ table keeps its first-entry headline under the
 earlier amendment. The weighting table was regenerated on 2026-10-22: it labels the registered
@@ -186,7 +186,7 @@ The Polymarket selection-analysis fits were not affected: `src/run_polymarket_se
 ## Primary estimand and cost comparison correction (2026-10-22)
 
 The final-five quiet-stoppage game-weighted estimate is restored as the
-pre-registered primary, following Sam's explicit correction. The previous
+pre-registered primary after correcting the estimator designation. The previous
 first-entry amendment still applies to the separate 10–40¢ table; it no longer
 relabels the quiet-stoppage primary. First-entry and trade-weighted quiet
 estimates remain sensitivity results. The weighting concern remains disclosed:

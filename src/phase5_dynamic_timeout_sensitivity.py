@@ -1,8 +1,10 @@
 """Post-hoc sensitivity for timeout eligibility before a later foul/free throw.
 
-Run from the project root:
+Run from this repository's root when the original project data are in the
+parent directory:
     python src/phase5_dynamic_timeout_sensitivity.py \
-        --output advisor_handoff_2026-11-03/TIMING_SENSITIVITY.json
+        --root .. \
+        --output TIMING_SENSITIVITY.json
 
 Requires the existing Phase 2 PBP/timeout cache and Phase 5 late-trade cache.
 This is an exploratory timing sensitivity, a sensitivity analysis for the

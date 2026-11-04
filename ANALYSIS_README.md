@@ -6,7 +6,7 @@ Prepared November 3, 2026. This repository contains analysis code, selected resu
 
 In the 5–20¢ Kalshi cohort, the ten wall-clock minutes before the final ESPN play contain 532,303 trade rows in 561 games. The pooled `Y − price` gap is −6.24 percentage points. Five-fold game-held-out cross-fitting predicts −6.24, but the estimated remainder depends on the aggregation and validation method: equal-game remainder −0.98 (fixed-prediction 95% CI −2.17 to +0.35), fixed-prediction pooled remainder −0.003 (−2.20 to +2.67), and chronological later-game remainder +1.89 (−3.68 to +9.41). The model-refit bootstrap interval for the pooled remainder is much narrower (−0.14 to +0.17); it is a separate inference sensitivity, not a replacement for the fixed-prediction interval.
 
-A new post hoc matched-game calculation compares the retrospective window with the final five regulation minutes. It uses the same 5–20¢ price band, market/`P*` support, and only games with trades in both samples. In 557 games, the game-equal mean of `Y − price` is −6.68 in the retrospective window and −2.79 in the regulation-clock window; the paired difference is +3.89 points (95% CI +2.16 to +5.67). The median within-game difference is −0.09, and 29% of games have a positive difference. A five-minute realized-end window gives a +7.03-point mean difference, with a −1.10-point median. These means compare different trade rows and game states; they do not identify a causal window effect.
+A matched-game calculation compares the retrospective window with the final five regulation minutes. It uses the same 5–20¢ price band, market/`P*` support, and only games with trades in both samples. In 557 games, the game-equal mean of `Y − price` is −6.68 in the retrospective window and −2.79 in the regulation-clock window; the paired difference is +3.89 points (95% CI +2.16 to +5.67). The median within-game difference is −0.09, and 29% of games have a positive difference. A five-minute realized-end window gives a +7.03-point mean difference, with a −1.10-point median. These means compare different trade rows and game states; they do not identify a causal window effect.
 
 The ten-minute matched difference falls to +0.56 points (−0.16 to +1.30) after excluding games that reached overtime. This is a diagnostic only because overtime status depends on the realized game path. It cannot be used as a confirmatory estimate or preferred correction.
 
@@ -24,7 +24,7 @@ Weighting contrasts are secondary. In the full final-five 5–20¢ cohort, the g
 
 ## Reproduction
 
-The repository omits approximately 38 GB of raw and intermediate source data. Complete reproduction requires the original project workspace. From that workspace, rerun the paired comparison and save its compact outputs into this repository with:
+The repository omits approximately 38 GB of raw and intermediate source data. The included summaries and figures can be reviewed from a clone, but complete reproduction requires the original project workspace and its `data/raw/` and `data/interim/` inputs. From that workspace, rerun the paired comparison and save its compact outputs into this repository with:
 
 ```sh
 python github_release/src/phase5_paired_window_contrast.py \

@@ -128,24 +128,12 @@ The 4,525 maker fill rows are saved in
 
 ## Cross-month transaction checks
 
-Each transaction below was decoded from its cached Polygon receipt and matched to the
-Data API's token, side, size, and price. Explorer links are provided for direct review.
-The browser could not load PolygonScan pages in this run, so these are independent raw
-receipt decodes rather than visual checks of PolygonScan's rendered interface.
-
-| Month | Exchange | Side | Size | Price | PolygonScan |
-|---|---|---:|---:|---:|---|
-| 2025-11 | V1 | SELL | 319.43 | 0.999 | [transaction](https://polygonscan.com/tx/0xd3353859b27f09dbf7b8a7c0065242d304896c1d34f543cacb3bc30c4d9de808) |
-| 2025-12 | V1 | SELL | 7.00 | 0.999 | [transaction](https://polygonscan.com/tx/0xc01cfed8fd3d3a62defd66992b8bd6f7349fe9bd21dbadedd63cd0124bd14b23) |
-| 2026-01 | V1 | BUY | 50.00 | 0.001 | [transaction](https://polygonscan.com/tx/0xba8f0d984923aea99ee65e045b7f0de2a8717e8862060655cec79109a6c2713e) |
-| 2026-02 | V1 | BUY | 3.359832 | 0.595267561 | [transaction](https://polygonscan.com/tx/0xd5ad82c9ee1f83a1c09c4919c3772f034a067d05b269eda0a0567b5072315258) |
-| 2026-03 | V1 | BUY | 3,140.00 | 0.001 | [transaction](https://polygonscan.com/tx/0xe65e7f5682db2ae7dcd1212cd43b28e6f5c5243c12f250a7cb13d7326dcb2cbf) |
-
-The machine-readable receipt checks, including April and the post-migration V2
-examples, are in `data/interim/phase2/polymarket_monthly_spotchecks.json` (9 of 9
-cached monthly samples matched). V1 was used in the April 1 sample; V2 was used in the
-May 1 and June 3 samples, consistent with the exchange migration occurring later in
-April.
+Nine sampled transactions from October 2025 through June 2026 were decoded from
+their Polygon receipts and matched to the Data API fields. All nine matched,
+including samples from both the V1 and post-migration V2 exchanges. Transaction
+identifiers and wallet-level receipt details are omitted from this release.
+These spot checks validate the sampled API-to-receipt mapping; they do not
+measure season-wide coverage or establish trader identity.
 
 ## 6a-lite: validation-market game-clock diagnostic
 
