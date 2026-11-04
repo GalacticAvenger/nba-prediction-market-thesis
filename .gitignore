@@ -6,3 +6,6 @@ data/interim/**/*.parquet
 *.tmp
 
 .docx_qa_*/
+Current_Thesis_Draft.*
+THESIS_DRAFT.md
+archive/v*/Current_Thesis_Draft*

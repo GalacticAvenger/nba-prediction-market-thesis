@@ -1,6 +1,6 @@
 # Senior thesis analysis package
 
-Prepared November 3, 2026. This repository accompanies the current thesis draft and preserves drafts v1 through v4 in `archive/`.
+Prepared November 3, 2026. This repository contains analysis code, selected result summaries, and figures for late-game NBA prediction-market research.
 
 ## Findings
 
@@ -16,10 +16,8 @@ Weighting contrasts are secondary. In the full final-five 5–20¢ cohort, the g
 
 ## Files
 
-- `Current_Thesis_Draft.md`, `.docx`, `.pdf`: current manuscript.
-- `archive/`: drafts v1 through v4 retained for comparison.
 - `RESULTS.md`, `RESULTS_POLYMARKET.md`, `DEVIATIONS.md`: detailed results, venue checks, and corrections.
-- `THESIS_STRATEGY.md`, `WALLET_STUDY.md`, `RECON.md`, `PREDICTIONS.md`, `PROSPECTIVE_POLYMARKET_PROTOCOL.md`, `SPECIFICATION_STATUS.md`: project design and source documentation.
+- `WALLET_STUDY.md`, `RECON.md`, `PREDICTIONS.md`, `PROSPECTIVE_POLYMARKET_PROTOCOL.md`, `SPECIFICATION_STATUS.md`: project design and source documentation.
 - `src/*.py`, `config.yaml`, `requirements.txt`, and `Makefile`: analysis code and settings.
 - `data/interim/phase5/phase5_crossfit_selection_diagnostic.json`, `phase5_selection_inference_audit.json`, `phase5_temporal_selection_validation.json`, `phase5_paired_window_contrast.json`, and `phase5_primary_costs.json`: main result summaries.
 - `phase5_paired_window_game_differences.csv`: one row per game and window pair, used for the empirical distribution figure.

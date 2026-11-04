@@ -82,8 +82,8 @@ adjustment and cost-aware trading. Position this project around the narrower
 game-state/quiet-stoppage question and the distinction between calibration,
 adjustment speed, and net profitability. Do not present generic event
 underreaction or near-expiry calibration distortion as a novel contribution.
-See the proposal-aligned draft in [THESIS_DRAFT.md](THESIS_DRAFT.md) and the
-claim audit/research plan in [THESIS_STRATEGY.md](THESIS_STRATEGY.md).
+The analysis focuses on the distinction between calibration, adjustment speed,
+and net profitability; these are reported as separate questions.
 
 ## Phase 1 ingestion snapshot (before Phase 2 sample exclusions)
 

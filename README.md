@@ -1,6 +1,6 @@
 # Late-game NBA prediction markets
 
-Working thesis and analysis package: [PDF](Current_Thesis_Draft.pdf) · [Word](Current_Thesis_Draft.docx) · [Markdown](Current_Thesis_Draft.md)
+Research code, selected results, figures, and reproduction instructions for an analysis of late-game NBA prediction markets.
 
 ## Main results
 
@@ -35,6 +35,4 @@ The cross-fitted model reproduces the pooled retrospective gap, but equal-game a
 - [Cross-fit diagnostic](data/interim/phase5/phase5_crossfit_selection_diagnostic.json) · [Inference audit](data/interim/phase5/phase5_selection_inference_audit.json) · [Chronological validation](data/interim/phase5/phase5_temporal_selection_validation.json)
 - [Paired window comparison](data/interim/phase5/phase5_paired_window_contrast.json) · [Per-game paired differences](data/interim/phase5/phase5_paired_window_game_differences.csv) · [Project-designated quiet-stoppage cost results](data/interim/phase5/phase5_primary_costs.json) · [Weighting contrasts](data/interim/phase5/phase5_final5_estimand_contrasts.csv)
 - [Paired comparison code](src/phase5_paired_window_contrast.py) · [Cross-fit code](src/phase5_crossfit_selection_diagnostic.py) · [Weighting-audit code](src/phase5_weighting_audit.py) · [Specification status](SPECIFICATION_STATUS.md) · [Corrections and deviations](DEVIATIONS.md)
-- [Earlier draft v1](archive/v1_2026-11-03/Current_Thesis_Draft_v1.md) · [Draft v2](archive/v2_2026-11-03/Current_Thesis_Draft_v2.md) · [Draft v3](archive/v3_2026-11-03/Current_Thesis_Draft_v3.md) · [Draft v4](archive/v4_2026-11-03/Current_Thesis_Draft_v4.md)
-
 The repository contains code and selected summaries but omits approximately 38 GB of raw and intermediate caches. Full reproduction requires the original project workspace. The paired comparison can be rerun there with `python github_release/src/phase5_paired_window_contrast.py --project-root . --output-dir github_release/data/interim/phase5`.
