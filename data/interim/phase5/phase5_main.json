@@ -1,0 +1,3931 @@
+{
+  "primary_estimand_Y_minus_price": {
+    "estimate": -0.023322305362109986,
+    "games": 390,
+    "ci95": [
+      -0.049367062872444675,
+      0.005272232253076076
+    ],
+    "draws": 2000,
+    "trades": 309318,
+    "price_mean": 0.11697107830776093,
+    "outcome_mean_trade_weighted": 0.10345986977802779
+  },
+  "A_overpricing_price_minus_Y": {
+    "estimate": 0.023322305362109986,
+    "games": 390,
+    "ci95": [
+      -0.005272232253076106,
+      0.049367062872444654
+    ],
+    "draws": 2000,
+    "trades": 309318,
+    "upper_95_one_sided": 0.04513205013655815,
+    "zero_two_sided_bootstrap_p": 0.0965,
+    "band_tests": {
+      "taker": {
+        "band": 0.010973514377365814,
+        "one_sided_p_A_gt_band": 0.199,
+        "lower_95_one_sided": -0.000601344834071674,
+        "significant_and_above_band": false
+      },
+      "maker": {
+        "band": 0.0018075547900774107,
+        "one_sided_p_A_gt_band": 0.053,
+        "lower_95_one_sided": -0.000601344834071674,
+        "significant_and_above_band": false
+      }
+    }
+  },
+  "calibration_cells": [
+    {
+      "price_bin": "nan",
+      "tau_bucket": "0-5",
+      "estimate": 0.027882551504585653,
+      "games": 75,
+      "ci95": [
+        0.00032888500450235975,
+        0.06774790323156393
+      ],
+      "window": "final5",
+      "stoppage": "quiet"
+    },
+    {
+      "price_bin": "nan",
+      "tau_bucket": "5-15",
+      "estimate": 0.00515517055263586,
+      "games": 410,
+      "ci95": [
+        -0.00013952589779895512,
+        0.012738704755825546
+      ],
+      "window": "final5",
+      "stoppage": "quiet"
+    },
+    {
+      "price_bin": "nan",
+      "tau_bucket": "15-30",
+      "estimate": 0.00046692541701197956,
+      "games": 536,
+      "ci95": [
+        -0.0045641683918363875,
+        0.005800260223965088
+      ],
+      "window": "final5",
+      "stoppage": "quiet"
+    },
+    {
+      "price_bin": "nan",
+      "tau_bucket": "30-60",
+      "estimate": 0.0005107061506466553,
+      "games": 599,
+      "ci95": [
+        -0.00461392485442165,
+        0.005163519634342987
+      ],
+      "window": "final5",
+      "stoppage": "quiet"
+    },
+    {
+      "price_bin": "nan",
+      "tau_bucket": "60-120",
+      "estimate": 0.0005855690959545342,
+      "games": 620,
+      "ci95": [
+        -0.003973653224026502,
+        0.005223600152114469
+      ],
+      "window": "final5",
+      "stoppage": "quiet"
+    },
+    {
+      "price_bin": "nan",
+      "tau_bucket": "120-300",
+      "estimate": 0.0024797914406071136,
+      "games": 214,
+      "ci95": [
+        -0.0009332984667650017,
+        0.007807390914069595
+      ],
+      "window": "final5",
+      "stoppage": "quiet"
+    },
+    {
+      "price_bin": "[0.05, 0.1)",
+      "tau_bucket": "15-30",
+      "estimate": 0.006754933622080707,
+      "games": 106,
+      "ci95": [
+        -0.03934106214687627,
+        0.05638863300716685
+      ],
+      "window": "final5",
+      "stoppage": "quiet"
+    },
+    {
+      "price_bin": "[0.1, 0.2)",
+      "tau_bucket": "15-30",
+      "estimate": 0.016782107117801027,
+      "games": 96,
+      "ci95": [
+        -0.05347526377206963,
+        0.09472399585013824
+      ],
+      "window": "final5",
+      "stoppage": "quiet"
+    },
+    {
+      "price_bin": "[0.1, 0.2)",
+      "tau_bucket": "30-60",
+      "estimate": 0.014616513439444924,
+      "games": 98,
+      "ci95": [
+        -0.05774481292509182,
+        0.09452828717800373
+      ],
+      "window": "final5",
+      "stoppage": "quiet"
+    },
+    {
+      "price_bin": "[0.1, 0.2)",
+      "tau_bucket": "60-120",
+      "estimate": 0.019431633132595667,
+      "games": 107,
+      "ci95": [
+        -0.04777240103755383,
+        0.09617885480371839
+      ],
+      "window": "final5",
+      "stoppage": "quiet"
+    },
+    {
+      "price_bin": "[0.2, 0.35)",
+      "tau_bucket": "15-30",
+      "estimate": 0.002951707684126805,
+      "games": 108,
+      "ci95": [
+        -0.0796133771305724,
+        0.08991921705096942
+      ],
+      "window": "final5",
+      "stoppage": "quiet"
+    },
+    {
+      "price_bin": "[0.2, 0.35)",
+      "tau_bucket": "30-60",
+      "estimate": 0.014946556258257067,
+      "games": 118,
+      "ci95": [
+        -0.06418316386026393,
+        0.09332936133491154
+      ],
+      "window": "final5",
+      "stoppage": "quiet"
+    },
+    {
+      "price_bin": "[0.2, 0.35)",
+      "tau_bucket": "60-120",
+      "estimate": 0.02840042157263902,
+      "games": 120,
+      "ci95": [
+        -0.04747235146908158,
+        0.10732112714461546
+      ],
+      "window": "final5",
+      "stoppage": "quiet"
+    },
+    {
+      "price_bin": "[0.2, 0.35)",
+      "tau_bucket": "120-300",
+      "estimate": -0.023315553041242814,
+      "games": 46,
+      "ci95": [
+        -0.14000959382474698,
+        0.10416122236604743
+      ],
+      "window": "final5",
+      "stoppage": "quiet"
+    },
+    {
+      "price_bin": "[0.35, 0.5)",
+      "tau_bucket": "5-15",
+      "estimate": -0.049430239930539396,
+      "games": 87,
+      "ci95": [
+        -0.14636194552528034,
+        0.050239904987692485
+      ],
+      "window": "final5",
+      "stoppage": "quiet"
+    },
+    {
+      "price_bin": "[0.35, 0.5)",
+      "tau_bucket": "15-30",
+      "estimate": -0.009193830013919012,
+      "games": 113,
+      "ci95": [
+        -0.09657048081424587,
+        0.08113968758106216
+      ],
+      "window": "final5",
+      "stoppage": "quiet"
+    },
+    {
+      "price_bin": "[0.5, 0.65)",
+      "tau_bucket": "5-15",
+      "estimate": 0.02836586874789701,
+      "games": 102,
+      "ci95": [
+        -0.058221726879543655,
+        0.11931752071090768
+      ],
+      "window": "final5",
+      "stoppage": "quiet"
+    },
+    {
+      "price_bin": "[0.5, 0.65)",
+      "tau_bucket": "15-30",
+      "estimate": 0.06720273847447392,
+      "games": 119,
+      "ci95": [
+        -0.022311866157432646,
+        0.15059142373786638
+      ],
+      "window": "final5",
+      "stoppage": "quiet"
+    },
+    {
+      "price_bin": "[0.5, 0.65)",
+      "tau_bucket": "30-60",
+      "estimate": 0.037281828600444364,
+      "games": 119,
+      "ci95": [
+        -0.04882248478975404,
+        0.12675644529052646
+      ],
+      "window": "final5",
+      "stoppage": "quiet"
+    },
+    {
+      "price_bin": "[0.5, 0.65)",
+      "tau_bucket": "60-120",
+      "estimate": 0.03744507088983856,
+      "games": 123,
+      "ci95": [
+        -0.04523666876886831,
+        0.12541890097452096
+      ],
+      "window": "final5",
+      "stoppage": "quiet"
+    },
+    {
+      "price_bin": "[0.5, 0.65)",
+      "tau_bucket": "120-300",
+      "estimate": 0.036263987822808964,
+      "games": 56,
+      "ci95": [
+        -0.09039604441880227,
+        0.15802895308454476
+      ],
+      "window": "final5",
+      "stoppage": "quiet"
+    },
+    {
+      "price_bin": "[0.1, 0.2)",
+      "tau_bucket": "5-15",
+      "estimate": -0.023856533104981356,
+      "games": 79,
+      "ci95": [
+        -0.09255940112428576,
+        0.05364229322366671
+      ],
+      "window": "final5",
+      "stoppage": "quiet"
+    },
+    {
+      "price_bin": "[0.2, 0.35)",
+      "tau_bucket": "5-15",
+      "estimate": -0.029323513833862624,
+      "games": 91,
+      "ci95": [
+        -0.11291930094611345,
+        0.05798731173913632
+      ],
+      "window": "final5",
+      "stoppage": "quiet"
+    },
+    {
+      "price_bin": "[0.35, 0.5)",
+      "tau_bucket": "60-120",
+      "estimate": 0.02729511773068464,
+      "games": 113,
+      "ci95": [
+        -0.06601421545192213,
+        0.11412221652616811
+      ],
+      "window": "final5",
+      "stoppage": "quiet"
+    },
+    {
+      "price_bin": "[0.35, 0.5)",
+      "tau_bucket": "30-60",
+      "estimate": 0.0007156136954884104,
+      "games": 108,
+      "ci95": [
+        -0.09065139657511116,
+        0.09295263061018594
+      ],
+      "window": "final5",
+      "stoppage": "quiet"
+    },
+    {
+      "price_bin": "[0.35, 0.5)",
+      "tau_bucket": "120-300",
+      "estimate": 0.09558658896065948,
+      "games": 44,
+      "ci95": [
+        -0.05344954361730665,
+        0.2413105435709285
+      ],
+      "window": "final5",
+      "stoppage": "quiet"
+    },
+    {
+      "price_bin": "[0.9, 0.97)",
+      "tau_bucket": "5-15",
+      "estimate": 0.012748279334725486,
+      "games": 132,
+      "ci95": [
+        -0.025686416372334236,
+        0.045409445366793734
+      ],
+      "window": "final5",
+      "stoppage": "quiet"
+    },
+    {
+      "price_bin": "[0.9, 0.97)",
+      "tau_bucket": "15-30",
+      "estimate": 0.004356516032357833,
+      "games": 161,
+      "ci95": [
+        -0.03440330698120976,
+        0.03905938637514145
+      ],
+      "window": "final5",
+      "stoppage": "quiet"
+    },
+    {
+      "price_bin": "[0.9, 0.97)",
+      "tau_bucket": "30-60",
+      "estimate": 0.008502585843095264,
+      "games": 160,
+      "ci95": [
+        -0.027883015367153076,
+        0.04116475063665884
+      ],
+      "window": "final5",
+      "stoppage": "quiet"
+    },
+    {
+      "price_bin": "[0.9, 0.97)",
+      "tau_bucket": "60-120",
+      "estimate": 0.026943469780369524,
+      "games": 158,
+      "ci95": [
+        -0.005147391249224614,
+        0.05311535088814175
+      ],
+      "window": "final5",
+      "stoppage": "quiet"
+    },
+    {
+      "price_bin": "[0.90,0.97]",
+      "tau_bucket": "15-30",
+      "estimate": 0.019247311827957015,
+      "games": 93,
+      "ci95": [
+        -0.0022580645161290056,
+        0.030000000000000037
+      ],
+      "window": "final5",
+      "stoppage": "quiet"
+    },
+    {
+      "price_bin": "[0.90,0.97]",
+      "tau_bucket": "30-60",
+      "estimate": 0.009381443298969097,
+      "games": 97,
+      "ci95": [
+        -0.021546391752577294,
+        0.03000000000000003
+      ],
+      "window": "final5",
+      "stoppage": "quiet"
+    },
+    {
+      "price_bin": "[0.90,0.97]",
+      "tau_bucket": "60-120",
+      "estimate": 0.01969072164948456,
+      "games": 97,
+      "ci95": [
+        -0.0009278350515463617,
+        0.03000000000000003
+      ],
+      "window": "final5",
+      "stoppage": "quiet"
+    },
+    {
+      "price_bin": "[0.8, 0.9)",
+      "tau_bucket": "15-30",
+      "estimate": 0.015188517974854487,
+      "games": 115,
+      "ci95": [
+        -0.05427388083190871,
+        0.078667358248603
+      ],
+      "window": "final5",
+      "stoppage": "quiet"
+    },
+    {
+      "price_bin": "[0.8, 0.9)",
+      "tau_bucket": "30-60",
+      "estimate": 0.03729364864187814,
+      "games": 120,
+      "ci95": [
+        -0.02671969521767416,
+        0.09159581205492903
+      ],
+      "window": "final5",
+      "stoppage": "quiet"
+    },
+    {
+      "price_bin": "[0.03, 0.05)",
+      "tau_bucket": "5-15",
+      "estimate": 0.00236910650088544,
+      "games": 79,
+      "ci95": [
+        -0.03544600434122216,
+        0.05254777382071581
+      ],
+      "window": "final5",
+      "stoppage": "quiet"
+    },
+    {
+      "price_bin": "[0.03, 0.05)",
+      "tau_bucket": "15-30",
+      "estimate": -0.004104100073849257,
+      "games": 97,
+      "ci95": [
+        -0.03503993050894072,
+        0.037246585521152134
+      ],
+      "window": "final5",
+      "stoppage": "quiet"
+    },
+    {
+      "price_bin": "[0.03, 0.05)",
+      "tau_bucket": "30-60",
+      "estimate": -0.014277729638512036,
+      "games": 100,
+      "ci95": [
+        -0.03453469978104608,
+        0.01589815237566797
+      ],
+      "window": "final5",
+      "stoppage": "quiet"
+    },
+    {
+      "price_bin": "[0.03, 0.05)",
+      "tau_bucket": "60-120",
+      "estimate": -0.012297708243972314,
+      "games": 91,
+      "ci95": [
+        -0.03454390842061987,
+        0.020708204217984548
+      ],
+      "window": "final5",
+      "stoppage": "quiet"
+    },
+    {
+      "price_bin": "[0.03, 0.05)",
+      "tau_bucket": "120-300",
+      "estimate": 8.382890712903878e-05,
+      "games": 29,
+      "ci95": [
+        -0.035531796406404345,
+        0.07019276382690719
+      ],
+      "window": "final5",
+      "stoppage": "quiet"
+    },
+    {
+      "price_bin": "[0.05, 0.1)",
+      "tau_bucket": "5-15",
+      "estimate": 0.00262248084319931,
+      "games": 84,
+      "ci95": [
+        -0.045470591677586894,
+        0.06049977376288227
+      ],
+      "window": "final5",
+      "stoppage": "quiet"
+    },
+    {
+      "price_bin": "[0.05, 0.1)",
+      "tau_bucket": "30-60",
+      "estimate": 0.004189473401659087,
+      "games": 108,
+      "ci95": [
+        -0.04172303202791552,
+        0.05852417310985017
+      ],
+      "window": "final5",
+      "stoppage": "quiet"
+    },
+    {
+      "price_bin": "[0.05, 0.1)",
+      "tau_bucket": "60-120",
+      "estimate": -0.00333086292624863,
+      "games": 103,
+      "ci95": [
+        -0.049631998955636934,
+        0.04670596292996435
+      ],
+      "window": "final5",
+      "stoppage": "quiet"
+    },
+    {
+      "price_bin": "[0.05, 0.1)",
+      "tau_bucket": "120-300",
+      "estimate": 0.016755921669737352,
+      "games": 34,
+      "ci95": [
+        -0.06816500072870395,
+        0.10985283301211521
+      ],
+      "window": "final5",
+      "stoppage": "quiet"
+    },
+    {
+      "price_bin": "[0.8, 0.9)",
+      "tau_bucket": "5-15",
+      "estimate": 0.023534682531714708,
+      "games": 106,
+      "ci95": [
+        -0.04138364652434421,
+        0.08470764994110296
+      ],
+      "window": "final5",
+      "stoppage": "quiet"
+    },
+    {
+      "price_bin": "[0.8, 0.9)",
+      "tau_bucket": "60-120",
+      "estimate": 0.0224077889741166,
+      "games": 108,
+      "ci95": [
+        -0.040148327065851364,
+        0.07950872707026073
+      ],
+      "window": "final5",
+      "stoppage": "quiet"
+    },
+    {
+      "price_bin": "[0.8, 0.9)",
+      "tau_bucket": "120-300",
+      "estimate": 0.0362316196632759,
+      "games": 36,
+      "ci95": [
+        -0.08197609287798073,
+        0.12361009093494346
+      ],
+      "window": "final5",
+      "stoppage": "quiet"
+    },
+    {
+      "price_bin": "[0.9, 0.97)",
+      "tau_bucket": "0-5",
+      "estimate": -0.0035505194409863237,
+      "games": 28,
+      "ci95": [
+        -0.1113360996529519,
+        0.0695098753284305
+      ],
+      "window": "final5",
+      "stoppage": "quiet"
+    },
+    {
+      "price_bin": "[0.9, 0.97)",
+      "tau_bucket": "120-300",
+      "estimate": 0.028402711665428793,
+      "games": 49,
+      "ci95": [
+        -0.032616064193729186,
+        0.07062552302468864
+      ],
+      "window": "final5",
+      "stoppage": "quiet"
+    },
+    {
+      "price_bin": "[0.90,0.97]",
+      "tau_bucket": "5-15",
+      "estimate": 0.01850574712643681,
+      "games": 87,
+      "ci95": [
+        -0.004482758620689629,
+        0.030000000000000044
+      ],
+      "window": "final5",
+      "stoppage": "quiet"
+    },
+    {
+      "price_bin": "[0.65, 0.8)",
+      "tau_bucket": "5-15",
+      "estimate": 0.034812186338920234,
+      "games": 106,
+      "ci95": [
+        -0.051687528251910086,
+        0.1133283177652593
+      ],
+      "window": "final5",
+      "stoppage": "quiet"
+    },
+    {
+      "price_bin": "[0.90,0.97]",
+      "tau_bucket": "120-300",
+      "estimate": 0.030000000000000027,
+      "games": 25,
+      "ci95": [
+        0.030000000000000027,
+        0.030000000000000027
+      ],
+      "window": "final5",
+      "stoppage": "quiet"
+    },
+    {
+      "price_bin": "[0.65, 0.8)",
+      "tau_bucket": "30-60",
+      "estimate": 0.06379925340529338,
+      "games": 126,
+      "ci95": [
+        -0.007061072445451078,
+        0.12874438799415866
+      ],
+      "window": "final5",
+      "stoppage": "quiet"
+    },
+    {
+      "price_bin": "[0.65, 0.8)",
+      "tau_bucket": "60-120",
+      "estimate": 0.08343751411738878,
+      "games": 122,
+      "ci95": [
+        0.01182682939475396,
+        0.15196058560461093
+      ],
+      "window": "final5",
+      "stoppage": "quiet"
+    },
+    {
+      "price_bin": "[0.65, 0.8)",
+      "tau_bucket": "120-300",
+      "estimate": 0.10078559186462664,
+      "games": 49,
+      "ci95": [
+        -0.01102494237780479,
+        0.2020356773207666
+      ],
+      "window": "final5",
+      "stoppage": "quiet"
+    },
+    {
+      "price_bin": "[0.1, 0.2)",
+      "tau_bucket": "120-300",
+      "estimate": -0.00550476322698191,
+      "games": 40,
+      "ci95": [
+        -0.10706278026466688,
+        0.10021692425726857
+      ],
+      "window": "final5",
+      "stoppage": "quiet"
+    },
+    {
+      "price_bin": "[0.65, 0.8)",
+      "tau_bucket": "0-5",
+      "estimate": 0.07491728093813184,
+      "games": 23,
+      "ci95": [
+        -0.10701831453143594,
+        0.23770224755086475
+      ],
+      "window": "final5",
+      "stoppage": "quiet"
+    },
+    {
+      "price_bin": "[0.65, 0.8)",
+      "tau_bucket": "15-30",
+      "estimate": 0.023907723750864463,
+      "games": 121,
+      "ci95": [
+        -0.05696370356363008,
+        0.09625678519972904
+      ],
+      "window": "final5",
+      "stoppage": "quiet"
+    },
+    {
+      "price_bin": "[0.05, 0.1)",
+      "tau_bucket": "0-5",
+      "estimate": 0.01428041709958493,
+      "games": 23,
+      "ci95": [
+        -0.0753011612794152,
+        0.14432440169994876
+      ],
+      "window": "final5",
+      "stoppage": "quiet"
+    },
+    {
+      "price_bin": "[0.2, 0.35)",
+      "tau_bucket": "0-5",
+      "estimate": -0.049515899949723476,
+      "games": 17,
+      "ci95": [
+        -0.2380911764705882,
+        0.18045520990447458
+      ],
+      "window": "final5",
+      "stoppage": "quiet"
+    },
+    {
+      "price_bin": "[0.35, 0.5)",
+      "tau_bucket": "0-5",
+      "estimate": -0.10590396811854692,
+      "games": 20,
+      "ci95": [
+        -0.3006798929079322,
+        0.09515595493650687
+      ],
+      "window": "final5",
+      "stoppage": "quiet"
+    },
+    {
+      "price_bin": "[0.1, 0.2)",
+      "tau_bucket": "0-5",
+      "estimate": 0.014800012961704051,
+      "games": 20,
+      "ci95": [
+        -0.13392591762558587,
+        0.1768842897139092
+      ],
+      "window": "final5",
+      "stoppage": "quiet"
+    },
+    {
+      "price_bin": "[0.03, 0.05)",
+      "tau_bucket": "0-5",
+      "estimate": 0.07035538847117793,
+      "games": 19,
+      "ci95": [
+        -0.035374373433583975,
+        0.22769466165413532
+      ],
+      "window": "final5",
+      "stoppage": "quiet"
+    },
+    {
+      "price_bin": "[0.5, 0.65)",
+      "tau_bucket": "0-5",
+      "estimate": 0.19379304185276078,
+      "games": 14,
+      "ci95": [
+        -0.025598376550264746,
+        0.39417335711712176
+      ],
+      "window": "final5",
+      "stoppage": "quiet"
+    },
+    {
+      "price_bin": "[0.90,0.97]",
+      "tau_bucket": "0-5",
+      "estimate": 0.030000000000000027,
+      "games": 13,
+      "ci95": [
+        0.030000000000000027,
+        0.030000000000000027
+      ],
+      "window": "final5",
+      "stoppage": "quiet"
+    },
+    {
+      "price_bin": "[0.8, 0.9)",
+      "tau_bucket": "0-5",
+      "estimate": -0.1627778738471673,
+      "games": 16,
+      "ci95": [
+        -0.41082742094861663,
+        0.030755316411396512
+      ],
+      "window": "final5",
+      "stoppage": "quiet"
+    },
+    {
+      "price_bin": "[0.35, 0.5)",
+      "tau_bucket": "300+",
+      "estimate": 0.5103125000000001,
+      "games": 1,
+      "ci95": [
+        0.5103125000000001,
+        0.5103125000000001
+      ],
+      "window": "final5",
+      "stoppage": "quiet"
+    },
+    {
+      "price_bin": "[0.5, 0.65)",
+      "tau_bucket": "300+",
+      "estimate": 0.4904054054054054,
+      "games": 1,
+      "ci95": [
+        0.4904054054054054,
+        0.4904054054054054
+      ],
+      "window": "final5",
+      "stoppage": "quiet"
+    },
+    {
+      "price_bin": "[0.65, 0.8)",
+      "tau_bucket": "300+",
+      "estimate": 0.3290476190476191,
+      "games": 1,
+      "ci95": [
+        0.3290476190476191,
+        0.3290476190476191
+      ],
+      "window": "final5",
+      "stoppage": "quiet"
+    },
+    {
+      "price_bin": "[0.8, 0.9)",
+      "tau_bucket": "300+",
+      "estimate": 0.10999999999999999,
+      "games": 1,
+      "ci95": [
+        0.10999999999999999,
+        0.10999999999999999
+      ],
+      "window": "final5",
+      "stoppage": "quiet"
+    },
+    {
+      "price_bin": "[0.9, 0.97)",
+      "tau_bucket": "300+",
+      "estimate": 0.09214983713355046,
+      "games": 1,
+      "ci95": [
+        0.09214983713355046,
+        0.09214983713355046
+      ],
+      "window": "final5",
+      "stoppage": "quiet"
+    },
+    {
+      "price_bin": "[0.1, 0.2)",
+      "tau_bucket": "300+",
+      "estimate": 0.8075490196078432,
+      "games": 1,
+      "ci95": [
+        0.8075490196078432,
+        0.8075490196078432
+      ],
+      "window": "final5",
+      "stoppage": "quiet"
+    },
+    {
+      "price_bin": "[0.2, 0.35)",
+      "tau_bucket": "300+",
+      "estimate": 0.7804338394793927,
+      "games": 1,
+      "ci95": [
+        0.7804338394793927,
+        0.7804338394793927
+      ],
+      "window": "final5",
+      "stoppage": "quiet"
+    },
+    {
+      "price_bin": "[0.03, 0.05)",
+      "tau_bucket": "0-5",
+      "estimate": -0.011968595151168524,
+      "games": 311,
+      "ci95": [
+        -0.02792735440847365,
+        0.007131473551679888
+      ],
+      "window": "final5",
+      "stoppage": "running"
+    },
+    {
+      "price_bin": "[0.03, 0.05)",
+      "tau_bucket": "5-15",
+      "estimate": -0.005517381007617249,
+      "games": 279,
+      "ci95": [
+        -0.023381072028926617,
+        0.01597823798361221
+      ],
+      "window": "final5",
+      "stoppage": "running"
+    },
+    {
+      "price_bin": "[0.03, 0.05)",
+      "tau_bucket": "15-30",
+      "estimate": -0.012258142619634437,
+      "games": 183,
+      "ci95": [
+        -0.02878364349479936,
+        0.009792281601390075
+      ],
+      "window": "final5",
+      "stoppage": "running"
+    },
+    {
+      "price_bin": "[0.05, 0.1)",
+      "tau_bucket": "0-5",
+      "estimate": -0.006289321346391125,
+      "games": 300,
+      "ci95": [
+        -0.03263309837104479,
+        0.023003983240203012
+      ],
+      "window": "final5",
+      "stoppage": "running"
+    },
+    {
+      "price_bin": "[0.05, 0.1)",
+      "tau_bucket": "5-15",
+      "estimate": -0.007438845846046453,
+      "games": 268,
+      "ci95": [
+        -0.034831298332046234,
+        0.025604687111966278
+      ],
+      "window": "final5",
+      "stoppage": "running"
+    },
+    {
+      "price_bin": "[0.05, 0.1)",
+      "tau_bucket": "15-30",
+      "estimate": -0.018316665279021982,
+      "games": 209,
+      "ci95": [
+        -0.046431067884919346,
+        0.015183882847696452
+      ],
+      "window": "final5",
+      "stoppage": "running"
+    },
+    {
+      "price_bin": "[0.1, 0.2)",
+      "tau_bucket": "0-5",
+      "estimate": 0.03131607189487205,
+      "games": 298,
+      "ci95": [
+        -0.009807909548254003,
+        0.07846031629143617
+      ],
+      "window": "final5",
+      "stoppage": "running"
+    },
+    {
+      "price_bin": "[0.1, 0.2)",
+      "tau_bucket": "5-15",
+      "estimate": 0.02315243852602133,
+      "games": 270,
+      "ci95": [
+        -0.020534603879465308,
+        0.06655545714542802
+      ],
+      "window": "final5",
+      "stoppage": "running"
+    },
+    {
+      "price_bin": "[0.1, 0.2)",
+      "tau_bucket": "15-30",
+      "estimate": 0.02082522679014463,
+      "games": 220,
+      "ci95": [
+        -0.026425241451279637,
+        0.07330824142762449
+      ],
+      "window": "final5",
+      "stoppage": "running"
+    },
+    {
+      "price_bin": "nan",
+      "tau_bucket": "0-5",
+      "estimate": -9.778486535255883e-05,
+      "games": 1083,
+      "ci95": [
+        -0.004810139288858785,
+        0.004642035481336966
+      ],
+      "window": "final5",
+      "stoppage": "running"
+    },
+    {
+      "price_bin": "nan",
+      "tau_bucket": "5-15",
+      "estimate": -0.0012226372673673944,
+      "games": 1068,
+      "ci95": [
+        -0.005647589136921661,
+        0.0027631720041064673
+      ],
+      "window": "final5",
+      "stoppage": "running"
+    },
+    {
+      "price_bin": "nan",
+      "tau_bucket": "15-30",
+      "estimate": 1.1112854384413676e-05,
+      "games": 930,
+      "ci95": [
+        -0.0052901594171925245,
+        0.0051178988608195815
+      ],
+      "window": "final5",
+      "stoppage": "running"
+    },
+    {
+      "price_bin": "[0.2, 0.35)",
+      "tau_bucket": "0-5",
+      "estimate": 0.04462459318516034,
+      "games": 304,
+      "ci95": [
+        -0.009394578178545889,
+        0.09797830032901078
+      ],
+      "window": "final5",
+      "stoppage": "running"
+    },
+    {
+      "price_bin": "[0.2, 0.35)",
+      "tau_bucket": "5-15",
+      "estimate": 0.03562859254503109,
+      "games": 281,
+      "ci95": [
+        -0.016583005118509773,
+        0.08781536455309716
+      ],
+      "window": "final5",
+      "stoppage": "running"
+    },
+    {
+      "price_bin": "[0.2, 0.35)",
+      "tau_bucket": "15-30",
+      "estimate": 0.027370956318691877,
+      "games": 232,
+      "ci95": [
+        -0.03003322853907046,
+        0.08264007039102378
+      ],
+      "window": "final5",
+      "stoppage": "running"
+    },
+    {
+      "price_bin": "[0.35, 0.5)",
+      "tau_bucket": "0-5",
+      "estimate": 0.058648119642483225,
+      "games": 302,
+      "ci95": [
+        0.003134516715549708,
+        0.1112013805908891
+      ],
+      "window": "final5",
+      "stoppage": "running"
+    },
+    {
+      "price_bin": "[0.35, 0.5)",
+      "tau_bucket": "5-15",
+      "estimate": 0.06030889950694406,
+      "games": 274,
+      "ci95": [
+        0.0003769383720426758,
+        0.1183983806616214
+      ],
+      "window": "final5",
+      "stoppage": "running"
+    },
+    {
+      "price_bin": "[0.35, 0.5)",
+      "tau_bucket": "15-30",
+      "estimate": 0.05642328560332954,
+      "games": 224,
+      "ci95": [
+        -0.00853821699599658,
+        0.11802348415838777
+      ],
+      "window": "final5",
+      "stoppage": "running"
+    },
+    {
+      "price_bin": "[0.5, 0.65)",
+      "tau_bucket": "0-5",
+      "estimate": 0.03947614168687037,
+      "games": 310,
+      "ci95": [
+        -0.013175396397400629,
+        0.09475926296207783
+      ],
+      "window": "final5",
+      "stoppage": "running"
+    },
+    {
+      "price_bin": "[0.5, 0.65)",
+      "tau_bucket": "5-15",
+      "estimate": 0.04688881282708298,
+      "games": 298,
+      "ci95": [
+        -0.007260671512435331,
+        0.10186632831798208
+      ],
+      "window": "final5",
+      "stoppage": "running"
+    },
+    {
+      "price_bin": "[0.5, 0.65)",
+      "tau_bucket": "15-30",
+      "estimate": 0.030085384764272437,
+      "games": 246,
+      "ci95": [
+        -0.03146588874417454,
+        0.09032087846388305
+      ],
+      "window": "final5",
+      "stoppage": "running"
+    },
+    {
+      "price_bin": "[0.5, 0.65)",
+      "tau_bucket": "30-60",
+      "estimate": 0.027758334284824045,
+      "games": 79,
+      "ci95": [
+        -0.07708058830517135,
+        0.13499035264322515
+      ],
+      "window": "final5",
+      "stoppage": "running"
+    },
+    {
+      "price_bin": "[0.65, 0.8)",
+      "tau_bucket": "0-5",
+      "estimate": 0.011323863952969315,
+      "games": 330,
+      "ci95": [
+        -0.03784729147782136,
+        0.05975556556284846
+      ],
+      "window": "final5",
+      "stoppage": "running"
+    },
+    {
+      "price_bin": "[0.2, 0.35)",
+      "tau_bucket": "30-60",
+      "estimate": 0.15080431047013856,
+      "games": 71,
+      "ci95": [
+        0.04008376207373262,
+        0.2680233317345386
+      ],
+      "window": "final5",
+      "stoppage": "running"
+    },
+    {
+      "price_bin": "[0.35, 0.5)",
+      "tau_bucket": "30-60",
+      "estimate": 0.12170748014717268,
+      "games": 68,
+      "ci95": [
+        0.0037342664424624703,
+        0.2341987928106999
+      ],
+      "window": "final5",
+      "stoppage": "running"
+    },
+    {
+      "price_bin": "[0.65, 0.8)",
+      "tau_bucket": "5-15",
+      "estimate": 0.035802946365680544,
+      "games": 299,
+      "ci95": [
+        -0.010358114835163216,
+        0.08287840926569642
+      ],
+      "window": "final5",
+      "stoppage": "running"
+    },
+    {
+      "price_bin": "[0.65, 0.8)",
+      "tau_bucket": "120-300",
+      "estimate": -0.08307780091958063,
+      "games": 14,
+      "ci95": [
+        -0.33149624961435625,
+        0.1313279522254706
+      ],
+      "window": "final5",
+      "stoppage": "running"
+    },
+    {
+      "price_bin": "[0.8, 0.9)",
+      "tau_bucket": "0-5",
+      "estimate": 0.02606788398324659,
+      "games": 329,
+      "ci95": [
+        -0.011831699146540689,
+        0.0612248415239553
+      ],
+      "window": "final5",
+      "stoppage": "running"
+    },
+    {
+      "price_bin": "[0.8, 0.9)",
+      "tau_bucket": "5-15",
+      "estimate": 0.023268447917330293,
+      "games": 292,
+      "ci95": [
+        -0.014584248064096285,
+        0.06038380192966432
+      ],
+      "window": "final5",
+      "stoppage": "running"
+    },
+    {
+      "price_bin": "[0.8, 0.9)",
+      "tau_bucket": "120-300",
+      "estimate": 0.012563096339091803,
+      "games": 14,
+      "ci95": [
+        -0.19068182587948512,
+        0.1587672395165027
+      ],
+      "window": "final5",
+      "stoppage": "running"
+    },
+    {
+      "price_bin": "[0.9, 0.97)",
+      "tau_bucket": "0-5",
+      "estimate": 0.0028073258549872063,
+      "games": 373,
+      "ci95": [
+        -0.02280884227453758,
+        0.02637312807269616
+      ],
+      "window": "final5",
+      "stoppage": "running"
+    },
+    {
+      "price_bin": "[0.9, 0.97)",
+      "tau_bucket": "5-15",
+      "estimate": 0.008591258648637549,
+      "games": 348,
+      "ci95": [
+        -0.017607387983357637,
+        0.031783241003733746
+      ],
+      "window": "final5",
+      "stoppage": "running"
+    },
+    {
+      "price_bin": "[0.9, 0.97)",
+      "tau_bucket": "30-60",
+      "estimate": 0.04252616069191698,
+      "games": 91,
+      "ci95": [
+        0.00971753215034611,
+        0.06607748188150749
+      ],
+      "window": "final5",
+      "stoppage": "running"
+    },
+    {
+      "price_bin": "[0.90,0.97]",
+      "tau_bucket": "0-5",
+      "estimate": 0.009591836734693904,
+      "games": 343,
+      "ci95": [
+        -0.007900874635568482,
+        0.024169096209912564
+      ],
+      "window": "final5",
+      "stoppage": "running"
+    },
+    {
+      "price_bin": "[0.90,0.97]",
+      "tau_bucket": "30-60",
+      "estimate": 0.01333333333333336,
+      "games": 60,
+      "ci95": [
+        -0.019999999999999973,
+        0.030000000000000027
+      ],
+      "window": "final5",
+      "stoppage": "running"
+    },
+    {
+      "price_bin": "nan",
+      "tau_bucket": "30-60",
+      "estimate": -0.00249215438744331,
+      "games": 413,
+      "ci95": [
+        -0.007935494859665453,
+        0.0007060685123306725
+      ],
+      "window": "final5",
+      "stoppage": "running"
+    },
+    {
+      "price_bin": "[0.8, 0.9)",
+      "tau_bucket": "15-30",
+      "estimate": 0.03777089919688375,
+      "games": 238,
+      "ci95": [
+        -0.003997209793141757,
+        0.07572461409731246
+      ],
+      "window": "final5",
+      "stoppage": "running"
+    },
+    {
+      "price_bin": "[0.9, 0.97)",
+      "tau_bucket": "15-30",
+      "estimate": 0.01990305906719884,
+      "games": 275,
+      "ci95": [
+        -0.006031509807885549,
+        0.04192147241993865
+      ],
+      "window": "final5",
+      "stoppage": "running"
+    },
+    {
+      "price_bin": "[0.90,0.97]",
+      "tau_bucket": "5-15",
+      "estimate": 0.009522184300341324,
+      "games": 293,
+      "ci95": [
+        -0.007542662116040928,
+        0.023174061433447128
+      ],
+      "window": "final5",
+      "stoppage": "running"
+    },
+    {
+      "price_bin": "[0.90,0.97]",
+      "tau_bucket": "15-30",
+      "estimate": 0.010582524271844687,
+      "games": 206,
+      "ci95": [
+        -0.008834951456310653,
+        0.025145631067961197
+      ],
+      "window": "final5",
+      "stoppage": "running"
+    },
+    {
+      "price_bin": "[0.65, 0.8)",
+      "tau_bucket": "15-30",
+      "estimate": 0.031869999070400945,
+      "games": 252,
+      "ci95": [
+        -0.02113343219052372,
+        0.08150029253901814
+      ],
+      "window": "final5",
+      "stoppage": "running"
+    },
+    {
+      "price_bin": "[0.8, 0.9)",
+      "tau_bucket": "30-60",
+      "estimate": 0.034970013382177575,
+      "games": 80,
+      "ci95": [
+        -0.04169154335673858,
+        0.10229526719584811
+      ],
+      "window": "final5",
+      "stoppage": "running"
+    },
+    {
+      "price_bin": "[0.8, 0.9)",
+      "tau_bucket": "60-120",
+      "estimate": 0.036806873292370035,
+      "games": 17,
+      "ci95": [
+        -0.13589823633938233,
+        0.15681223253911017
+      ],
+      "window": "final5",
+      "stoppage": "running"
+    },
+    {
+      "price_bin": "[0.9, 0.97)",
+      "tau_bucket": "60-120",
+      "estimate": 0.06957697941794849,
+      "games": 14,
+      "ci95": [
+        0.057231289421964864,
+        0.08223737577604504
+      ],
+      "window": "final5",
+      "stoppage": "running"
+    },
+    {
+      "price_bin": "[0.9, 0.97)",
+      "tau_bucket": "120-300",
+      "estimate": -0.08778879747703276,
+      "games": 13,
+      "ci95": [
+        -0.31897868675442204,
+        0.07080330625257096
+      ],
+      "window": "final5",
+      "stoppage": "running"
+    },
+    {
+      "price_bin": "[0.65, 0.8)",
+      "tau_bucket": "30-60",
+      "estimate": 0.013189444803850916,
+      "games": 101,
+      "ci95": [
+        -0.07651873254592703,
+        0.097063447492479
+      ],
+      "window": "final5",
+      "stoppage": "running"
+    },
+    {
+      "price_bin": "[0.03, 0.05)",
+      "tau_bucket": "30-60",
+      "estimate": -0.016107312532695043,
+      "games": 53,
+      "ci95": [
+        -0.03567079321266983,
+        0.02197854907217616
+      ],
+      "window": "final5",
+      "stoppage": "running"
+    },
+    {
+      "price_bin": "[0.05, 0.1)",
+      "tau_bucket": "30-60",
+      "estimate": -0.004826246177852777,
+      "games": 63,
+      "ci95": [
+        -0.053968250414490285,
+        0.059260443091921355
+      ],
+      "window": "final5",
+      "stoppage": "running"
+    },
+    {
+      "price_bin": "[0.35, 0.5)",
+      "tau_bucket": "120-300",
+      "estimate": -0.05506288330653303,
+      "games": 6,
+      "ci95": [
+        -0.40474965486830455,
+        0.29785822021116143
+      ],
+      "window": "final5",
+      "stoppage": "running"
+    },
+    {
+      "price_bin": "[0.03, 0.05)",
+      "tau_bucket": "60-120",
+      "estimate": -0.03442719409770382,
+      "games": 12,
+      "ci95": [
+        -0.03682926226113424,
+        -0.03229761904761906
+      ],
+      "window": "final5",
+      "stoppage": "running"
+    },
+    {
+      "price_bin": "nan",
+      "tau_bucket": "60-120",
+      "estimate": -0.0029108499520324534,
+      "games": 77,
+      "ci95": [
+        -0.005702313872311311,
+        -0.0002163391568723056
+      ],
+      "window": "final5",
+      "stoppage": "running"
+    },
+    {
+      "price_bin": "[0.2, 0.35)",
+      "tau_bucket": "60-120",
+      "estimate": 0.008940390454492067,
+      "games": 7,
+      "ci95": [
+        -0.2841212228050922,
+        0.32694907821292846
+      ],
+      "window": "final5",
+      "stoppage": "running"
+    },
+    {
+      "price_bin": "[0.2, 0.35)",
+      "tau_bucket": "120-300",
+      "estimate": -0.07443076503375011,
+      "games": 11,
+      "ci95": [
+        -0.2535702478077478,
+        0.16541671228992114
+      ],
+      "window": "final5",
+      "stoppage": "running"
+    },
+    {
+      "price_bin": "[0.1, 0.2)",
+      "tau_bucket": "30-60",
+      "estimate": 0.04724143054303406,
+      "games": 68,
+      "ci95": [
+        -0.041325481228360744,
+        0.14278132583211733
+      ],
+      "window": "final5",
+      "stoppage": "running"
+    },
+    {
+      "price_bin": "[0.90,0.97]",
+      "tau_bucket": "60-120",
+      "estimate": 0.030000000000000027,
+      "games": 6,
+      "ci95": [
+        0.030000000000000027,
+        0.030000000000000027
+      ],
+      "window": "final5",
+      "stoppage": "running"
+    },
+    {
+      "price_bin": "[0.90,0.97]",
+      "tau_bucket": "120-300",
+      "estimate": 0.030000000000000027,
+      "games": 8,
+      "ci95": [
+        0.030000000000000027,
+        0.030000000000000027
+      ],
+      "window": "final5",
+      "stoppage": "running"
+    },
+    {
+      "price_bin": "nan",
+      "tau_bucket": "120-300",
+      "estimate": 0.001556181060365813,
+      "games": 53,
+      "ci95": [
+        -0.0015969653579522261,
+        0.0047782777622563015
+      ],
+      "window": "final5",
+      "stoppage": "running"
+    },
+    {
+      "price_bin": "[0.65, 0.8)",
+      "tau_bucket": "60-120",
+      "estimate": 0.07660337212900413,
+      "games": 19,
+      "ci95": [
+        -0.12157381249247494,
+        0.23771323552874238
+      ],
+      "window": "final5",
+      "stoppage": "running"
+    },
+    {
+      "price_bin": "[0.1, 0.2)",
+      "tau_bucket": "60-120",
+      "estimate": 0.019977817783251733,
+      "games": 6,
+      "ci95": [
+        -0.16602777103910357,
+        0.3567394551980772
+      ],
+      "window": "final5",
+      "stoppage": "running"
+    },
+    {
+      "price_bin": "[0.1, 0.2)",
+      "tau_bucket": "120-300",
+      "estimate": -0.16257305538910702,
+      "games": 7,
+      "ci95": [
+        -0.1741947505509918,
+        -0.15165599885401057
+      ],
+      "window": "final5",
+      "stoppage": "running"
+    },
+    {
+      "price_bin": "[0.35, 0.5)",
+      "tau_bucket": "60-120",
+      "estimate": 0.015298184311036507,
+      "games": 7,
+      "ci95": [
+        -0.26904956745382275,
+        0.4014254807692305
+      ],
+      "window": "final5",
+      "stoppage": "running"
+    },
+    {
+      "price_bin": "[0.5, 0.65)",
+      "tau_bucket": "60-120",
+      "estimate": 0.18177095323054268,
+      "games": 13,
+      "ci95": [
+        -0.04785611198753797,
+        0.39304663099274917
+      ],
+      "window": "final5",
+      "stoppage": "running"
+    },
+    {
+      "price_bin": "[0.5, 0.65)",
+      "tau_bucket": "120-300",
+      "estimate": -0.1947094219540405,
+      "games": 11,
+      "ci95": [
+        -0.47103134396158197,
+        0.09025899199707313
+      ],
+      "window": "final5",
+      "stoppage": "running"
+    },
+    {
+      "price_bin": "[0.05, 0.1)",
+      "tau_bucket": "60-120",
+      "estimate": -0.06334498708574339,
+      "games": 10,
+      "ci95": [
+        -0.06982698420277202,
+        -0.05745861085343229
+      ],
+      "window": "final5",
+      "stoppage": "running"
+    },
+    {
+      "price_bin": "nan",
+      "tau_bucket": "300+",
+      "estimate": 0.002500000000000005,
+      "games": 5,
+      "ci95": [
+        -0.006000000000000001,
+        0.01100000000000001
+      ],
+      "window": "final5",
+      "stoppage": "running"
+    },
+    {
+      "price_bin": "[0.03, 0.05)",
+      "tau_bucket": "120-300",
+      "estimate": -0.03432453416149069,
+      "games": 7,
+      "ci95": [
+        -0.03736024844720497,
+        -0.03142857142857144
+      ],
+      "window": "final5",
+      "stoppage": "running"
+    },
+    {
+      "price_bin": "[0.05, 0.1)",
+      "tau_bucket": "120-300",
+      "estimate": -0.05903048666500499,
+      "games": 4,
+      "ci95": [
+        -0.06477068793619142,
+        -0.052734375
+      ],
+      "window": "final5",
+      "stoppage": "running"
+    },
+    {
+      "price_bin": "[0.8, 0.9)",
+      "tau_bucket": "300+",
+      "estimate": 0.11539999999999999,
+      "games": 1,
+      "ci95": [
+        0.11539999999999999,
+        0.11539999999999999
+      ],
+      "window": "final5",
+      "stoppage": "running"
+    },
+    {
+      "price_bin": "[0.9, 0.97)",
+      "tau_bucket": "300+",
+      "estimate": 0.09666666666666664,
+      "games": 1,
+      "ci95": [
+        0.09666666666666664,
+        0.09666666666666664
+      ],
+      "window": "final5",
+      "stoppage": "running"
+    },
+    {
+      "price_bin": "[0.05, 0.1)",
+      "tau_bucket": "5-15",
+      "estimate": -0.010045977016806323,
+      "games": 150,
+      "ci95": [
+        -0.04397218290289578,
+        0.029314484598887757
+      ],
+      "window": "final10",
+      "stoppage": "quiet"
+    },
+    {
+      "price_bin": "[0.05, 0.1)",
+      "tau_bucket": "15-30",
+      "estimate": -0.011615505948145165,
+      "games": 188,
+      "ci95": [
+        -0.042553164650651475,
+        0.024030983527032732
+      ],
+      "window": "final10",
+      "stoppage": "quiet"
+    },
+    {
+      "price_bin": "[0.05, 0.1)",
+      "tau_bucket": "30-60",
+      "estimate": -0.012105140637889247,
+      "games": 190,
+      "ci95": [
+        -0.0423285060265949,
+        0.020959025546677505
+      ],
+      "window": "final10",
+      "stoppage": "quiet"
+    },
+    {
+      "price_bin": "[0.05, 0.1)",
+      "tau_bucket": "60-120",
+      "estimate": -0.013266785582610248,
+      "games": 191,
+      "ci95": [
+        -0.04348887973503008,
+        0.019499451090959772
+      ],
+      "window": "final10",
+      "stoppage": "quiet"
+    },
+    {
+      "price_bin": "[0.05, 0.1)",
+      "tau_bucket": "120-300",
+      "estimate": -0.023509141193600373,
+      "games": 122,
+      "ci95": [
+        -0.05847070134511017,
+        0.018079899648096934
+      ],
+      "window": "final10",
+      "stoppage": "quiet"
+    },
+    {
+      "price_bin": "[0.1, 0.2)",
+      "tau_bucket": "5-15",
+      "estimate": 0.00876725985387281,
+      "games": 162,
+      "ci95": [
+        -0.04563525983794107,
+        0.06447272015406573
+      ],
+      "window": "final10",
+      "stoppage": "quiet"
+    },
+    {
+      "price_bin": "[0.1, 0.2)",
+      "tau_bucket": "15-30",
+      "estimate": 0.01531207268549368,
+      "games": 186,
+      "ci95": [
+        -0.03393998961084779,
+        0.06771557823489552
+      ],
+      "window": "final10",
+      "stoppage": "quiet"
+    },
+    {
+      "price_bin": "[0.1, 0.2)",
+      "tau_bucket": "120-300",
+      "estimate": -0.0053159690342670365,
+      "games": 134,
+      "ci95": [
+        -0.05747240292782646,
+        0.05524495910105706
+      ],
+      "window": "final10",
+      "stoppage": "quiet"
+    },
+    {
+      "price_bin": "nan",
+      "tau_bucket": "0-5",
+      "estimate": 0.021202632954189705,
+      "games": 98,
+      "ci95": [
+        -0.00011545738110912384,
+        0.052224788620807615
+      ],
+      "window": "final10",
+      "stoppage": "quiet"
+    },
+    {
+      "price_bin": "nan",
+      "tau_bucket": "5-15",
+      "estimate": 0.001647935964435288,
+      "games": 580,
+      "ci95": [
+        -0.0037815420328161232,
+        0.008046468844412702
+      ],
+      "window": "final10",
+      "stoppage": "quiet"
+    },
+    {
+      "price_bin": "nan",
+      "tau_bucket": "15-30",
+      "estimate": -0.0009000364463965649,
+      "games": 739,
+      "ci95": [
+        -0.005376671550878637,
+        0.00350130132132491
+      ],
+      "window": "final10",
+      "stoppage": "quiet"
+    },
+    {
+      "price_bin": "nan",
+      "tau_bucket": "30-60",
+      "estimate": -0.0007837542813400748,
+      "games": 785,
+      "ci95": [
+        -0.005302758768438523,
+        0.003268165719666016
+      ],
+      "window": "final10",
+      "stoppage": "quiet"
+    },
+    {
+      "price_bin": "nan",
+      "tau_bucket": "60-120",
+      "estimate": -0.0007644651520625833,
+      "games": 802,
+      "ci95": [
+        -0.005052947510042686,
+        0.003345244465552995
+      ],
+      "window": "final10",
+      "stoppage": "quiet"
+    },
+    {
+      "price_bin": "nan",
+      "tau_bucket": "120-300",
+      "estimate": -0.0012705651188688908,
+      "games": 502,
+      "ci95": [
+        -0.006070371554279113,
+        0.0023825608247627244
+      ],
+      "window": "final10",
+      "stoppage": "quiet"
+    },
+    {
+      "price_bin": "[0.1, 0.2)",
+      "tau_bucket": "30-60",
+      "estimate": 0.007004558640939352,
+      "games": 185,
+      "ci95": [
+        -0.04190468065964977,
+        0.059342632497540536
+      ],
+      "window": "final10",
+      "stoppage": "quiet"
+    },
+    {
+      "price_bin": "[0.1, 0.2)",
+      "tau_bucket": "60-120",
+      "estimate": 0.010455955588874846,
+      "games": 192,
+      "ci95": [
+        -0.03723014659076415,
+        0.0601809162492058
+      ],
+      "window": "final10",
+      "stoppage": "quiet"
+    },
+    {
+      "price_bin": "[0.2, 0.35)",
+      "tau_bucket": "15-30",
+      "estimate": -0.0025555979130636414,
+      "games": 180,
+      "ci95": [
+        -0.06810095021407439,
+        0.060100213695766146
+      ],
+      "window": "final10",
+      "stoppage": "quiet"
+    },
+    {
+      "price_bin": "[0.2, 0.35)",
+      "tau_bucket": "30-60",
+      "estimate": 0.005480592699014696,
+      "games": 189,
+      "ci95": [
+        -0.05817045044560853,
+        0.07307440387100299
+      ],
+      "window": "final10",
+      "stoppage": "quiet"
+    },
+    {
+      "price_bin": "[0.2, 0.35)",
+      "tau_bucket": "60-120",
+      "estimate": 0.0269972640241331,
+      "games": 191,
+      "ci95": [
+        -0.04041752397974517,
+        0.09033112507011817
+      ],
+      "window": "final10",
+      "stoppage": "quiet"
+    },
+    {
+      "price_bin": "[0.2, 0.35)",
+      "tau_bucket": "120-300",
+      "estimate": 0.005583553835249866,
+      "games": 130,
+      "ci95": [
+        -0.06534555926853988,
+        0.07917554246157708
+      ],
+      "window": "final10",
+      "stoppage": "quiet"
+    },
+    {
+      "price_bin": "[0.35, 0.5)",
+      "tau_bucket": "5-15",
+      "estimate": 0.004682403037338437,
+      "games": 146,
+      "ci95": [
+        -0.06896377371872442,
+        0.08166407117413477
+      ],
+      "window": "final10",
+      "stoppage": "quiet"
+    },
+    {
+      "price_bin": "[0.35, 0.5)",
+      "tau_bucket": "15-30",
+      "estimate": 0.031381453928590645,
+      "games": 176,
+      "ci95": [
+        -0.039779943178155044,
+        0.1019273346748263
+      ],
+      "window": "final10",
+      "stoppage": "quiet"
+    },
+    {
+      "price_bin": "[0.5, 0.65)",
+      "tau_bucket": "5-15",
+      "estimate": 0.06517060404099634,
+      "games": 167,
+      "ci95": [
+        -0.008030577099284052,
+        0.13759290450777775
+      ],
+      "window": "final10",
+      "stoppage": "quiet"
+    },
+    {
+      "price_bin": "[0.5, 0.65)",
+      "tau_bucket": "15-30",
+      "estimate": 0.07586991658818144,
+      "games": 187,
+      "ci95": [
+        0.007875902416056629,
+        0.1413011632010322
+      ],
+      "window": "final10",
+      "stoppage": "quiet"
+    },
+    {
+      "price_bin": "[0.5, 0.65)",
+      "tau_bucket": "30-60",
+      "estimate": 0.04872627237139348,
+      "games": 182,
+      "ci95": [
+        -0.021461848781698056,
+        0.12153241787842474
+      ],
+      "window": "final10",
+      "stoppage": "quiet"
+    },
+    {
+      "price_bin": "[0.5, 0.65)",
+      "tau_bucket": "60-120",
+      "estimate": 0.04690088935496216,
+      "games": 188,
+      "ci95": [
+        -0.021479247797001652,
+        0.11472058446982784
+      ],
+      "window": "final10",
+      "stoppage": "quiet"
+    },
+    {
+      "price_bin": "[0.5, 0.65)",
+      "tau_bucket": "120-300",
+      "estimate": 0.038585790551003175,
+      "games": 130,
+      "ci95": [
+        -0.0476137504087576,
+        0.11890142298641856
+      ],
+      "window": "final10",
+      "stoppage": "quiet"
+    },
+    {
+      "price_bin": "[0.2, 0.35)",
+      "tau_bucket": "5-15",
+      "estimate": -0.0032808946513916753,
+      "games": 155,
+      "ci95": [
+        -0.07087921676856779,
+        0.0676810212892348
+      ],
+      "window": "final10",
+      "stoppage": "quiet"
+    },
+    {
+      "price_bin": "[0.35, 0.5)",
+      "tau_bucket": "60-120",
+      "estimate": 0.05932062870122215,
+      "games": 174,
+      "ci95": [
+        -0.011594126432371786,
+        0.1291593867860141
+      ],
+      "window": "final10",
+      "stoppage": "quiet"
+    },
+    {
+      "price_bin": "[0.35, 0.5)",
+      "tau_bucket": "30-60",
+      "estimate": 0.03963231316157802,
+      "games": 168,
+      "ci95": [
+        -0.034577001524398826,
+        0.11525541573651697
+      ],
+      "window": "final10",
+      "stoppage": "quiet"
+    },
+    {
+      "price_bin": "[0.35, 0.5)",
+      "tau_bucket": "120-300",
+      "estimate": 0.11741255244849962,
+      "games": 109,
+      "ci95": [
+        0.02839773394992173,
+        0.21475243164827118
+      ],
+      "window": "final10",
+      "stoppage": "quiet"
+    },
+    {
+      "price_bin": "[0.9, 0.97)",
+      "tau_bucket": "5-15",
+      "estimate": 0.00901399913837912,
+      "games": 211,
+      "ci95": [
+        -0.023823994354605995,
+        0.037454634191158395
+      ],
+      "window": "final10",
+      "stoppage": "quiet"
+    },
+    {
+      "price_bin": "[0.9, 0.97)",
+      "tau_bucket": "15-30",
+      "estimate": 0.006725726643649377,
+      "games": 234,
+      "ci95": [
+        -0.026264217912359042,
+        0.036096651792803434
+      ],
+      "window": "final10",
+      "stoppage": "quiet"
+    },
+    {
+      "price_bin": "[0.9, 0.97)",
+      "tau_bucket": "30-60",
+      "estimate": 6.0457925294389334e-05,
+      "games": 245,
+      "ci95": [
+        -0.03280784950326586,
+        0.02800800801252565
+      ],
+      "window": "final10",
+      "stoppage": "quiet"
+    },
+    {
+      "price_bin": "[0.9, 0.97)",
+      "tau_bucket": "60-120",
+      "estimate": 0.005479288145894775,
+      "games": 247,
+      "ci95": [
+        -0.02539230604199695,
+        0.03408758264446668
+      ],
+      "window": "final10",
+      "stoppage": "quiet"
+    },
+    {
+      "price_bin": "[0.90,0.97]",
+      "tau_bucket": "15-30",
+      "estimate": 0.016842105263157922,
+      "games": 152,
+      "ci95": [
+        -0.002894736842105238,
+        0.030000000000000027
+      ],
+      "window": "final10",
+      "stoppage": "quiet"
+    },
+    {
+      "price_bin": "[0.90,0.97]",
+      "tau_bucket": "30-60",
+      "estimate": 0.017577639751552823,
+      "games": 161,
+      "ci95": [
+        -0.0010559006211179871,
+        0.030000000000000027
+      ],
+      "window": "final10",
+      "stoppage": "quiet"
+    },
+    {
+      "price_bin": "[0.90,0.97]",
+      "tau_bucket": "60-120",
+      "estimate": 0.01765432098765435,
+      "games": 162,
+      "ci95": [
+        -0.0008641975308641701,
+        0.03000000000000003
+      ],
+      "window": "final10",
+      "stoppage": "quiet"
+    },
+    {
+      "price_bin": "[0.65, 0.8)",
+      "tau_bucket": "0-5",
+      "estimate": 0.0825984996420164,
+      "games": 34,
+      "ci95": [
+        -0.06290818186438799,
+        0.2056152303487583
+      ],
+      "window": "final10",
+      "stoppage": "quiet"
+    },
+    {
+      "price_bin": "[0.65, 0.8)",
+      "tau_bucket": "5-15",
+      "estimate": 0.048359732336863887,
+      "games": 183,
+      "ci95": [
+        -0.013099938236262123,
+        0.1070123643090571
+      ],
+      "window": "final10",
+      "stoppage": "quiet"
+    },
+    {
+      "price_bin": "[0.65, 0.8)",
+      "tau_bucket": "15-30",
+      "estimate": 0.039144361314429284,
+      "games": 205,
+      "ci95": [
+        -0.018960617677672053,
+        0.09828835797996452
+      ],
+      "window": "final10",
+      "stoppage": "quiet"
+    },
+    {
+      "price_bin": "[0.65, 0.8)",
+      "tau_bucket": "30-60",
+      "estimate": 0.044975628196747254,
+      "games": 211,
+      "ci95": [
+        -0.011729204210465137,
+        0.1001575115217823
+      ],
+      "window": "final10",
+      "stoppage": "quiet"
+    },
+    {
+      "price_bin": "[0.65, 0.8)",
+      "tau_bucket": "60-120",
+      "estimate": 0.06255130311665211,
+      "games": 205,
+      "ci95": [
+        0.004209801970714421,
+        0.11615339911588557
+      ],
+      "window": "final10",
+      "stoppage": "quiet"
+    },
+    {
+      "price_bin": "[0.65, 0.8)",
+      "tau_bucket": "120-300",
+      "estimate": 0.05327327936951063,
+      "games": 142,
+      "ci95": [
+        -0.013941532852648698,
+        0.1187223001508519
+      ],
+      "window": "final10",
+      "stoppage": "quiet"
+    },
+    {
+      "price_bin": "[0.8, 0.9)",
+      "tau_bucket": "15-30",
+      "estimate": 0.02857573793299707,
+      "games": 206,
+      "ci95": [
+        -0.015910735855391645,
+        0.07071730846314006
+      ],
+      "window": "final10",
+      "stoppage": "quiet"
+    },
+    {
+      "price_bin": "[0.8, 0.9)",
+      "tau_bucket": "30-60",
+      "estimate": 0.029529562141761997,
+      "games": 208,
+      "ci95": [
+        -0.018611625587929753,
+        0.0738512962687939
+      ],
+      "window": "final10",
+      "stoppage": "quiet"
+    },
+    {
+      "price_bin": "[0.03, 0.05)",
+      "tau_bucket": "5-15",
+      "estimate": -0.014065736198625682,
+      "games": 143,
+      "ci95": [
+        -0.0348817884594179,
+        0.01357023761784295
+      ],
+      "window": "final10",
+      "stoppage": "quiet"
+    },
+    {
+      "price_bin": "[0.03, 0.05)",
+      "tau_bucket": "15-30",
+      "estimate": -0.016826792992994315,
+      "games": 167,
+      "ci95": [
+        -0.03469275888056232,
+        0.006951788696145489
+      ],
+      "window": "final10",
+      "stoppage": "quiet"
+    },
+    {
+      "price_bin": "[0.03, 0.05)",
+      "tau_bucket": "30-60",
+      "estimate": -0.01657284485198202,
+      "games": 168,
+      "ci95": [
+        -0.03436865029520164,
+        0.007080234659206669
+      ],
+      "window": "final10",
+      "stoppage": "quiet"
+    },
+    {
+      "price_bin": "[0.03, 0.05)",
+      "tau_bucket": "60-120",
+      "estimate": -0.015546482736832474,
+      "games": 159,
+      "ci95": [
+        -0.03434616414917917,
+        0.009569936897818609
+      ],
+      "window": "final10",
+      "stoppage": "quiet"
+    },
+    {
+      "price_bin": "[0.03, 0.05)",
+      "tau_bucket": "120-300",
+      "estimate": -0.023766932397970834,
+      "games": 97,
+      "ci95": [
+        -0.03463450447573157,
+        -0.002767833437715724
+      ],
+      "window": "final10",
+      "stoppage": "quiet"
+    },
+    {
+      "price_bin": "[0.8, 0.9)",
+      "tau_bucket": "5-15",
+      "estimate": 0.04347887087700658,
+      "games": 180,
+      "ci95": [
+        -0.0063778763404207075,
+        0.08666990436237107
+      ],
+      "window": "final10",
+      "stoppage": "quiet"
+    },
+    {
+      "price_bin": "[0.8, 0.9)",
+      "tau_bucket": "60-120",
+      "estimate": 0.02808680838715119,
+      "games": 200,
+      "ci95": [
+        -0.020063983411049414,
+        0.07127808271582196
+      ],
+      "window": "final10",
+      "stoppage": "quiet"
+    },
+    {
+      "price_bin": "[0.8, 0.9)",
+      "tau_bucket": "120-300",
+      "estimate": 0.01798022001987276,
+      "games": 135,
+      "ci95": [
+        -0.0426119540880135,
+        0.07358582878161542
+      ],
+      "window": "final10",
+      "stoppage": "quiet"
+    },
+    {
+      "price_bin": "[0.9, 0.97)",
+      "tau_bucket": "0-5",
+      "estimate": -0.0022043145479591266,
+      "games": 42,
+      "ci95": [
+        -0.0935828770373268,
+        0.06812562671940721
+      ],
+      "window": "final10",
+      "stoppage": "quiet"
+    },
+    {
+      "price_bin": "[0.9, 0.97)",
+      "tau_bucket": "120-300",
+      "estimate": -0.004616763510364599,
+      "games": 166,
+      "ci95": [
+        -0.04602426753229855,
+        0.033615758129855774
+      ],
+      "window": "final10",
+      "stoppage": "quiet"
+    },
+    {
+      "price_bin": "[0.90,0.97]",
+      "tau_bucket": "5-15",
+      "estimate": 0.022857142857142892,
+      "games": 140,
+      "ci95": [
+        0.008571428571428598,
+        0.030000000000000034
+      ],
+      "window": "final10",
+      "stoppage": "quiet"
+    },
+    {
+      "price_bin": "[0.90,0.97]",
+      "tau_bucket": "120-300",
+      "estimate": 0.01850574712643681,
+      "games": 87,
+      "ci95": [
+        -0.004482758620689629,
+        0.030000000000000044
+      ],
+      "window": "final10",
+      "stoppage": "quiet"
+    },
+    {
+      "price_bin": "[0.05, 0.1)",
+      "tau_bucket": "0-5",
+      "estimate": -0.009426311931285054,
+      "games": 32,
+      "ci95": [
+        -0.07487873119141446,
+        0.08522965666996521
+      ],
+      "window": "final10",
+      "stoppage": "quiet"
+    },
+    {
+      "price_bin": "[0.2, 0.35)",
+      "tau_bucket": "0-5",
+      "estimate": 0.050710328385065256,
+      "games": 25,
+      "ci95": [
+        -0.12475325522138679,
+        0.25358816721290395
+      ],
+      "window": "final10",
+      "stoppage": "quiet"
+    },
+    {
+      "price_bin": "[0.35, 0.5)",
+      "tau_bucket": "0-5",
+      "estimate": -0.11545437540514113,
+      "games": 24,
+      "ci95": [
+        -0.2833096486639569,
+        0.06564559049670635
+      ],
+      "window": "final10",
+      "stoppage": "quiet"
+    },
+    {
+      "price_bin": "[0.1, 0.2)",
+      "tau_bucket": "0-5",
+      "estimate": 0.05394544001881084,
+      "games": 31,
+      "ci95": [
+        -0.07277055751432217,
+        0.19171679322556717
+      ],
+      "window": "final10",
+      "stoppage": "quiet"
+    },
+    {
+      "price_bin": "[0.03, 0.05)",
+      "tau_bucket": "0-5",
+      "estimate": 0.0394270429159318,
+      "games": 27,
+      "ci95": [
+        -0.03517186067019402,
+        0.15028865961199292
+      ],
+      "window": "final10",
+      "stoppage": "quiet"
+    },
+    {
+      "price_bin": "[0.5, 0.65)",
+      "tau_bucket": "0-5",
+      "estimate": 0.11835788019604065,
+      "games": 29,
+      "ci95": [
+        -0.05901135889972096,
+        0.2818804805841581
+      ],
+      "window": "final10",
+      "stoppage": "quiet"
+    },
+    {
+      "price_bin": "[0.90,0.97]",
+      "tau_bucket": "0-5",
+      "estimate": 0.030000000000000027,
+      "games": 17,
+      "ci95": [
+        0.030000000000000027,
+        0.030000000000000027
+      ],
+      "window": "final10",
+      "stoppage": "quiet"
+    },
+    {
+      "price_bin": "[0.8, 0.9)",
+      "tau_bucket": "0-5",
+      "estimate": -0.04538241206080081,
+      "games": 26,
+      "ci95": [
+        -0.19860917330396233,
+        0.10078056366587376
+      ],
+      "window": "final10",
+      "stoppage": "quiet"
+    },
+    {
+      "price_bin": "[0.35, 0.5)",
+      "tau_bucket": "300+",
+      "estimate": 0.5103125000000001,
+      "games": 1,
+      "ci95": [
+        0.5103125000000001,
+        0.5103125000000001
+      ],
+      "window": "final10",
+      "stoppage": "quiet"
+    },
+    {
+      "price_bin": "[0.5, 0.65)",
+      "tau_bucket": "300+",
+      "estimate": 0.4904054054054054,
+      "games": 1,
+      "ci95": [
+        0.4904054054054054,
+        0.4904054054054054
+      ],
+      "window": "final10",
+      "stoppage": "quiet"
+    },
+    {
+      "price_bin": "[0.65, 0.8)",
+      "tau_bucket": "300+",
+      "estimate": 0.3290476190476191,
+      "games": 1,
+      "ci95": [
+        0.3290476190476191,
+        0.3290476190476191
+      ],
+      "window": "final10",
+      "stoppage": "quiet"
+    },
+    {
+      "price_bin": "[0.8, 0.9)",
+      "tau_bucket": "300+",
+      "estimate": 0.10999999999999999,
+      "games": 1,
+      "ci95": [
+        0.10999999999999999,
+        0.10999999999999999
+      ],
+      "window": "final10",
+      "stoppage": "quiet"
+    },
+    {
+      "price_bin": "[0.9, 0.97)",
+      "tau_bucket": "300+",
+      "estimate": 0.09214983713355046,
+      "games": 1,
+      "ci95": [
+        0.09214983713355046,
+        0.09214983713355046
+      ],
+      "window": "final10",
+      "stoppage": "quiet"
+    },
+    {
+      "price_bin": "nan",
+      "tau_bucket": "300+",
+      "estimate": 0.010000000000000009,
+      "games": 1,
+      "ci95": [
+        0.010000000000000009,
+        0.010000000000000009
+      ],
+      "window": "final10",
+      "stoppage": "quiet"
+    },
+    {
+      "price_bin": "[0.1, 0.2)",
+      "tau_bucket": "300+",
+      "estimate": 0.3101461912198508,
+      "games": 2,
+      "ci95": [
+        -0.1872566371681416,
+        0.8075490196078432
+      ],
+      "window": "final10",
+      "stoppage": "quiet"
+    },
+    {
+      "price_bin": "[0.2, 0.35)",
+      "tau_bucket": "300+",
+      "estimate": 0.7804338394793927,
+      "games": 1,
+      "ci95": [
+        0.7804338394793927,
+        0.7804338394793927
+      ],
+      "window": "final10",
+      "stoppage": "quiet"
+    },
+    {
+      "price_bin": "[0.03, 0.05)",
+      "tau_bucket": "0-5",
+      "estimate": -0.01523610046328913,
+      "games": 413,
+      "ci95": [
+        -0.027355726533468988,
+        -0.0008245499915578612
+      ],
+      "window": "final10",
+      "stoppage": "running"
+    },
+    {
+      "price_bin": "[0.03, 0.05)",
+      "tau_bucket": "5-15",
+      "estimate": -0.006073293783260667,
+      "games": 388,
+      "ci95": [
+        -0.021578719822857775,
+        0.011923376465561237
+      ],
+      "window": "final10",
+      "stoppage": "running"
+    },
+    {
+      "price_bin": "[0.03, 0.05)",
+      "tau_bucket": "15-30",
+      "estimate": -0.011512261401215102,
+      "games": 305,
+      "ci95": [
+        -0.02764764673086401,
+        0.005244266758661548
+      ],
+      "window": "final10",
+      "stoppage": "running"
+    },
+    {
+      "price_bin": "[0.05, 0.1)",
+      "tau_bucket": "0-5",
+      "estimate": -0.002030467937340625,
+      "games": 415,
+      "ci95": [
+        -0.025568276263847917,
+        0.02414110838481822
+      ],
+      "window": "final10",
+      "stoppage": "running"
+    },
+    {
+      "price_bin": "[0.05, 0.1)",
+      "tau_bucket": "5-15",
+      "estimate": -0.0006614192073173378,
+      "games": 390,
+      "ci95": [
+        -0.023705031462647408,
+        0.023748590700351964
+      ],
+      "window": "final10",
+      "stoppage": "running"
+    },
+    {
+      "price_bin": "[0.05, 0.1)",
+      "tau_bucket": "15-30",
+      "estimate": -0.0027822381347305213,
+      "games": 323,
+      "ci95": [
+        -0.029039852502379095,
+        0.025550543453245804
+      ],
+      "window": "final10",
+      "stoppage": "running"
+    },
+    {
+      "price_bin": "[0.1, 0.2)",
+      "tau_bucket": "0-5",
+      "estimate": 0.02658365487122149,
+      "games": 412,
+      "ci95": [
+        -0.008794132857030892,
+        0.06319827085682499
+      ],
+      "window": "final10",
+      "stoppage": "running"
+    },
+    {
+      "price_bin": "[0.1, 0.2)",
+      "tau_bucket": "5-15",
+      "estimate": 0.024040316675398632,
+      "games": 379,
+      "ci95": [
+        -0.011975951231126892,
+        0.061935989477469054
+      ],
+      "window": "final10",
+      "stoppage": "running"
+    },
+    {
+      "price_bin": "[0.1, 0.2)",
+      "tau_bucket": "15-30",
+      "estimate": 0.018330814276347734,
+      "games": 323,
+      "ci95": [
+        -0.020751994060074518,
+        0.061592825443708324
+      ],
+      "window": "final10",
+      "stoppage": "running"
+    },
+    {
+      "price_bin": "[0.2, 0.35)",
+      "tau_bucket": "0-5",
+      "estimate": 0.04144861722046272,
+      "games": 406,
+      "ci95": [
+        -0.0028397777450623837,
+        0.08827023324489587
+      ],
+      "window": "final10",
+      "stoppage": "running"
+    },
+    {
+      "price_bin": "[0.2, 0.35)",
+      "tau_bucket": "5-15",
+      "estimate": 0.02866115483847969,
+      "games": 380,
+      "ci95": [
+        -0.012460433968202877,
+        0.07345020736719116
+      ],
+      "window": "final10",
+      "stoppage": "running"
+    },
+    {
+      "price_bin": "[0.2, 0.35)",
+      "tau_bucket": "15-30",
+      "estimate": 0.025404489439127216,
+      "games": 336,
+      "ci95": [
+        -0.02340406710278863,
+        0.07358309546220221
+      ],
+      "window": "final10",
+      "stoppage": "running"
+    },
+    {
+      "price_bin": "nan",
+      "tau_bucket": "0-5",
+      "estimate": -7.831989988115803e-05,
+      "games": 1105,
+      "ci95": [
+        -0.005356530339766856,
+        0.0051805634493037106
+      ],
+      "window": "final10",
+      "stoppage": "running"
+    },
+    {
+      "price_bin": "nan",
+      "tau_bucket": "5-15",
+      "estimate": -0.0015724777241797334,
+      "games": 1085,
+      "ci95": [
+        -0.006503924361098881,
+        0.002891560714344658
+      ],
+      "window": "final10",
+      "stoppage": "running"
+    },
+    {
+      "price_bin": "nan",
+      "tau_bucket": "15-30",
+      "estimate": -0.0015775429990090822,
+      "games": 987,
+      "ci95": [
+        -0.007066761255548854,
+        0.0037745216816445592
+      ],
+      "window": "final10",
+      "stoppage": "running"
+    },
+    {
+      "price_bin": "[0.9, 0.97)",
+      "tau_bucket": "5-15",
+      "estimate": -0.003053306859955898,
+      "games": 455,
+      "ci95": [
+        -0.026300820394367076,
+        0.019750830207403126
+      ],
+      "window": "final10",
+      "stoppage": "running"
+    },
+    {
+      "price_bin": "[0.90,0.97]",
+      "tau_bucket": "0-5",
+      "estimate": 0.004056603773584932,
+      "games": 424,
+      "ci95": [
+        -0.012452830188679218,
+        0.018207547169811347
+      ],
+      "window": "final10",
+      "stoppage": "running"
+    },
+    {
+      "price_bin": "[0.2, 0.35)",
+      "tau_bucket": "30-60",
+      "estimate": 0.09257553232984157,
+      "games": 133,
+      "ci95": [
+        0.015571721116667783,
+        0.177225814001058
+      ],
+      "window": "final10",
+      "stoppage": "running"
+    },
+    {
+      "price_bin": "[0.35, 0.5)",
+      "tau_bucket": "0-5",
+      "estimate": 0.049683751341507945,
+      "games": 397,
+      "ci95": [
+        0.002386445391002341,
+        0.09495152641356185
+      ],
+      "window": "final10",
+      "stoppage": "running"
+    },
+    {
+      "price_bin": "[0.35, 0.5)",
+      "tau_bucket": "5-15",
+      "estimate": 0.05090513210850983,
+      "games": 375,
+      "ci95": [
+        -0.0010443618093412452,
+        0.10205737871587182
+      ],
+      "window": "final10",
+      "stoppage": "running"
+    },
+    {
+      "price_bin": "[0.35, 0.5)",
+      "tau_bucket": "15-30",
+      "estimate": 0.04267956354255272,
+      "games": 326,
+      "ci95": [
+        -0.011424779927391198,
+        0.09738931508241795
+      ],
+      "window": "final10",
+      "stoppage": "running"
+    },
+    {
+      "price_bin": "[0.35, 0.5)",
+      "tau_bucket": "30-60",
+      "estimate": 0.08620964633343983,
+      "games": 135,
+      "ci95": [
+        0.002997355880769454,
+        0.17377789013073838
+      ],
+      "window": "final10",
+      "stoppage": "running"
+    },
+    {
+      "price_bin": "[0.5, 0.65)",
+      "tau_bucket": "0-5",
+      "estimate": 0.028760368283588193,
+      "games": 419,
+      "ci95": [
+        -0.017613733508161394,
+        0.0746768609173438
+      ],
+      "window": "final10",
+      "stoppage": "running"
+    },
+    {
+      "price_bin": "[0.5, 0.65)",
+      "tau_bucket": "5-15",
+      "estimate": 0.04480327734869701,
+      "games": 404,
+      "ci95": [
+        -0.00350092740214937,
+        0.09117977427792953
+      ],
+      "window": "final10",
+      "stoppage": "running"
+    },
+    {
+      "price_bin": "[0.5, 0.65)",
+      "tau_bucket": "15-30",
+      "estimate": 0.026516554252454288,
+      "games": 351,
+      "ci95": [
+        -0.021318306693316233,
+        0.07699238275496836
+      ],
+      "window": "final10",
+      "stoppage": "running"
+    },
+    {
+      "price_bin": "[0.5, 0.65)",
+      "tau_bucket": "30-60",
+      "estimate": 0.03675074796967563,
+      "games": 155,
+      "ci95": [
+        -0.040772676997869475,
+        0.1151153531366871
+      ],
+      "window": "final10",
+      "stoppage": "running"
+    },
+    {
+      "price_bin": "[0.65, 0.8)",
+      "tau_bucket": "0-5",
+      "estimate": 0.011671915656899585,
+      "games": 444,
+      "ci95": [
+        -0.029726980988026636,
+        0.05115179540399991
+      ],
+      "window": "final10",
+      "stoppage": "running"
+    },
+    {
+      "price_bin": "[0.1, 0.2)",
+      "tau_bucket": "30-60",
+      "estimate": 0.012616371538225596,
+      "games": 128,
+      "ci95": [
+        -0.04790927584630708,
+        0.07850203935513259
+      ],
+      "window": "final10",
+      "stoppage": "running"
+    },
+    {
+      "price_bin": "[0.1, 0.2)",
+      "tau_bucket": "60-120",
+      "estimate": -0.006186794634570752,
+      "games": 15,
+      "ci95": [
+        -0.14352118129090957,
+        0.19238253073534894
+      ],
+      "window": "final10",
+      "stoppage": "running"
+    },
+    {
+      "price_bin": "[0.65, 0.8)",
+      "tau_bucket": "5-15",
+      "estimate": 0.02330290354935371,
+      "games": 420,
+      "ci95": [
+        -0.01773401796563518,
+        0.0629697219297649
+      ],
+      "window": "final10",
+      "stoppage": "running"
+    },
+    {
+      "price_bin": "[0.65, 0.8)",
+      "tau_bucket": "120-300",
+      "estimate": -0.031493242694988474,
+      "games": 20,
+      "ci95": [
+        -0.22959305622070345,
+        0.1495713055105081
+      ],
+      "window": "final10",
+      "stoppage": "running"
+    },
+    {
+      "price_bin": "[0.8, 0.9)",
+      "tau_bucket": "0-5",
+      "estimate": 0.007946624527915213,
+      "games": 442,
+      "ci95": [
+        -0.02556095213760131,
+        0.03861677518531774
+      ],
+      "window": "final10",
+      "stoppage": "running"
+    },
+    {
+      "price_bin": "[0.8, 0.9)",
+      "tau_bucket": "5-15",
+      "estimate": 0.018493941663116402,
+      "games": 415,
+      "ci95": [
+        -0.015618436654972681,
+        0.049181470959614275
+      ],
+      "window": "final10",
+      "stoppage": "running"
+    },
+    {
+      "price_bin": "[0.8, 0.9)",
+      "tau_bucket": "120-300",
+      "estimate": 0.0025552785484753682,
+      "games": 20,
+      "ci95": [
+        -0.15476691552005112,
+        0.150655068852014
+      ],
+      "window": "final10",
+      "stoppage": "running"
+    },
+    {
+      "price_bin": "[0.9, 0.97)",
+      "tau_bucket": "0-5",
+      "estimate": -0.007801047355826634,
+      "games": 473,
+      "ci95": [
+        -0.031203066157500212,
+        0.01494996371088443
+      ],
+      "window": "final10",
+      "stoppage": "running"
+    },
+    {
+      "price_bin": "[0.9, 0.97)",
+      "tau_bucket": "30-60",
+      "estimate": 0.00844800169107052,
+      "games": 179,
+      "ci95": [
+        -0.02499542412889202,
+        0.03735558942914789
+      ],
+      "window": "final10",
+      "stoppage": "running"
+    },
+    {
+      "price_bin": "[0.90,0.97]",
+      "tau_bucket": "30-60",
+      "estimate": -0.0003030303030302775,
+      "games": 99,
+      "ci95": [
+        -0.04070707070707067,
+        0.030000000000000034
+      ],
+      "window": "final10",
+      "stoppage": "running"
+    },
+    {
+      "price_bin": "nan",
+      "tau_bucket": "30-60",
+      "estimate": -0.0019400337293422859,
+      "games": 535,
+      "ci95": [
+        -0.008437363783617258,
+        0.004182500451825637
+      ],
+      "window": "final10",
+      "stoppage": "running"
+    },
+    {
+      "price_bin": "[0.65, 0.8)",
+      "tau_bucket": "15-30",
+      "estimate": 0.020646052895357495,
+      "games": 377,
+      "ci95": [
+        -0.022123663371274145,
+        0.0630794749607245
+      ],
+      "window": "final10",
+      "stoppage": "running"
+    },
+    {
+      "price_bin": "[0.65, 0.8)",
+      "tau_bucket": "30-60",
+      "estimate": 0.018806371286787832,
+      "games": 178,
+      "ci95": [
+        -0.042549429581124856,
+        0.08061242810812336
+      ],
+      "window": "final10",
+      "stoppage": "running"
+    },
+    {
+      "price_bin": "[0.8, 0.9)",
+      "tau_bucket": "15-30",
+      "estimate": 0.021309173981304386,
+      "games": 358,
+      "ci95": [
+        -0.01754393784551998,
+        0.05559700582808743
+      ],
+      "window": "final10",
+      "stoppage": "running"
+    },
+    {
+      "price_bin": "[0.9, 0.97)",
+      "tau_bucket": "15-30",
+      "estimate": 0.006166701488447705,
+      "games": 391,
+      "ci95": [
+        -0.01872834946595203,
+        0.028519683170403837
+      ],
+      "window": "final10",
+      "stoppage": "running"
+    },
+    {
+      "price_bin": "[0.90,0.97]",
+      "tau_bucket": "5-15",
+      "estimate": 0.006439790575916257,
+      "games": 382,
+      "ci95": [
+        -0.009267015706806258,
+        0.019528795811518354
+      ],
+      "window": "final10",
+      "stoppage": "running"
+    },
+    {
+      "price_bin": "[0.90,0.97]",
+      "tau_bucket": "15-30",
+      "estimate": 0.006430976430976457,
+      "games": 297,
+      "ci95": [
+        -0.010404040404040377,
+        0.023265993265993292
+      ],
+      "window": "final10",
+      "stoppage": "running"
+    },
+    {
+      "price_bin": "[0.05, 0.1)",
+      "tau_bucket": "30-60",
+      "estimate": -0.003011937351044587,
+      "games": 119,
+      "ci95": [
+        -0.044762083798356896,
+        0.045807567599741396
+      ],
+      "window": "final10",
+      "stoppage": "running"
+    },
+    {
+      "price_bin": "[0.05, 0.1)",
+      "tau_bucket": "60-120",
+      "estimate": -0.06640803114253176,
+      "games": 17,
+      "ci95": [
+        -0.0734532649845753,
+        -0.06020504277843986
+      ],
+      "window": "final10",
+      "stoppage": "running"
+    },
+    {
+      "price_bin": "[0.8, 0.9)",
+      "tau_bucket": "30-60",
+      "estimate": 0.029737898764091625,
+      "games": 139,
+      "ci95": [
+        -0.02765986454333691,
+        0.08173104497134384
+      ],
+      "window": "final10",
+      "stoppage": "running"
+    },
+    {
+      "price_bin": "[0.8, 0.9)",
+      "tau_bucket": "60-120",
+      "estimate": 0.00694389880446577,
+      "games": 27,
+      "ci95": [
+        -0.13431862894859184,
+        0.12241221826316565
+      ],
+      "window": "final10",
+      "stoppage": "running"
+    },
+    {
+      "price_bin": "[0.9, 0.97)",
+      "tau_bucket": "60-120",
+      "estimate": 0.030543079819788273,
+      "games": 27,
+      "ci95": [
+        -0.04480910463801475,
+        0.07314442490774957
+      ],
+      "window": "final10",
+      "stoppage": "running"
+    },
+    {
+      "price_bin": "[0.9, 0.97)",
+      "tau_bucket": "120-300",
+      "estimate": -0.07988468236098265,
+      "games": 20,
+      "ci95": [
+        -0.23720866347017278,
+        0.06508957005984212
+      ],
+      "window": "final10",
+      "stoppage": "running"
+    },
+    {
+      "price_bin": "[0.03, 0.05)",
+      "tau_bucket": "30-60",
+      "estimate": -0.015549674045899653,
+      "games": 107,
+      "ci95": [
+        -0.03451781945541672,
+        0.01265493069520575
+      ],
+      "window": "final10",
+      "stoppage": "running"
+    },
+    {
+      "price_bin": "[0.1, 0.2)",
+      "tau_bucket": "120-300",
+      "estimate": -0.05359000989138339,
+      "games": 9,
+      "ci95": [
+        -0.16890269346236364,
+        0.1655376512984024
+      ],
+      "window": "final10",
+      "stoppage": "running"
+    },
+    {
+      "price_bin": "[0.35, 0.5)",
+      "tau_bucket": "120-300",
+      "estimate": -0.17212393461366174,
+      "games": 9,
+      "ci95": [
+        -0.4099281397667974,
+        0.17111051122080534
+      ],
+      "window": "final10",
+      "stoppage": "running"
+    },
+    {
+      "price_bin": "[0.5, 0.65)",
+      "tau_bucket": "60-120",
+      "estimate": 0.13567085347691582,
+      "games": 21,
+      "ci95": [
+        -0.05185871182147713,
+        0.3198301922603094
+      ],
+      "window": "final10",
+      "stoppage": "running"
+    },
+    {
+      "price_bin": "[0.03, 0.05)",
+      "tau_bucket": "60-120",
+      "estimate": -0.034359728955062244,
+      "games": 21,
+      "ci95": [
+        -0.03619490489561522,
+        -0.032717560835013634
+      ],
+      "window": "final10",
+      "stoppage": "running"
+    },
+    {
+      "price_bin": "nan",
+      "tau_bucket": "60-120",
+      "estimate": -0.0027968513757358256,
+      "games": 105,
+      "ci95": [
+        -0.005115569714300918,
+        -0.0004443069837459442
+      ],
+      "window": "final10",
+      "stoppage": "running"
+    },
+    {
+      "price_bin": "[0.2, 0.35)",
+      "tau_bucket": "60-120",
+      "estimate": 0.1026738771051653,
+      "games": 18,
+      "ci95": [
+        -0.12176606319430286,
+        0.3276954930196607
+      ],
+      "window": "final10",
+      "stoppage": "running"
+    },
+    {
+      "price_bin": "[0.65, 0.8)",
+      "tau_bucket": "60-120",
+      "estimate": 0.11594356092820561,
+      "games": 30,
+      "ci95": [
+        -0.019774663607819824,
+        0.2385077709398597
+      ],
+      "window": "final10",
+      "stoppage": "running"
+    },
+    {
+      "price_bin": "[0.05, 0.1)",
+      "tau_bucket": "120-300",
+      "estimate": -0.06097581403487007,
+      "games": 13,
+      "ci95": [
+        -0.06523841402273277,
+        -0.05659460419929365
+      ],
+      "window": "final10",
+      "stoppage": "running"
+    },
+    {
+      "price_bin": "[0.2, 0.35)",
+      "tau_bucket": "120-300",
+      "estimate": -0.01310799319185512,
+      "games": 16,
+      "ci95": [
+        -0.20812919227693943,
+        0.21732814357508842
+      ],
+      "window": "final10",
+      "stoppage": "running"
+    },
+    {
+      "price_bin": "[0.90,0.97]",
+      "tau_bucket": "60-120",
+      "estimate": 0.030000000000000027,
+      "games": 10,
+      "ci95": [
+        0.030000000000000027,
+        0.030000000000000027
+      ],
+      "window": "final10",
+      "stoppage": "running"
+    },
+    {
+      "price_bin": "[0.90,0.97]",
+      "tau_bucket": "120-300",
+      "estimate": -0.06999999999999998,
+      "games": 10,
+      "ci95": [
+        -0.26999999999999996,
+        0.030000000000000027
+      ],
+      "window": "final10",
+      "stoppage": "running"
+    },
+    {
+      "price_bin": "nan",
+      "tau_bucket": "120-300",
+      "estimate": -0.0006822928434101024,
+      "games": 70,
+      "ci95": [
+        -0.003611997399729896,
+        0.0021427228620591538
+      ],
+      "window": "final10",
+      "stoppage": "running"
+    },
+    {
+      "price_bin": "[0.5, 0.65)",
+      "tau_bucket": "120-300",
+      "estimate": 0.011412462947049106,
+      "games": 19,
+      "ci95": [
+        -0.20488877114716594,
+        0.22778807631748527
+      ],
+      "window": "final10",
+      "stoppage": "running"
+    },
+    {
+      "price_bin": "[0.03, 0.05)",
+      "tau_bucket": "120-300",
+      "estimate": -0.0350069224254007,
+      "games": 14,
+      "ci95": [
+        -0.03717813232962691,
+        -0.03284334415584418
+      ],
+      "window": "final10",
+      "stoppage": "running"
+    },
+    {
+      "price_bin": "[0.35, 0.5)",
+      "tau_bucket": "60-120",
+      "estimate": 0.1483889536413412,
+      "games": 16,
+      "ci95": [
+        -0.08966581656454409,
+        0.38234084382573075
+      ],
+      "window": "final10",
+      "stoppage": "running"
+    },
+    {
+      "price_bin": "nan",
+      "tau_bucket": "300+",
+      "estimate": 0.002500000000000005,
+      "games": 5,
+      "ci95": [
+        -0.006000000000000003,
+        0.01100000000000001
+      ],
+      "window": "final10",
+      "stoppage": "running"
+    },
+    {
+      "price_bin": "[0.8, 0.9)",
+      "tau_bucket": "300+",
+      "estimate": 0.11539999999999999,
+      "games": 1,
+      "ci95": [
+        0.11539999999999999,
+        0.11539999999999999
+      ],
+      "window": "final10",
+      "stoppage": "running"
+    },
+    {
+      "price_bin": "[0.9, 0.97)",
+      "tau_bucket": "300+",
+      "estimate": 0.09666666666666664,
+      "games": 1,
+      "ci95": [
+        0.09666666666666664,
+        0.09666666666666664
+      ],
+      "window": "final10",
+      "stoppage": "running"
+    }
+  ],
+  "microstructure_primary_by_game_cell": [
+    {
+      "longshot_price_bin": "[0.1, 0.2)",
+      "tau_bucket": "5-15",
+      "games_paired": 139,
+      "A_buy": 0.048300697462558426,
+      "A_buy_ci95": [
+        -0.008006154039165166,
+        0.09928876472326657
+      ],
+      "A_sell": 0.04020988976194484,
+      "A_sell_ci95": [
+        -0.01611035186698963,
+        0.0909122992344651
+      ],
+      "A_mid_approx": 0.04425529361225164,
+      "A_mid_approx_ci95": [
+        -0.011663584880174004,
+        0.09483686018572893
+      ],
+      "spread_effect_approx": 0.008090807700613581,
+      "spread_effect_approx_ci95": [
+        0.0028641824376791996,
+        0.013199332575368572
+      ],
+      "trades_buy": 6703,
+      "trades_sell": 4940,
+      "taker_band_large_size": 0.007230219160309642,
+      "maker_band_large_size": 0.0018075547900774105
+    },
+    {
+      "longshot_price_bin": "[0.1, 0.2)",
+      "tau_bucket": "15-30",
+      "games_paired": 161,
+      "A_buy": 0.028642715587445296,
+      "A_buy_ci95": [
+        -0.026043917854376687,
+        0.07939144423356599
+      ],
+      "A_sell": 0.021411505206268312,
+      "A_sell_ci95": [
+        -0.031233815638535833,
+        0.07158698088087588
+      ],
+      "A_mid_approx": 0.0250271103968568,
+      "A_mid_approx_ci95": [
+        -0.02806543497005732,
+        0.07499408952611032
+      ],
+      "spread_effect_approx": 0.0072312103811769815,
+      "spread_effect_approx_ci95": [
+        -0.0077771975778884546,
+        0.016699681266110183
+      ],
+      "trades_buy": 15154,
+      "trades_sell": 12729,
+      "taker_band_large_size": 0.007230219160309642,
+      "maker_band_large_size": 0.0018075547900774105
+    },
+    {
+      "longshot_price_bin": "[0.1, 0.2)",
+      "tau_bucket": "30-60",
+      "games_paired": 163,
+      "A_buy": 0.02234680389075862,
+      "A_buy_ci95": [
+        -0.030733294532015388,
+        0.0711263635689121
+      ],
+      "A_sell": 0.013708823089404552,
+      "A_sell_ci95": [
+        -0.040074981905580516,
+        0.0626947964286486
+      ],
+      "A_mid_approx": 0.01802781349008159,
+      "A_mid_approx_ci95": [
+        -0.0349021047207466,
+        0.06651539815771315
+      ],
+      "spread_effect_approx": 0.008637980801354068,
+      "spread_effect_approx_ci95": [
+        0.003945428198479699,
+        0.014895256745270985
+      ],
+      "trades_buy": 28281,
+      "trades_sell": 22217,
+      "taker_band_large_size": 0.007230219160309642,
+      "maker_band_large_size": 0.0018075547900774105
+    },
+    {
+      "longshot_price_bin": "[0.1, 0.2)",
+      "tau_bucket": "60-120",
+      "games_paired": 162,
+      "A_buy": 0.008890128541804756,
+      "A_buy_ci95": [
+        -0.04754161782903428,
+        0.05909027440443157
+      ],
+      "A_sell": 0.00391901731314343,
+      "A_sell_ci95": [
+        -0.052112020505242516,
+        0.05404295223892921
+      ],
+      "A_mid_approx": 0.006404572927474103,
+      "A_mid_approx_ci95": [
+        -0.04954999264714873,
+        0.05611515466486301
+      ],
+      "spread_effect_approx": 0.004971111228661333,
+      "spread_effect_approx_ci95": [
+        -0.0027873273373477114,
+        0.00976802254396571
+      ],
+      "trades_buy": 38617,
+      "trades_sell": 24998,
+      "taker_band_large_size": 0.007230219160309642,
+      "maker_band_large_size": 0.0018075547900774105
+    },
+    {
+      "longshot_price_bin": "[0.1, 0.2)",
+      "tau_bucket": "120-300",
+      "games_paired": 63,
+      "A_buy": 0.01193790559773625,
+      "A_buy_ci95": [
+        -0.08103299009658685,
+        0.09386867263827132
+      ],
+      "A_sell": -0.0068193844784327235,
+      "A_sell_ci95": [
+        -0.09465759177391501,
+        0.07409254174142674
+      ],
+      "A_mid_approx": 0.0025592605596517683,
+      "A_mid_approx_ci95": [
+        -0.08783540242157012,
+        0.08455924121564959
+      ],
+      "spread_effect_approx": 0.01875729007616897,
+      "spread_effect_approx_ci95": [
+        0.010429604210460356,
+        0.034466252916576526
+      ],
+      "trades_buy": 7728,
+      "trades_sell": 5096,
+      "taker_band_large_size": 0.007230219160309642,
+      "maker_band_large_size": 0.0018075547900774105
+    },
+    {
+      "longshot_price_bin": "[0.05, 0.1)",
+      "tau_bucket": "5-15",
+      "games_paired": 134,
+      "A_buy": 0.017657073136093538,
+      "A_buy_ci95": [
+        -0.026470499748026347,
+        0.0549937478015717
+      ],
+      "A_sell": 0.008302702250453578,
+      "A_sell_ci95": [
+        -0.035910838079641884,
+        0.045638560174378826
+      ],
+      "A_mid_approx": 0.012979887693273563,
+      "A_mid_approx_ci95": [
+        -0.031207464246532545,
+        0.0503799444787293
+      ],
+      "spread_effect_approx": 0.00935437088563996,
+      "spread_effect_approx_ci95": [
+        0.008213869963290954,
+        0.010427459522903361
+      ],
+      "trades_buy": 7152,
+      "trades_sell": 4698,
+      "taker_band_large_size": 0.007230219160309642,
+      "maker_band_large_size": 0.0018075547900774105
+    },
+    {
+      "longshot_price_bin": "[0.05, 0.1)",
+      "tau_bucket": "15-30",
+      "games_paired": 178,
+      "A_buy": 0.0030338120010080342,
+      "A_buy_ci95": [
+        -0.03715652420315479,
+        0.037304671149096635
+      ],
+      "A_sell": -0.004012394230626677,
+      "A_sell_ci95": [
+        -0.04384194326892755,
+        0.029702006014520704
+      ],
+      "A_mid_approx": -0.0004892911148093215,
+      "A_mid_approx_ci95": [
+        -0.0402924237633272,
+        0.03332629389802615
+      ],
+      "spread_effect_approx": 0.00704620623163471,
+      "spread_effect_approx_ci95": [
+        0.004098536843005489,
+        0.008938362389743755
+      ],
+      "trades_buy": 14802,
+      "trades_sell": 11338,
+      "taker_band_large_size": 0.007230219160309642,
+      "maker_band_large_size": 0.0018075547900774105
+    },
+    {
+      "longshot_price_bin": "[0.05, 0.1)",
+      "tau_bucket": "30-60",
+      "games_paired": 180,
+      "A_buy": 0.014868274764248075,
+      "A_buy_ci95": [
+        -0.023586059104015625,
+        0.04693337256734263
+      ],
+      "A_sell": 0.007071192707798678,
+      "A_sell_ci95": [
+        -0.031085223927698528,
+        0.038781788608082374
+      ],
+      "A_mid_approx": 0.01096973373602338,
+      "A_mid_approx_ci95": [
+        -0.027354675913763463,
+        0.04298506925327697
+      ],
+      "spread_effect_approx": 0.0077970820564493976,
+      "spread_effect_approx_ci95": [
+        0.00609165854779968,
+        0.009048387279513823
+      ],
+      "trades_buy": 24671,
+      "trades_sell": 19905,
+      "taker_band_large_size": 0.007230219160309642,
+      "maker_band_large_size": 0.0018075547900774105
+    },
+    {
+      "longshot_price_bin": "[0.05, 0.1)",
+      "tau_bucket": "60-120",
+      "games_paired": 170,
+      "A_buy": 0.017809318071693357,
+      "A_buy_ci95": [
+        -0.022487564299055844,
+        0.048712139272650404
+      ],
+      "A_sell": 0.008958990895410034,
+      "A_sell_ci95": [
+        -0.031287658238829875,
+        0.039642660966461796
+      ],
+      "A_mid_approx": 0.013384154483551697,
+      "A_mid_approx_ci95": [
+        -0.02688761126894286,
+        0.04417768979860103
+      ],
+      "spread_effect_approx": 0.008850327176283323,
+      "spread_effect_approx_ci95": [
+        0.0078620491252055,
+        0.009661687182306943
+      ],
+      "trades_buy": 29955,
+      "trades_sell": 21156,
+      "taker_band_large_size": 0.007230219160309642,
+      "maker_band_large_size": 0.0018075547900774105
+    },
+    {
+      "longshot_price_bin": "[0.05, 0.1)",
+      "tau_bucket": "120-300",
+      "games_paired": 51,
+      "A_buy": 0.0383579730706909,
+      "A_buy_ci95": [
+        -0.020756351774609636,
+        0.07876635773151362
+      ],
+      "A_sell": 0.028236718338215106,
+      "A_sell_ci95": [
+        -0.031139903673832747,
+        0.06930555131320325
+      ],
+      "A_mid_approx": 0.033297345704452995,
+      "A_mid_approx_ci95": [
+        -0.02562273475956019,
+        0.07393045505862862
+      ],
+      "spread_effect_approx": 0.010121254732475791,
+      "spread_effect_approx_ci95": [
+        0.006306037113652729,
+        0.015225472542076533
+      ],
+      "trades_buy": 4147,
+      "trades_sell": 3265,
+      "taker_band_large_size": 0.007230219160309642,
+      "maker_band_large_size": 0.0018075547900774105
+    },
+    {
+      "longshot_price_bin": "[0.05, 0.1)",
+      "tau_bucket": "0-5",
+      "games_paired": 29,
+      "A_buy": 0.04723552650302142,
+      "A_buy_ci95": [
+        -0.02405375995989586,
+        0.08539927275789347
+      ],
+      "A_sell": 0.035549654847068644,
+      "A_sell_ci95": [
+        -0.03488293925901684,
+        0.07370795086139915
+      ],
+      "A_mid_approx": 0.04139259067504504,
+      "A_mid_approx_ci95": [
+        -0.029251826064753923,
+        0.07957206978246849
+      ],
+      "spread_effect_approx": 0.011685871655952777,
+      "spread_effect_approx_ci95": [
+        0.008456713686499424,
+        0.014905300680978907
+      ],
+      "trades_buy": 333,
+      "trades_sell": 307,
+      "taker_band_large_size": 0.007230219160309642,
+      "maker_band_large_size": 0.0018075547900774105
+    },
+    {
+      "longshot_price_bin": "[0.1, 0.2)",
+      "tau_bucket": "0-5",
+      "games_paired": 23,
+      "A_buy": -0.004139213271936371,
+      "A_buy_ci95": [
+        -0.14583100946536304,
+        0.12114599233100373
+      ],
+      "A_sell": -0.029016550745064384,
+      "A_sell_ci95": [
+        -0.1785997913921827,
+        0.10188097171337816
+      ],
+      "A_mid_approx": -0.01657788200850039,
+      "A_mid_approx_ci95": [
+        -0.15851320302980768,
+        0.11084393298667153
+      ],
+      "spread_effect_approx": 0.024877337473128012,
+      "spread_effect_approx_ci95": [
+        0.008113774637516061,
+        0.054255456008402245
+      ],
+      "trades_buy": 334,
+      "trades_sell": 240,
+      "taker_band_large_size": 0.007230219160309642,
+      "maker_band_large_size": 0.0018075547900774105
+    },
+    {
+      "longshot_price_bin": "[0.05, 0.1)",
+      "tau_bucket": "300+",
+      "games_paired": 1,
+      "A_buy": 0.09396396396396393,
+      "A_buy_ci95": [
+        0.09396396396396393,
+        0.09396396396396393
+      ],
+      "A_sell": 0.09112244897959179,
+      "A_sell_ci95": [
+        0.09112244897959179,
+        0.09112244897959179
+      ],
+      "A_mid_approx": 0.09254320647177786,
+      "A_mid_approx_ci95": [
+        0.09254320647177786,
+        0.09254320647177786
+      ],
+      "spread_effect_approx": 0.0028415149843721427,
+      "spread_effect_approx_ci95": [
+        0.0028415149843721427,
+        0.0028415149843721427
+      ],
+      "trades_buy": 111,
+      "trades_sell": 196,
+      "taker_band_large_size": 0.007230219160309642,
+      "maker_band_large_size": 0.0018075547900774105
+    }
+  ],
+  "quotes": {
+    "all_panel_trades": 23072381,
+    "all_panel_valid_5s_both_sides": 13548324,
+    "all_panel_valid_share": 0.5872096165540955,
+    "candle_validation_rows": 5009482,
+    "candle_bid_ask_both_within_1c": 3637365,
+    "candle_validation_share": 0.7260960314858902,
+    "primary_subset": [
+      {
+        "valid_5s": false,
+        "trades": 57632,
+        "games": 361,
+        "mean_longshot_price": 0.1231340227651305,
+        "mean_tau_seconds": 44.33739047360165,
+        "mean_abs_spread": null,
+        "gap_Y_minus_trade_price_trade_weighted": -0.03155295669072737,
+        "gap_Y_minus_trade_price_game_weighted": {
+          "estimate": -0.024987724930406945,
+          "games": 361,
+          "ci95": [
+            -0.05308315713860271,
+            0.004175618091622548
+          ],
+          "draws": 2000
+        },
+        "gap_Y_minus_mid_game_weighted": null
+      },
+      {
+        "valid_5s": true,
+        "trades": 251686,
+        "games": 376,
+        "mean_longshot_price": 0.1155598642753272,
+        "mean_tau_seconds": 63.79882725928875,
+        "mean_abs_spread": 0.007486590434112344,
+        "gap_Y_minus_trade_price_trade_weighted": -0.009379941673354895,
+        "gap_Y_minus_trade_price_game_weighted": {
+          "estimate": -0.02234525972511686,
+          "games": 376,
+          "ci95": [
+            -0.04813373373208579,
+            0.005314258958704782
+          ],
+          "draws": 2000
+        },
+        "gap_Y_minus_mid_game_weighted": {
+          "estimate": -0.023120055054410994,
+          "games": 376,
+          "ci95": [
+            -0.0487957359652978,
+            0.004327739372949542
+          ],
+          "draws": 2000
+        }
+      }
+    ]
+  },
+  "fee_band": {
+    "mean_primary_price": 0.11697107830776093,
+    "median_trade_size_contracts": 51.0,
+    "large_size_taker_fee_dollars_per_contract": 0.007230219160309643,
+    "large_size_maker_fee_formula_dollars_per_contract": 0.0018075547900774107,
+    "median_size_taker_fee_dollars_per_contract": 0.0072549019607843135,
+    "median_size_maker_fee_formula_dollars_per_contract": 0.00196078431372549,
+    "mean_5s_halfspread_dollars_per_contract": 0.003743295217056172,
+    "large_size_taker_band_including_halfspread": 0.010973514377365814,
+    "large_size_maker_band_formula": 0.0018075547900774107,
+    "median_size_taker_band_including_halfspread": 0.010998197177840485,
+    "median_size_maker_band_formula": 0.00196078431372549,
+    "fee_range_endpoints": {
+      "0.05": {
+        "large_size_taker_fee": 0.0033250000000000003,
+        "large_size_maker_fee_formula": 0.0008312500000000001,
+        "median_size_taker_fee": 0.0033333333333333335,
+        "median_size_maker_fee_formula": 0.000980392156862745
+      },
+      "0.20": {
+        "large_size_taker_fee": 0.011200000000000003,
+        "large_size_maker_fee_formula": 0.002800000000000001,
+        "median_size_taker_fee": 0.011372549019607842,
+        "median_size_maker_fee_formula": 0.0029411764705882353
+      }
+    },
+    "historical_maker_eligibility": "unresolved for KXNBAGAME"
+  },
+  "method": {
+    "bootstrap_draws": 2000,
+    "cluster": "game",
+    "seed": 9142026,
+    "game_weighting": "average trades within game, then average games"
+  }
+}

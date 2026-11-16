@@ -1,0 +1,198 @@
+{
+  "created_by": "analysis/build_thesis_figures_2026_11_16.py",
+  "format": {
+    "png_dpi": 300,
+    "width_inches": 6.5,
+    "pdf": true,
+    "titles_inside_figures": false
+  },
+  "plot_convention": "A = p - Y for outcome-gap figures; Figure 1 plots win rate against trade price.",
+  "figure1": {
+    "source": "data/interim/phase5/phase5a_bootstrap_bins.csv",
+    "sample": "2,524,781 trades; 1,202 games; d_full_regular_season calibration version",
+    "binned_win_rate": "raw_rate from each of 99 saved bins; no interval displayed",
+    "own_prelec": {
+      "alpha": 1.526,
+      "beta": 1.196,
+      "source": "user-specified fitted parameters"
+    },
+    "moshrefi_prelec": {
+      "alpha": 1.516,
+      "beta": 1.182,
+      "label": "Moshrefi (2026), her sample"
+    },
+    "all_bin_values_csv": "figure1_calibration_bins.csv",
+    "curve_values_csv": "figure1_calibration_curves.csv"
+  },
+  "figure2": {
+    "source": "data/interim/phase5/phase5_paired_window_game_differences.csv",
+    "sample": "557 paired games; 51 overtime games and 506 non-overtime games",
+    "sign_conversion": "Saved y - p game gaps multiplied by -1 to plot A = p - Y",
+    "all_plotted_game_values_csv": "figure2_paired_game_points.csv"
+  },
+  "figure3": {
+    "A_convention": "A = p - Y; percentage points",
+    "sample_note": "P* common support is used for final five regulation minutes estimates; the saved full-game longshot estimates do not have that support restriction; quiet stoppage results use their saved primary sample.",
+    "all_estimates_and_intervals_csv": "figure3_estimates_and_intervals.csv",
+    "retrospective_equal_game_ci_json": "data/interim/phase5/retrospective_equal_game_ci_for_figures.json",
+    "simulation": "Basketball base scenario, fair_pricing_null_simulation_2026_11_10.json; diamond marks the saved mean for estimators available in that simulation; no quiet-stoppage marks.",
+    "rows": [
+      {
+        "group": 1,
+        "estimator": "pooled trades",
+        "window": "full game",
+        "estimate_pp": 0.7452514788200572,
+        "ci95_low_pp": -1.2103020101984965,
+        "ci95_high_pp": 2.457968271776265,
+        "eligible_trade_rows": 6989018,
+        "estimator_observations": 6989018,
+        "games": 1219,
+        "simulation_mean_pp": -0.00614760032383011,
+        "sample_definition": "saved full-game 5\u201320\u00a2 longshot sample; no P* support screen"
+      },
+      {
+        "group": 1,
+        "estimator": "pooled trades",
+        "window": "final five regulation minutes",
+        "estimate_pp": 1.1244298719044623,
+        "ci95_low_pp": -2.831265927908256,
+        "ci95_high_pp": 4.360533578643809,
+        "eligible_trade_rows": 961626,
+        "estimator_observations": 961626,
+        "games": 658,
+        "simulation_mean_pp": 0.016549466853703405,
+        "sample_definition": "final-five sample with P* common support"
+      },
+      {
+        "group": 1,
+        "estimator": "pooled trades",
+        "window": "quiet stoppages",
+        "estimate_pp": 1.3511208529733099,
+        "ci95_low_pp": -2.58466665040117,
+        "ci95_high_pp": 4.92982949223493,
+        "eligible_trade_rows": 309318,
+        "estimator_observations": 309318,
+        "games": 390,
+        "simulation_mean_pp": NaN,
+        "sample_definition": "primary final-five quiet sample; market A; no fair-pricing simulation estimate"
+      },
+      {
+        "group": 1,
+        "estimator": "first trade per game",
+        "window": "full game",
+        "estimate_pp": -0.2608695652173942,
+        "ci95_low_pp": -2.4430885972108314,
+        "ci95_high_pp": 1.7803527481542205,
+        "eligible_trade_rows": 6989018,
+        "estimator_observations": 1219,
+        "games": 1219,
+        "simulation_mean_pp": -0.029705785707121558,
+        "sample_definition": "saved full-game 5\u201320\u00a2 longshot sample; no P* support screen; one first trade per game"
+      },
+      {
+        "group": 1,
+        "estimator": "first trade per game",
+        "window": "final five regulation minutes",
+        "estimate_pp": -0.44680851063829824,
+        "ci95_low_pp": -3.1279255319148938,
+        "ci95_high_pp": 2.19787234042553,
+        "eligible_trade_rows": 961626,
+        "estimator_observations": 658,
+        "games": 658,
+        "simulation_mean_pp": -0.02948256876341733,
+        "sample_definition": "final-five sample with P* common support; one first trade per game"
+      },
+      {
+        "group": 1,
+        "estimator": "first trade per game",
+        "window": "quiet stoppages",
+        "estimate_pp": 1.15384615384615,
+        "ci95_low_pp": -1.9153846153846101,
+        "ci95_high_pp": 4.12826923076923,
+        "eligible_trade_rows": 309318,
+        "estimator_observations": 390,
+        "games": 390,
+        "simulation_mean_pp": NaN,
+        "sample_definition": "primary final-five quiet sample; market A; one first trade per game; no fair-pricing simulation estimate"
+      },
+      {
+        "group": 1,
+        "estimator": "fixed clock sampling",
+        "window": "final five regulation minutes",
+        "estimate_pp": 0.8690265486725663,
+        "ci95_low_pp": -1.7635299347954954,
+        "ci95_high_pp": 3.279919761133286,
+        "eligible_trade_rows": 1695,
+        "estimator_observations": 1695,
+        "games": 626,
+        "simulation_mean_pp": 0.007566737638307511,
+        "sample_definition": "final-five sample with P* common support; pooled sampled observations"
+      },
+      {
+        "group": 2,
+        "estimator": "equal game weight",
+        "window": "full game",
+        "estimate_pp": 3.8897585081544848,
+        "ci95_low_pp": 2.7118330168944156,
+        "ci95_high_pp": 4.899308791189928,
+        "eligible_trade_rows": 6989018,
+        "estimator_observations": 1219,
+        "games": 1219,
+        "simulation_mean_pp": 0.8770948659856026,
+        "sample_definition": "saved full-game 5\u201320\u00a2 longshot sample; no P* support screen"
+      },
+      {
+        "group": 2,
+        "estimator": "equal game weight",
+        "window": "final five regulation minutes",
+        "estimate_pp": 3.5392548516179447,
+        "ci95_low_pp": 1.7691089930154211,
+        "ci95_high_pp": 5.230729580302416,
+        "eligible_trade_rows": 961626,
+        "estimator_observations": 658,
+        "games": 658,
+        "simulation_mean_pp": 0.6308125608029369,
+        "sample_definition": "final-five sample with P* common support"
+      },
+      {
+        "group": 2,
+        "estimator": "equal game weight",
+        "window": "quiet stoppages",
+        "estimate_pp": 2.33223053621099,
+        "ci95_low_pp": -0.52722322530761,
+        "ci95_high_pp": 4.93670628724446,
+        "eligible_trade_rows": 309318,
+        "estimator_observations": 390,
+        "games": 390,
+        "simulation_mean_pp": NaN,
+        "sample_definition": "primary final-five quiet sample; market A; no fair-pricing simulation estimate"
+      },
+      {
+        "group": 3,
+        "estimator": "pooled trades",
+        "window": "retrospective window",
+        "estimate_pp": 6.243481626066358,
+        "ci95_low_pp": 3.6436845176419346,
+        "ci95_high_pp": 8.319058068087012,
+        "eligible_trade_rows": 532303,
+        "estimator_observations": 532303,
+        "games": 561,
+        "simulation_mean_pp": 4.039746791139533,
+        "sample_definition": "saved retrospective sample with market and P* common support"
+      },
+      {
+        "group": 3,
+        "estimator": "equal game weight",
+        "window": "retrospective window",
+        "estimate_pp": 6.679159750416469,
+        "ci95_low_pp": 5.415062609226506,
+        "ci95_high_pp": 7.836767116905083,
+        "eligible_trade_rows": 532303,
+        "estimator_observations": 561,
+        "games": 561,
+        "simulation_mean_pp": 4.04700355596821,
+        "sample_definition": "saved retrospective sample with market and P* common support; newly computed 2,000-draw game bootstrap interval"
+      }
+    ]
+  }
+}

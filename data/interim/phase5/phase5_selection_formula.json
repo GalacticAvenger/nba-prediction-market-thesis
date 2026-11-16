@@ -1,0 +1,86 @@
+{
+  "(d)_price": {
+    "alpha": 1.3498557326520482,
+    "beta": 1.086957189145625,
+    "alpha_ci95": [
+      1.21554693775224,
+      1.522569724767253
+    ],
+    "beta_ci95": [
+      1.0405994609954494,
+      1.1505936730111863
+    ],
+    "trades_base": 8559393,
+    "trades_window": 2053734,
+    "games_base": 1000,
+    "games_window": 683,
+    "draws": 2000,
+    "successful_fit_draws": 2000,
+    "minimum_games_1c": 30,
+    "cluster": "game",
+    "fit_target": "predicted selection-formula calibration curve"
+  },
+  "(d)_pstar": {
+    "alpha": 1.4616238960246852,
+    "beta": 1.1387097773778296,
+    "alpha_ci95": [
+      1.3193172766859294,
+      1.63100646999287
+    ],
+    "beta_ci95": [
+      1.0904678636989396,
+      1.2025537829568071
+    ],
+    "trades_base": 8464104,
+    "trades_window": 2185828,
+    "games_base": 955,
+    "games_window": 648,
+    "draws": 2000,
+    "successful_fit_draws": 2000,
+    "minimum_games_1c": 30,
+    "cluster": "game",
+    "fit_target": "predicted selection-formula calibration curve"
+  },
+  "(d) excluding OT_price": {
+    "alpha": 1.2037063203207172,
+    "beta": 1.0371159483884018,
+    "alpha_ci95": [
+      1.0701227902636383,
+      1.3546883790447037
+    ],
+    "beta_ci95": [
+      0.9947928254527975,
+      1.089152595661076
+    ],
+    "trades_base": 7026052,
+    "trades_window": 1771697,
+    "games_base": 947,
+    "games_window": 630,
+    "draws": 2000,
+    "successful_fit_draws": 2000,
+    "minimum_games_1c": 30,
+    "cluster": "game",
+    "fit_target": "predicted selection-formula calibration curve"
+  },
+  "(d) excluding OT_pstar": {
+    "alpha": 1.2888082729879353,
+    "beta": 1.077992343223054,
+    "alpha_ci95": [
+      1.1668888031721292,
+      1.4406475051827667
+    ],
+    "beta_ci95": [
+      1.0420551587137916,
+      1.1270790216254263
+    ],
+    "trades_base": 6890591,
+    "trades_window": 1867504,
+    "games_base": 902,
+    "games_window": 595,
+    "draws": 2000,
+    "successful_fit_draws": 2000,
+    "minimum_games_1c": 30,
+    "cluster": "game",
+    "fit_target": "predicted selection-formula calibration curve"
+  }
+}

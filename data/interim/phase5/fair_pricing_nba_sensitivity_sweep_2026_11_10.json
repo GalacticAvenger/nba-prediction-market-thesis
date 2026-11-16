@@ -1,0 +1,732 @@
+{
+  "purpose": "Sensitivity of the fair-pricing NBA null simulation to the two prespecified parameters.",
+  "grid": {
+    "closeness_term_coefficient": [
+      1,
+      3,
+      6
+    ],
+    "late_close_extra_wall_delay_mean_seconds": [
+      25,
+      50
+    ]
+  },
+  "fixed_settings": {
+    "seed_each_cell": 20261110,
+    "synthetic_seasons_each_cell": 1000,
+    "games_per_season": 1230,
+    "other_parameters": "Identical to analysis/null_simulation_fair_pricing_2026_11_10.py NBA baseline.",
+    "estimator_units": "A in percentage points; Monte Carlo standard errors across seasons; no bootstrap inside seasons.",
+    "unmodified_parameters": {
+      "regulation_possessions": 96,
+      "game_clock_seconds_per_possession": 30,
+      "score_difference_increment_probabilities": {
+        "-3": 0.04,
+        "-2": 0.12,
+        "-1": 0.22,
+        "0": 0.24,
+        "+1": 0.22,
+        "+2": 0.12,
+        "+3": 0.04
+      },
+      "overtime_possessions": 10,
+      "overtime_break_wall_seconds": 120,
+      "base_stoppage_exponential_mean_seconds": 4,
+      "late_close_margin_threshold_abs_points": 6,
+      "trade_base_rate_per_second": 7.5,
+      "closeness_price_scale": 0.15,
+      "late_clock_rate_multiplier_minus_one": 0.5,
+      "longshot_probability_band": [
+        0.05,
+        0.2
+      ],
+      "price": "exact dynamic-programming win probability"
+    }
+  },
+  "runs": {
+    "closeness_coefficient_1__late_delay_25s": {
+      "estimators": {
+        "full_pooled": {
+          "mean_A_pp": -0.034889846918944985,
+          "MCSE_pp": 0.03074484690961527,
+          "valid_seasons": 1000
+        },
+        "full_equal_game": {
+          "mean_A_pp": 0.8410602020345955,
+          "MCSE_pp": 0.02393620179307779,
+          "valid_seasons": 1000
+        },
+        "full_first_trade": {
+          "mean_A_pp": -0.011023372649638274,
+          "MCSE_pp": 0.033759199271826926,
+          "valid_seasons": 1000
+        },
+        "full_fixed_clock": {
+          "mean_A_pp": -0.039765823138192234,
+          "MCSE_pp": 0.030813746670525343,
+          "valid_seasons": 1000
+        },
+        "final5_pooled": {
+          "mean_A_pp": 0.01294239334119634,
+          "MCSE_pp": 0.050494640605972516,
+          "valid_seasons": 1000
+        },
+        "final5_equal_game": {
+          "mean_A_pp": 0.6569008027438755,
+          "MCSE_pp": 0.038822544139383096,
+          "valid_seasons": 1000
+        },
+        "final5_first_trade": {
+          "mean_A_pp": 0.002838953680556885,
+          "MCSE_pp": 0.043391257011898395,
+          "valid_seasons": 1000
+        },
+        "final5_fixed_clock": {
+          "mean_A_pp": 0.02985846187567428,
+          "MCSE_pp": 0.047085889727151754,
+          "valid_seasons": 1000
+        },
+        "retro10m_pooled": {
+          "mean_A_pp": 4.017868203070895,
+          "MCSE_pp": 0.03321526601449708,
+          "valid_seasons": 1000
+        },
+        "retro10m_equal_game": {
+          "mean_A_pp": 4.02248777000676,
+          "MCSE_pp": 0.026303679288958756,
+          "valid_seasons": 1000
+        }
+      },
+      "mean_sample_sizes": {
+        "full_trade_rows": {
+          "mean_per_season": 8717683.995,
+          "MCSE": 4865.183728333538
+        },
+        "full_games_with_trades": {
+          "mean_per_season": 1225.607,
+          "MCSE": 0.06743217405733037
+        },
+        "full_first_entries": {
+          "mean_per_season": 1225.607,
+          "MCSE": 0.06743217405733037
+        },
+        "full_fixed_observations": {
+          "mean_per_season": 13695.354,
+          "MCSE": 7.476348739490051
+        },
+        "final5_trade_rows": {
+          "mean_per_season": 1189262.211,
+          "MCSE": 1585.685863778531
+        },
+        "final5_games_with_trades": {
+          "mean_per_season": 560.947,
+          "MCSE": 0.5689902819389282
+        },
+        "final5_first_entries": {
+          "mean_per_season": 560.947,
+          "MCSE": 0.5689902819389282
+        },
+        "final5_fixed_observations": {
+          "mean_per_season": 1150.495,
+          "MCSE": 1.4403536349083144
+        },
+        "retro10m_trade_rows": {
+          "mean_per_season": 1589183.33,
+          "MCSE": 1634.5823643300691
+        },
+        "retro10m_games_with_trades": {
+          "mean_per_season": 763.065,
+          "MCSE": 0.5378494743485923
+        }
+      },
+      "overtime_share": {
+        "mean": 0.0276869918699187,
+        "MCSE": 0.00014801017457411253
+      },
+      "final5_trade_count_ratio_winning_vs_no_winning_longshot": {
+        "mean": 1.1175516484877261,
+        "MCSE": 0.00274412682999969,
+        "mean_trades_per_game_with_winning_longshot": 2331.240727080968,
+        "mean_trades_per_game_without_winning_longshot": 2088.0759863681833
+      },
+      "fixed_time_fairness_check": {
+        "final5_fixed_clock_A_pp_mean": 0.02985846187567428,
+        "MCSE_pp": 0.047085889727151754,
+        "z_from_zero": 0.6341275921235614
+      },
+      "seed": 20261110,
+      "synthetic_seasons": 1000,
+      "games_per_season": 1230
+    },
+    "closeness_coefficient_1__late_delay_50s": {
+      "estimators": {
+        "full_pooled": {
+          "mean_A_pp": -0.04516370295101626,
+          "MCSE_pp": 0.03161832827330912,
+          "valid_seasons": 1000
+        },
+        "full_equal_game": {
+          "mean_A_pp": 1.183000321819883,
+          "MCSE_pp": 0.023892942794284475,
+          "valid_seasons": 1000
+        },
+        "full_first_trade": {
+          "mean_A_pp": -0.05142785952636604,
+          "MCSE_pp": 0.034041590607947425,
+          "valid_seasons": 1000
+        },
+        "full_fixed_clock": {
+          "mean_A_pp": -0.05630888602644967,
+          "MCSE_pp": 0.032092840266511324,
+          "valid_seasons": 1000
+        },
+        "final5_pooled": {
+          "mean_A_pp": -0.005086720856679092,
+          "MCSE_pp": 0.051315207245482684,
+          "valid_seasons": 1000
+        },
+        "final5_equal_game": {
+          "mean_A_pp": 0.6484761504833962,
+          "MCSE_pp": 0.038020161839747484,
+          "valid_seasons": 1000
+        },
+        "final5_first_trade": {
+          "mean_A_pp": -0.03235292670845048,
+          "MCSE_pp": 0.04308791760022519,
+          "valid_seasons": 1000
+        },
+        "final5_fixed_clock": {
+          "mean_A_pp": -0.006742685327436893,
+          "MCSE_pp": 0.04789214251558055,
+          "valid_seasons": 1000
+        },
+        "retro10m_pooled": {
+          "mean_A_pp": 5.269880003751433,
+          "MCSE_pp": 0.031146430084439937,
+          "valid_seasons": 1000
+        },
+        "retro10m_equal_game": {
+          "mean_A_pp": 5.255557594146449,
+          "MCSE_pp": 0.023583622237593787,
+          "valid_seasons": 1000
+        }
+      },
+      "mean_sample_sizes": {
+        "full_trade_rows": {
+          "mean_per_season": 9202938.784,
+          "MCSE": 5066.9341443287285
+        },
+        "full_games_with_trades": {
+          "mean_per_season": 1225.621,
+          "MCSE": 0.06546483517618178
+        },
+        "full_first_entries": {
+          "mean_per_season": 1225.621,
+          "MCSE": 0.06546483517618178
+        },
+        "full_fixed_observations": {
+          "mean_per_season": 13620.708,
+          "MCSE": 7.53868652555142
+        },
+        "final5_trade_rows": {
+          "mean_per_season": 1672121.818,
+          "MCSE": 2304.7346858580213
+        },
+        "final5_games_with_trades": {
+          "mean_per_season": 561.082,
+          "MCSE": 0.5511488374668326
+        },
+        "final5_first_entries": {
+          "mean_per_season": 561.082,
+          "MCSE": 0.5511488374668326
+        },
+        "final5_fixed_observations": {
+          "mean_per_season": 1086.165,
+          "MCSE": 1.351820696022292
+        },
+        "retro10m_trade_rows": {
+          "mean_per_season": 1611225.36,
+          "MCSE": 1706.786303916116
+        },
+        "retro10m_games_with_trades": {
+          "mean_per_season": 744.923,
+          "MCSE": 0.5330452215414826
+        }
+      },
+      "overtime_share": {
+        "mean": 0.027764227642276425,
+        "MCSE": 0.0001457568304855124
+      },
+      "final5_trade_count_ratio_winning_vs_no_winning_longshot": {
+        "mean": 1.123497304507735,
+        "MCSE": 0.002868591987544849,
+        "mean_trades_per_game_with_winning_longshot": 3291.341529915152,
+        "mean_trades_per_game_without_winning_longshot": 2932.7278453178556
+      },
+      "fixed_time_fairness_check": {
+        "final5_fixed_clock_A_pp_mean": -0.006742685327436893,
+        "MCSE_pp": 0.04789214251558055,
+        "z_from_zero": -0.1407889681536658
+      },
+      "seed": 20261110,
+      "synthetic_seasons": 1000,
+      "games_per_season": 1230
+    },
+    "closeness_coefficient_3__late_delay_25s": {
+      "estimators": {
+        "full_pooled": {
+          "mean_A_pp": -0.00614760032383011,
+          "MCSE_pp": 0.030918744014978496,
+          "valid_seasons": 1000
+        },
+        "full_equal_game": {
+          "mean_A_pp": 0.8770948659856026,
+          "MCSE_pp": 0.023642715862229043,
+          "valid_seasons": 1000
+        },
+        "full_first_trade": {
+          "mean_A_pp": -0.029705785707121558,
+          "MCSE_pp": 0.03345033681126209,
+          "valid_seasons": 1000
+        },
+        "full_fixed_clock": {
+          "mean_A_pp": -0.01287298482428785,
+          "MCSE_pp": 0.03136032381977886,
+          "valid_seasons": 1000
+        },
+        "final5_pooled": {
+          "mean_A_pp": 0.016549466853703405,
+          "MCSE_pp": 0.047562319865927516,
+          "valid_seasons": 1000
+        },
+        "final5_equal_game": {
+          "mean_A_pp": 0.6308125608029369,
+          "MCSE_pp": 0.03798744949797605,
+          "valid_seasons": 1000
+        },
+        "final5_first_trade": {
+          "mean_A_pp": -0.02948256876341733,
+          "MCSE_pp": 0.04351059048836918,
+          "valid_seasons": 1000
+        },
+        "final5_fixed_clock": {
+          "mean_A_pp": 0.007566737638307511,
+          "MCSE_pp": 0.04552503641260253,
+          "valid_seasons": 1000
+        },
+        "retro10m_pooled": {
+          "mean_A_pp": 4.039746791139533,
+          "MCSE_pp": 0.033758218176246205,
+          "valid_seasons": 1000
+        },
+        "retro10m_equal_game": {
+          "mean_A_pp": 4.04700355596821,
+          "MCSE_pp": 0.027222797201508213,
+          "valid_seasons": 1000
+        }
+      },
+      "mean_sample_sizes": {
+        "full_trade_rows": {
+          "mean_per_season": 10073589.397,
+          "MCSE": 5684.557287544102
+        },
+        "full_games_with_trades": {
+          "mean_per_season": 1225.604,
+          "MCSE": 0.06560097169621412
+        },
+        "full_first_entries": {
+          "mean_per_season": 1225.604,
+          "MCSE": 0.06560097169621412
+        },
+        "full_fixed_observations": {
+          "mean_per_season": 13681.322,
+          "MCSE": 7.71754383199725
+        },
+        "final5_trade_rows": {
+          "mean_per_season": 1368600.422,
+          "MCSE": 1840.6248120539572
+        },
+        "final5_games_with_trades": {
+          "mean_per_season": 560.993,
+          "MCSE": 0.5757903138170053
+        },
+        "final5_first_entries": {
+          "mean_per_season": 560.993,
+          "MCSE": 0.5757903138170053
+        },
+        "final5_fixed_observations": {
+          "mean_per_season": 1151.414,
+          "MCSE": 1.4451072413281096
+        },
+        "retro10m_trade_rows": {
+          "mean_per_season": 1823757.368,
+          "MCSE": 1907.965683324341
+        },
+        "retro10m_games_with_trades": {
+          "mean_per_season": 763.925,
+          "MCSE": 0.5527068480305449
+        }
+      },
+      "overtime_share": {
+        "mean": 0.027790243902439022,
+        "MCSE": 0.00014628556125420228
+      },
+      "final5_trade_count_ratio_winning_vs_no_winning_longshot": {
+        "mean": 1.1231437651217888,
+        "MCSE": 0.002625662195591866,
+        "mean_trades_per_game_with_winning_longshot": 2694.2543355884345,
+        "mean_trades_per_game_without_winning_longshot": 2401.0302123454585
+      },
+      "fixed_time_fairness_check": {
+        "final5_fixed_clock_A_pp_mean": 0.007566737638307511,
+        "MCSE_pp": 0.04552503641260253,
+        "z_from_zero": 0.16621046866890232
+      },
+      "seed": 20261110,
+      "synthetic_seasons": 1000,
+      "games_per_season": 1230
+    },
+    "closeness_coefficient_3__late_delay_50s": {
+      "estimators": {
+        "full_pooled": {
+          "mean_A_pp": 0.045120593945534165,
+          "MCSE_pp": 0.03144051153032287,
+          "valid_seasons": 1000
+        },
+        "full_equal_game": {
+          "mean_A_pp": 1.2939463652209222,
+          "MCSE_pp": 0.02344820885730787,
+          "valid_seasons": 1000
+        },
+        "full_first_trade": {
+          "mean_A_pp": 0.024001378731196083,
+          "MCSE_pp": 0.03389785574210987,
+          "valid_seasons": 1000
+        },
+        "full_fixed_clock": {
+          "mean_A_pp": 0.03982432858330507,
+          "MCSE_pp": 0.03243074417534448,
+          "valid_seasons": 1000
+        },
+        "final5_pooled": {
+          "mean_A_pp": 0.08286072033099756,
+          "MCSE_pp": 0.049074217747404246,
+          "valid_seasons": 1000
+        },
+        "final5_equal_game": {
+          "mean_A_pp": 0.7161356311624654,
+          "MCSE_pp": 0.038297766688577956,
+          "valid_seasons": 1000
+        },
+        "final5_first_trade": {
+          "mean_A_pp": 0.03705235383239343,
+          "MCSE_pp": 0.043199060623429035,
+          "valid_seasons": 1000
+        },
+        "final5_fixed_clock": {
+          "mean_A_pp": 0.0487292547538891,
+          "MCSE_pp": 0.0453701970886007,
+          "valid_seasons": 1000
+        },
+        "retro10m_pooled": {
+          "mean_A_pp": 5.350224327757426,
+          "MCSE_pp": 0.0307746259384708,
+          "valid_seasons": 1000
+        },
+        "retro10m_equal_game": {
+          "mean_A_pp": 5.333329710835151,
+          "MCSE_pp": 0.023930151154226514,
+          "valid_seasons": 1000
+        }
+      },
+      "mean_sample_sizes": {
+        "full_trade_rows": {
+          "mean_per_season": 10644880.691,
+          "MCSE": 5985.489088601305
+        },
+        "full_games_with_trades": {
+          "mean_per_season": 1225.685,
+          "MCSE": 0.06522291797389189
+        },
+        "full_first_entries": {
+          "mean_per_season": 1225.685,
+          "MCSE": 0.06522291797389189
+        },
+        "full_fixed_observations": {
+          "mean_per_season": 13623.718,
+          "MCSE": 7.671541372046626
+        },
+        "final5_trade_rows": {
+          "mean_per_season": 1925488.971,
+          "MCSE": 2700.052366679389
+        },
+        "final5_games_with_trades": {
+          "mean_per_season": 560.6,
+          "MCSE": 0.5602730636983236
+        },
+        "final5_first_entries": {
+          "mean_per_season": 560.6,
+          "MCSE": 0.5602730636983236
+        },
+        "final5_fixed_observations": {
+          "mean_per_season": 1086.6,
+          "MCSE": 1.3535257781187737
+        },
+        "retro10m_trade_rows": {
+          "mean_per_season": 1845938.263,
+          "MCSE": 1920.0425148409156
+        },
+        "retro10m_games_with_trades": {
+          "mean_per_season": 744.51,
+          "MCSE": 0.5431638122398499
+        }
+      },
+      "overtime_share": {
+        "mean": 0.027926829268292683,
+        "MCSE": 0.00014952571220860775
+      },
+      "final5_trade_count_ratio_winning_vs_no_winning_longshot": {
+        "mean": 1.1310777420507427,
+        "MCSE": 0.0027956624468298444,
+        "mean_trades_per_game_with_winning_longshot": 3815.847932212944,
+        "mean_trades_per_game_without_winning_longshot": 3377.294491846066
+      },
+      "fixed_time_fairness_check": {
+        "final5_fixed_clock_A_pp_mean": 0.0487292547538891,
+        "MCSE_pp": 0.0453701970886007,
+        "z_from_zero": 1.0740366557969476
+      },
+      "seed": 20261110,
+      "synthetic_seasons": 1000,
+      "games_per_season": 1230
+    },
+    "closeness_coefficient_6__late_delay_25s": {
+      "estimators": {
+        "full_pooled": {
+          "mean_A_pp": 0.0269866910277379,
+          "MCSE_pp": 0.031233655901435432,
+          "valid_seasons": 1000
+        },
+        "full_equal_game": {
+          "mean_A_pp": 0.9722616349589472,
+          "MCSE_pp": 0.02384215733094227,
+          "valid_seasons": 1000
+        },
+        "full_first_trade": {
+          "mean_A_pp": 0.06772646531196422,
+          "MCSE_pp": 0.033410329349951425,
+          "valid_seasons": 1000
+        },
+        "full_fixed_clock": {
+          "mean_A_pp": 0.028173995907481986,
+          "MCSE_pp": 0.03126614795167899,
+          "valid_seasons": 1000
+        },
+        "final5_pooled": {
+          "mean_A_pp": -0.037591547948696506,
+          "MCSE_pp": 0.04846907800701568,
+          "valid_seasons": 1000
+        },
+        "final5_equal_game": {
+          "mean_A_pp": 0.6869975710270129,
+          "MCSE_pp": 0.03741324335591633,
+          "valid_seasons": 1000
+        },
+        "final5_first_trade": {
+          "mean_A_pp": -0.048921032358347494,
+          "MCSE_pp": 0.042539964549357906,
+          "valid_seasons": 1000
+        },
+        "final5_fixed_clock": {
+          "mean_A_pp": -0.06401449434378663,
+          "MCSE_pp": 0.04516513621243044,
+          "valid_seasons": 1000
+        },
+        "retro10m_pooled": {
+          "mean_A_pp": 4.068622126459047,
+          "MCSE_pp": 0.03361284954840299,
+          "valid_seasons": 1000
+        },
+        "retro10m_equal_game": {
+          "mean_A_pp": 4.105169837938595,
+          "MCSE_pp": 0.02659965126052593,
+          "valid_seasons": 1000
+        }
+      },
+      "mean_sample_sizes": {
+        "full_trade_rows": {
+          "mean_per_season": 12121853.053,
+          "MCSE": 6512.601562386616
+        },
+        "full_games_with_trades": {
+          "mean_per_season": 1225.564,
+          "MCSE": 0.06946026726646486
+        },
+        "full_first_entries": {
+          "mean_per_season": 1225.564,
+          "MCSE": 0.06946026726646486
+        },
+        "full_fixed_observations": {
+          "mean_per_season": 13683.523,
+          "MCSE": 7.36724193472189
+        },
+        "final5_trade_rows": {
+          "mean_per_season": 1632916.878,
+          "MCSE": 2154.7909913696044
+        },
+        "final5_games_with_trades": {
+          "mean_per_season": 559.828,
+          "MCSE": 0.5526552667294901
+        },
+        "final5_first_entries": {
+          "mean_per_season": 559.828,
+          "MCSE": 0.5526552667294901
+        },
+        "final5_fixed_observations": {
+          "mean_per_season": 1149.589,
+          "MCSE": 1.4068366174749178
+        },
+        "retro10m_trade_rows": {
+          "mean_per_season": 2165355.101,
+          "MCSE": 2233.4624581520893
+        },
+        "retro10m_games_with_trades": {
+          "mean_per_season": 761.374,
+          "MCSE": 0.5401294880525076
+        }
+      },
+      "overtime_share": {
+        "mean": 0.028088617886178863,
+        "MCSE": 0.0001512943018769743
+      },
+      "final5_trade_count_ratio_winning_vs_no_winning_longshot": {
+        "mean": 1.1459701974055136,
+        "MCSE": 0.002813226703033111,
+        "mean_trades_per_game_with_winning_longshot": 3276.8545734626887,
+        "mean_trades_per_game_without_winning_longshot": 2862.4227222262703
+      },
+      "fixed_time_fairness_check": {
+        "final5_fixed_clock_A_pp_mean": -0.06401449434378663,
+        "MCSE_pp": 0.04516513621243044,
+        "z_from_zero": -1.4173431038201636
+      },
+      "seed": 20261110,
+      "synthetic_seasons": 1000,
+      "games_per_season": 1230
+    },
+    "closeness_coefficient_6__late_delay_50s": {
+      "estimators": {
+        "full_pooled": {
+          "mean_A_pp": 0.04021982049377313,
+          "MCSE_pp": 0.031419401267285346,
+          "valid_seasons": 1000
+        },
+        "full_equal_game": {
+          "mean_A_pp": 1.3563994916065187,
+          "MCSE_pp": 0.023121287669028472,
+          "valid_seasons": 1000
+        },
+        "full_first_trade": {
+          "mean_A_pp": 0.010017575325753404,
+          "MCSE_pp": 0.03290650315504743,
+          "valid_seasons": 1000
+        },
+        "full_fixed_clock": {
+          "mean_A_pp": 0.038342617097064276,
+          "MCSE_pp": 0.031524127980233865,
+          "valid_seasons": 1000
+        },
+        "final5_pooled": {
+          "mean_A_pp": 0.030305966155732313,
+          "MCSE_pp": 0.051479638738829776,
+          "valid_seasons": 1000
+        },
+        "final5_equal_game": {
+          "mean_A_pp": 0.7873905230781532,
+          "MCSE_pp": 0.038871270356119904,
+          "valid_seasons": 1000
+        },
+        "final5_first_trade": {
+          "mean_A_pp": 0.04785715157291942,
+          "MCSE_pp": 0.04413251759572877,
+          "valid_seasons": 1000
+        },
+        "final5_fixed_clock": {
+          "mean_A_pp": 0.01587274226342225,
+          "MCSE_pp": 0.047352339981293984,
+          "valid_seasons": 1000
+        },
+        "retro10m_pooled": {
+          "mean_A_pp": 5.359804959929681,
+          "MCSE_pp": 0.031596757830877086,
+          "valid_seasons": 1000
+        },
+        "retro10m_equal_game": {
+          "mean_A_pp": 5.391068443002741,
+          "MCSE_pp": 0.024153275260243145,
+          "valid_seasons": 1000
+        }
+      },
+      "mean_sample_sizes": {
+        "full_trade_rows": {
+          "mean_per_season": 12799156.635,
+          "MCSE": 7127.11205011305
+        },
+        "full_games_with_trades": {
+          "mean_per_season": 1225.581,
+          "MCSE": 0.06678247448918691
+        },
+        "full_first_entries": {
+          "mean_per_season": 1225.581,
+          "MCSE": 0.06678247448918691
+        },
+        "full_fixed_observations": {
+          "mean_per_season": 13620.626,
+          "MCSE": 7.617344160273714
+        },
+        "final5_trade_rows": {
+          "mean_per_season": 2300821.802,
+          "MCSE": 2959.2366913622004
+        },
+        "final5_games_with_trades": {
+          "mean_per_season": 560.317,
+          "MCSE": 0.5373893358620903
+        },
+        "final5_first_entries": {
+          "mean_per_season": 560.317,
+          "MCSE": 0.5373893358620903
+        },
+        "final5_fixed_observations": {
+          "mean_per_season": 1085.916,
+          "MCSE": 1.2614000452172476
+        },
+        "retro10m_trade_rows": {
+          "mean_per_season": 2192468.281,
+          "MCSE": 2269.506730509929
+        },
+        "retro10m_games_with_trades": {
+          "mean_per_season": 744.326,
+          "MCSE": 0.552536895619669
+        }
+      },
+      "overtime_share": {
+        "mean": 0.027865040650406507,
+        "MCSE": 0.00015022195899892148
+      },
+      "final5_trade_count_ratio_winning_vs_no_winning_longshot": {
+        "mean": 1.1552754384645734,
+        "MCSE": 0.002954050015970601,
+        "mean_trades_per_game_with_winning_longshot": 4645.3425083412085,
+        "mean_trades_per_game_without_winning_longshot": 4025.251989631746
+      },
+      "fixed_time_fairness_check": {
+        "final5_fixed_clock_A_pp_mean": 0.01587274226342225,
+        "MCSE_pp": 0.047352339981293984,
+        "z_from_zero": 0.33520502407468356
+      },
+      "seed": 20261110,
+      "synthetic_seasons": 1000,
+      "games_per_season": 1230
+    }
+  }
+}

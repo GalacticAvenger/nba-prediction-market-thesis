@@ -1,0 +1,246 @@
+{
+  "scope": "2025-26 NHL regular season, ESPN dates 2025-10-07 through 2026-04-16; all matched settled two-team markets",
+  "estimand": "equal-game mean of realized longshot payoff minus trade price; paired effect is clock-window mean minus retrospective-window mean within each game",
+  "windows": {
+    "retrospective": "trades in final 10 wall-clock minutes before last timestamped ESPN play, excluding that play and later trades",
+    "clock_final5_reg": "trades assigned to final 5:00 of 3rd period from latest timestamped ESPN play at/before trade; trades after last timestamped play excluded"
+  },
+  "eligibility": "5-20c inclusive cheaper-side team contract, folded YES/NO trade prices to cheaper side, non-block trades",
+  "nhl": {
+    "retrospective": {
+      "game_equal": {
+        "n_games": 841,
+        "estimate": -0.011098992282865332,
+        "ci95": [
+          -0.027969479345020812,
+          0.0064430096704594765
+        ],
+        "draws": 10000
+      },
+      "trade_weighted": {
+        "trades": 249296,
+        "games": 841,
+        "estimate": -0.0554504284063924,
+        "ci95": [
+          -0.07326874116023195,
+          -0.03285738434630172
+        ],
+        "draws": 10000
+      }
+    },
+    "clock_final5_reg": {
+      "game_equal": {
+        "n_games": 741,
+        "estimate": 0.028384431038622145,
+        "ci95": [
+          0.003985323091155616,
+          0.05425061333335014
+        ],
+        "draws": 10000
+      },
+      "trade_weighted": {
+        "trades": 113230,
+        "games": 741,
+        "estimate": -0.013830080367393794,
+        "ci95": [
+          -0.04166506187523731,
+          0.01677448281952182
+        ],
+        "draws": 10000
+      }
+    },
+    "paired_window_difference": {
+      "n_games": 461,
+      "estimate": 0.08308076715068637,
+      "ci95": [
+        0.04857797931192236,
+        0.11885418093415187
+      ],
+      "draws": 10000
+    }
+  },
+  "nba_same_dates_price_only": {
+    "retrospective": {
+      "game_equal": {
+        "n_games": 581,
+        "estimate": -0.06546644567755293,
+        "ci95": [
+          -0.07638840706734597,
+          -0.05354270857308602
+        ],
+        "draws": 10000
+      },
+      "trade_weighted": {
+        "trades": 933979,
+        "games": 581,
+        "estimate": -0.06358709349996092,
+        "ci95": [
+          -0.08277267909002682,
+          -0.040084620062963504
+        ],
+        "draws": 10000
+      }
+    },
+    "clock_final5_reg": {
+      "game_equal": {
+        "n_games": 684,
+        "estimate": -0.03436119816359533,
+        "ci95": [
+          -0.05029872919743316,
+          -0.017139711346940686
+        ],
+        "draws": 10000
+      },
+      "trade_weighted": {
+        "trades": 1681533,
+        "games": 684,
+        "estimate": -0.012762776585413428,
+        "ci95": [
+          -0.04431684396571784,
+          0.023768059605574512
+        ],
+        "draws": 10000
+      }
+    },
+    "paired_window_difference": {
+      "n_games": 575,
+      "estimate": 0.03769560047529549,
+      "ci95": [
+        0.02108158042208932,
+        0.0549382631456403
+      ],
+      "draws": 10000
+    }
+  },
+  "league_difference_nba_minus_nhl_window_effect": {
+    "estimate_nba_minus_nhl": -0.04538516667539087,
+    "ci95": [
+      -0.08496331478742779,
+      -0.006272099615730167
+    ],
+    "nba_games": 575,
+    "nhl_games": 461,
+    "draws": 10000
+  },
+  "league_difference_regulation_end_games_only": {
+    "estimate_nba_minus_nhl": -0.049950793890208844,
+    "ci95": [
+      -0.083652914252872,
+      -0.018450314818416212
+    ],
+    "nba_games": 524,
+    "nhl_games": 341,
+    "draws": 10000
+  },
+  "marginal_window_differences_separate_game_samples": {
+    "nhl": {
+      "estimate_clock_minus_retrospective": 0.03948342332148748,
+      "ci95": [
+        0.009560957127660514,
+        0.06981983220866729
+      ],
+      "retrospective_games": 841,
+      "clock_games": 741,
+      "draws": 10000
+    },
+    "nba": {
+      "estimate_clock_minus_retrospective": 0.0311052475139576,
+      "ci95": [
+        0.010888597825964201,
+        0.05123211756353997
+      ],
+      "retrospective_games": 581,
+      "clock_games": 684,
+      "draws": 10000
+    }
+  },
+  "league_difference_marginal_window_effect": {
+    "estimate_nhl_minus_nba_marginal_window_difference": 0.008378175807529878,
+    "ci95": [
+      -0.028234527362525418,
+      0.04490247673663313
+    ],
+    "nhl_retrospective_games": 841,
+    "nhl_clock_games": 741,
+    "nba_retrospective_games": 581,
+    "nba_clock_games": 684,
+    "draws": 10000
+  },
+  "league_difference_marginal_regulation_end_games_only": {
+    "estimate_nhl_minus_nba_marginal_window_difference": 0.03207238711331373,
+    "ci95": [
+      0.006548303868743148,
+      0.058205894191348063
+    ],
+    "nhl_retrospective_games": 596,
+    "nhl_clock_games": 587,
+    "nba_retrospective_games": 529,
+    "nba_clock_games": 632,
+    "draws": 10000
+  },
+  "nhl_clock_lag_sensitivity_seconds": {
+    "60": {
+      "n_games": 460,
+      "estimate": 0.08313287734826454,
+      "ci95": [
+        0.04857254593797031,
+        0.1185348974124249
+      ],
+      "draws": 10000
+    },
+    "180": {
+      "n_games": 461,
+      "estimate": 0.0830147157102741,
+      "ci95": [
+        0.04838005992211985,
+        0.11956129857009871
+      ],
+      "draws": 10000
+    }
+  },
+  "sample": {
+    "espn_final_regular_games": 1312,
+    "matched_settled_two_market_games": 1312,
+    "games_with_eligible_trades": 1310,
+    "paired_window_games": 461,
+    "eligible_trade_rows": 1606971,
+    "retrospective_trade_rows": 249296,
+    "clock_trade_rows": 113230,
+    "settlement_matches_espn": 1312,
+    "settlement_mismatches": 0,
+    "complementary_market_pairs": 1312,
+    "regulation_ending_paired_games": 341,
+    "overtime_ending_paired_games": 120
+  },
+  "overtime_sensitivity": {
+    "regulation_only_paired_effect": {
+      "n_games": 341,
+      "estimate": 0.05466908642628978,
+      "ci95": [
+        0.024166556038297492,
+        0.0873356599831701
+      ],
+      "draws": 10000
+    },
+    "overtime_ending_paired_effect": {
+      "n_games": 120,
+      "estimate": 0.16381729320918004,
+      "ci95": [
+        0.06271460880554429,
+        0.2637244981452869
+      ],
+      "draws": 10000
+    }
+  },
+  "clock_mapping_audit": {
+    "median_lag_trade_to_prior_play_seconds": 20.64094305038452,
+    "p90_lag_seconds": 161.38236474990913,
+    "share_over_60s": 0.23473372562127762,
+    "share_over_180s": 0.09537764560758119,
+    "games_using_explicit_game_end_marker": 1312,
+    "plays_after_game_end_dropped": 65,
+    "limitation": "Trade period and clock are proxied by latest timestamped play; elapsed running clock between plays may make assignment stale."
+  },
+  "bootstrap": "independent game-level percentile bootstrap, 10000 draws; fixed seed 20261104",
+  "interpretation_limit": "Descriptive windows contain different trade moments/game states. The league contrast is not causal. Regulation clock window and overtime final-event window are substantively different; report regulation-only estimate and audit data coverage before treating as transportability evidence."
+}

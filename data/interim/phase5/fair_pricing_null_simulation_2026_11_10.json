@@ -1,0 +1,313 @@
+{
+  "design": {
+    "A": "p-Y",
+    "seasons": 1000,
+    "games_per_season": 1230,
+    "seed": 20261110,
+    "uncertainty": "Monte Carlo SE across synthetic-season estimates; no within-season bootstrap",
+    "windows": {
+      "final5": "last 10 possession steps of regulation (5 game-clock minutes)",
+      "retro10m": "last 600 simulated wall-clock seconds before game end",
+      "fixed_clock": "one sample at each whole remaining game-clock minute; first eligible trade in next 60 wall-clock seconds; full game samples all regulation marks, final5 samples 5:00 through 1:00; pooled over sampled trades"
+    },
+    "longshot": "q=min(P,1-P), inclusive 0.05 to 0.20; no P* support restriction",
+    "price_fairness": "P is exact dynamic-programming conditional win probability under the simulator; no fitted prices or P*",
+    "arrival": "Poisson; sport-specific base rate * [1+3 exp(-abs(P-0.5)/0.15)] * [1+0.5*elapsed_fraction]; depends only on current probability and clock, highest near a 50-50 state",
+    "OT": "tie at regulation enters 10-possession (5 game-clock-minute) period; repeat if tied; tie boundary has continuation value 0.5 under symmetric increments",
+    "within_season_bootstrap": false
+  },
+  "parameters": {
+    "NBA": {
+      "regulation_minutes": 48,
+      "possessions": 96,
+      "game_clock_seconds_per_possession": 30,
+      "score_difference_increment_probabilities": {
+        "-3": 0.04,
+        "-2": 0.12,
+        "-1": 0.22,
+        "0": 0.24,
+        "+1": 0.22,
+        "+2": 0.12,
+        "+3": 0.04
+      },
+      "regulation_increment_SD_points": 14.266043600101607,
+      "overtime_possessions": 10,
+      "OT_break_wall_seconds": 120,
+      "base_stoppage_exponential_mean_seconds": 4,
+      "extra_mean_seconds_when_final5_and_margin_abs_le_6": 25,
+      "trade_rate_base_per_second": 7.5,
+      "close_trade_multiplier_at_even_price": 4
+    },
+    "hockey_rare_scoring_variant": {
+      "regulation_minutes": 60,
+      "possessions": 120,
+      "game_clock_seconds_per_possession": 30,
+      "score_difference_increment_probabilities": {
+        "-1": 0.025,
+        "0": 0.95,
+        "+1": 0.025
+      },
+      "expected_goals_total_per_regulation_game": 6,
+      "overtime_possessions": 10,
+      "OT_break_wall_seconds": 60,
+      "base_stoppage_exponential_mean_seconds": 5,
+      "extra_mean_seconds_when_final5_and_margin_abs_le_1": 35,
+      "trade_rate_base_per_second": 0.25,
+      "close_trade_multiplier_at_even_price": 4
+    }
+  },
+  "parameter_rationales": {
+    "NBA_score_walk": "96 steps at 30 game-clock seconds represent a 48-minute regulation game; the symmetric -3 to +3 increment mix has per-step variance 2.12 and an end-of-regulation score-difference SD of about 14.27 points, a compact basketball-like margin scale without fitting play-by-play transitions.",
+    "hockey_score_walk": "A 5% scoring-event probability per 30-second step (\u00b11 with equal probability) yields 6 expected total goals over 60 minutes; one goal changes the margin by one and can move late win probabilities sharply.",
+    "overtime": "Ten 30-second steps make each overtime a shorter five-minute period; the periods repeat until a winner. The 120-second NBA and 60-second hockey wall-clock breaks are explicit stylized inter-period pauses.",
+    "wall_clock": "Each possession lasts 30 game-clock seconds plus an exponential stoppage delay. Base mean delays are 4 seconds (NBA) and 5 seconds (hockey); in a close final five minutes, add 25 seconds (NBA, absolute margin at most 6) or 35 seconds (hockey, absolute margin at most 1). These are transparent stylized assumptions, not fitted estimates.",
+    "trade_arrivals": "The close-state multiplier peaks at 4x for a 50-50 win probability; 0.15 is the probability-distance scale and 0.5 adds up to 50% for late clock. Sport-specific base rates 7.5/sec (NBA) and 0.25/sec (hockey) scale the eligible final-five row counts toward the observed league-specific sample levels; the rate shape is not fitted.",
+    "symmetric_start": "Every game starts tied with equal team strength; there is no home advantage, team heterogeneity, or point drift. This isolates estimator behavior under an intentionally minimal fair-pricing null."
+  },
+  "real_comparators": {
+    "NBA": {
+      "overtime_games": 54,
+      "games": 1229,
+      "overtime_share": 0.043938161106590726,
+      "final5_mean_trades_with_winning_longshot": 3500.742424242424,
+      "final5_mean_trades_without_winning_longshot": 2209.121376811594,
+      "final5_trade_count_ratio": 1.5846763609227374,
+      "games_with_winning": 132,
+      "games_without_winning": 552
+    },
+    "NHL_variant": {
+      "overtime_games": 324,
+      "games_with_ESPN_summary": 1310,
+      "overtime_share": 0.24732824427480915,
+      "final5_mean_trades_with_winning_longshot": 110.78448275862068,
+      "final5_mean_trades_without_winning_longshot": 160.6064,
+      "final5_trade_count_ratio": 0.6897887180001586,
+      "games_with_winning": 116,
+      "games_without_winning": 625
+    }
+  },
+  "NBA": {
+    "estimators": {
+      "full_pooled": {
+        "mean_A_pp": -0.00614760032383011,
+        "MCSE_pp": 0.030918744014978496,
+        "valid_seasons": 1000
+      },
+      "full_equal_game": {
+        "mean_A_pp": 0.8770948659856026,
+        "MCSE_pp": 0.023642715862229043,
+        "valid_seasons": 1000
+      },
+      "full_first_trade": {
+        "mean_A_pp": -0.029705785707121558,
+        "MCSE_pp": 0.03345033681126209,
+        "valid_seasons": 1000
+      },
+      "full_fixed_clock": {
+        "mean_A_pp": -0.01287298482428785,
+        "MCSE_pp": 0.03136032381977886,
+        "valid_seasons": 1000
+      },
+      "final5_pooled": {
+        "mean_A_pp": 0.016549466853703405,
+        "MCSE_pp": 0.047562319865927516,
+        "valid_seasons": 1000
+      },
+      "final5_equal_game": {
+        "mean_A_pp": 0.6308125608029369,
+        "MCSE_pp": 0.03798744949797605,
+        "valid_seasons": 1000
+      },
+      "final5_first_trade": {
+        "mean_A_pp": -0.02948256876341733,
+        "MCSE_pp": 0.04351059048836918,
+        "valid_seasons": 1000
+      },
+      "final5_fixed_clock": {
+        "mean_A_pp": 0.007566737638307511,
+        "MCSE_pp": 0.04552503641260253,
+        "valid_seasons": 1000
+      },
+      "retro10m_pooled": {
+        "mean_A_pp": 4.039746791139533,
+        "MCSE_pp": 0.033758218176246205,
+        "valid_seasons": 1000
+      },
+      "retro10m_equal_game": {
+        "mean_A_pp": 4.04700355596821,
+        "MCSE_pp": 0.027222797201508213,
+        "valid_seasons": 1000
+      }
+    },
+    "mean_sample_sizes": {
+      "full_trade_rows": {
+        "mean_per_season": 10073589.397,
+        "MCSE": 5684.557287544102
+      },
+      "full_games_with_trades": {
+        "mean_per_season": 1225.604,
+        "MCSE": 0.06560097169621412
+      },
+      "full_first_entries": {
+        "mean_per_season": 1225.604,
+        "MCSE": 0.06560097169621412
+      },
+      "full_fixed_observations": {
+        "mean_per_season": 13681.322,
+        "MCSE": 7.71754383199725
+      },
+      "final5_trade_rows": {
+        "mean_per_season": 1368600.422,
+        "MCSE": 1840.6248120539572
+      },
+      "final5_games_with_trades": {
+        "mean_per_season": 560.993,
+        "MCSE": 0.5757903138170053
+      },
+      "final5_first_entries": {
+        "mean_per_season": 560.993,
+        "MCSE": 0.5757903138170053
+      },
+      "final5_fixed_observations": {
+        "mean_per_season": 1151.414,
+        "MCSE": 1.4451072413281096
+      },
+      "retro10m_trade_rows": {
+        "mean_per_season": 1823757.368,
+        "MCSE": 1907.965683324341
+      },
+      "retro10m_games_with_trades": {
+        "mean_per_season": 763.925,
+        "MCSE": 0.5527068480305449
+      }
+    },
+    "checks": {
+      "overtime_share": {
+        "mean": 0.027790243902439022,
+        "MCSE": 0.00014628556125420228
+      },
+      "final5_trade_count_ratio_winning_vs_no_winning_longshot": {
+        "mean": 1.1231437651217888,
+        "MCSE": 0.002625662195591866,
+        "mean_trades_per_game_with_winning_longshot": 2694.2543355884345,
+        "mean_trades_per_game_without_winning_longshot": 2401.0302123454585
+      },
+      "fixed_time_fairness_z": 0.16621046866890232
+    },
+    "synthetic_seasons": 1000,
+    "games_per_season": 1230,
+    "seed": 20261110
+  },
+  "hockey_rare_scoring": {
+    "estimators": {
+      "full_pooled": {
+        "mean_A_pp": -0.008164832034078797,
+        "MCSE_pp": 0.03281226485210048,
+        "valid_seasons": 1000
+      },
+      "full_equal_game": {
+        "mean_A_pp": 0.4841327404144201,
+        "MCSE_pp": 0.026346127051502147,
+        "valid_seasons": 1000
+      },
+      "full_first_trade": {
+        "mean_A_pp": 0.0033800725740164295,
+        "MCSE_pp": 0.0336105613877847,
+        "valid_seasons": 1000
+      },
+      "full_fixed_clock": {
+        "mean_A_pp": -0.0070732763305679245,
+        "MCSE_pp": 0.03407457584965887,
+        "valid_seasons": 1000
+      },
+      "final5_pooled": {
+        "mean_A_pp": -0.05471379315692727,
+        "MCSE_pp": 0.04184565893650889,
+        "valid_seasons": 1000
+      },
+      "final5_equal_game": {
+        "mean_A_pp": -1.5221564231193783,
+        "MCSE_pp": 0.04387954381430265,
+        "valid_seasons": 1000
+      },
+      "final5_first_trade": {
+        "mean_A_pp": -0.04699268737343824,
+        "MCSE_pp": 0.04456130270757794,
+        "valid_seasons": 1000
+      },
+      "final5_fixed_clock": {
+        "mean_A_pp": -0.044500259029313705,
+        "MCSE_pp": 0.04169637211918627,
+        "valid_seasons": 1000
+      },
+      "retro10m_pooled": {
+        "mean_A_pp": 7.00022783449243,
+        "MCSE_pp": 0.015413969851565807,
+        "valid_seasons": 1000
+      },
+      "retro10m_equal_game": {
+        "mean_A_pp": 6.6524664568451675,
+        "MCSE_pp": 0.01644298493071469,
+        "valid_seasons": 1000
+      }
+    },
+    "mean_sample_sizes": {
+      "full_trade_rows": {
+        "mean_per_season": 480103.828,
+        "MCSE": 293.0146814683045
+      },
+      "full_games_with_trades": {
+        "mean_per_season": 1202.399,
+        "MCSE": 0.16374556974651744
+      },
+      "full_first_entries": {
+        "mean_per_season": 1202.399,
+        "MCSE": 0.16374556974651744
+      },
+      "full_fixed_observations": {
+        "mean_per_season": 16496.312,
+        "MCSE": 10.427801767664445
+      },
+      "final5_trade_rows": {
+        "mean_per_season": 69940.331,
+        "MCSE": 90.03078484417794
+      },
+      "final5_games_with_trades": {
+        "mean_per_season": 468.88,
+        "MCSE": 0.5273212186776365
+      },
+      "final5_first_entries": {
+        "mean_per_season": 468.88,
+        "MCSE": 0.5273212186776365
+      },
+      "final5_fixed_observations": {
+        "mean_per_season": 1189.867,
+        "MCSE": 1.443661133531158
+      },
+      "retro10m_trade_rows": {
+        "mean_per_season": 58418.645,
+        "MCSE": 70.30157079205863
+      },
+      "retro10m_games_with_trades": {
+        "mean_per_season": 565.037,
+        "MCSE": 0.5299098370812109
+      }
+    },
+    "checks": {
+      "overtime_share": {
+        "mean": 0.16632195121951218,
+        "MCSE": 0.00033873456233246145
+      },
+      "final5_trade_count_ratio_winning_vs_no_winning_longshot": {
+        "mean": 0.8305260068805802,
+        "MCSE": 0.002075723521977788,
+        "mean_trades_per_game_with_winning_longshot": 125.92888527972428,
+        "mean_trades_per_game_without_winning_longshot": 151.68319980758892
+      },
+      "fixed_time_fairness_z": -1.0672453445616976
+    },
+    "synthetic_seasons": 1000,
+    "games_per_season": 1230,
+    "seed": 21261110
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "estimand": "equal game weight A in the retrospective window",
+  "A_convention": "A = price - payoff (p - Y), percentage points",
+  "estimate_pp": 6.679159750416469,
+  "ci95_pp": [
+    5.415062609226506,
+    7.836767116905083
+  ],
+  "games": 561,
+  "draws": 2000,
+  "seed": 9142026,
+  "bootstrap_unit": "game, sampled with replacement; mean recomputed in each draw",
+  "source_values": "data/interim/phase5/phase5_crossfit_selection_diagnostic_games.csv; window_minutes=10, price_band=05_20, coordinate=price, bin_width=0.05; 561 retrospective-window games"
+}
