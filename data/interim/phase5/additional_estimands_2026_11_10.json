@@ -1,0 +1,972 @@
+{
+  "convention": "A = p - Y",
+  "units": "percentage points unless stated",
+  "bootstrap": {
+    "draws": 2000,
+    "unit": "game",
+    "interval": "percentile 95%",
+    "seed": 20261110
+  },
+  "draft_modified": false,
+  "1_paired_pooled_window_contrast": {
+    "all_557_paired_games": {
+      "games": 557,
+      "window_A": {
+        "trades": 531413,
+        "pooled_A_pp": 6.2394578228233035,
+        "CI95_pp": [
+          3.454675543322947,
+          8.387986020403728
+        ]
+      },
+      "window_B": {
+        "trades": 893400,
+        "pooled_A_pp": 0.41063465413028893,
+        "CI95_pp": [
+          -3.877091286023081,
+          4.013270999232446
+        ]
+      },
+      "B_minus_A_pp": -5.828823168693015,
+      "difference_CI95_pp": [
+        -9.639996468206627,
+        -2.4165001590313504
+      ],
+      "draws": 2000,
+      "seed": 20261111,
+      "bootstrap_unit": "paired game; pooled means recomputed per draw"
+    },
+    "506_non_overtime": {
+      "games": 506,
+      "window_A": {
+        "trades": 457905,
+        "pooled_A_pp": 6.611915135235476,
+        "CI95_pp": [
+          3.758769279372788,
+          8.77511396604094
+        ]
+      },
+      "window_B": {
+        "trades": 790947,
+        "pooled_A_pp": 4.922436016572539,
+        "CI95_pp": [
+          1.7865730379060645,
+          7.431073013802912
+        ]
+      },
+      "B_minus_A_pp": -1.6894791186629363,
+      "difference_CI95_pp": [
+        -3.077126730836795,
+        -0.41371407150734146
+      ],
+      "draws": 2000,
+      "seed": 20261111,
+      "bootstrap_unit": "paired game; pooled means recomputed per draw"
+    },
+    "51_overtime": {
+      "games": 51,
+      "window_A": {
+        "trades": 73508,
+        "pooled_A_pp": 3.9193013005387174,
+        "CI95_pp": [
+          -3.8366588605825194,
+          10.42900449739151
+        ]
+      },
+      "window_B": {
+        "trades": 102453,
+        "pooled_A_pp": -34.42090519555308,
+        "CI95_pp": [
+          -53.415083754657864,
+          -16.16199843958691
+        ]
+      },
+      "B_minus_A_pp": -38.3402064960918,
+      "difference_CI95_pp": [
+        -58.48021316288736,
+        -17.15839261502224
+      ],
+      "draws": 2000,
+      "seed": 20261112,
+      "bootstrap_unit": "paired game; pooled means recomputed per draw"
+    }
+  },
+  "2_equal_game_minus_pooled": {
+    "full_game_5_20c": {
+      "trades": 6989018,
+      "games": 1219,
+      "equal_game_minus_pooled_A_pp": 3.1445070293344273,
+      "CI95_pp": [
+        2.113274346435264,
+        4.193259172805659
+      ],
+      "draws": 2000,
+      "seed": 20261130,
+      "bootstrap_unit": "game; both estimates recomputed per draw"
+    },
+    "final5_Pstar_support_market_yes_5_20c": {
+      "trades": 961626,
+      "games": 658,
+      "equal_game_minus_pooled_A_pp": 2.4148249797134826,
+      "CI95_pp": [
+        0.011279482657231062,
+        5.248494578871906
+      ],
+      "draws": 2000,
+      "seed": 20261131,
+      "bootstrap_unit": "game; both estimates recomputed per draw"
+    },
+    "final5_no_Pstar_folded_longshot_5_20c": {
+      "trades": 1681533,
+      "games": 684,
+      "equal_game_minus_pooled_A_pp": 2.1598421578181894,
+      "CI95_pp": [
+        -0.22820608104758178,
+        4.83435143345333
+      ],
+      "draws": 2000,
+      "seed": 20261132,
+      "bootstrap_unit": "game; both estimates recomputed per draw"
+    },
+    "quiet_stoppage_primary_5_20c": {
+      "trades": 309318,
+      "games": 390,
+      "equal_game_minus_pooled_A_pp": 0.9811096832376828,
+      "CI95_pp": [
+        -1.314190747524135,
+        3.4641061994349687
+      ],
+      "draws": 2000,
+      "seed": 20261133,
+      "bootstrap_unit": "game; both estimates recomputed per draw"
+    }
+  },
+  "3_fixed_game_clock_sampling": {
+    "with_Pstar": {
+      "overall_all_sampled_trades": {
+        "trades": 1695,
+        "games": 626,
+        "pooled_A_pp": 0.8690265486725663,
+        "pooled_CI95_pp": [
+          -1.7635299347954954,
+          3.279919761133286
+        ],
+        "equal_game_A_pp": 1.3369808306709265,
+        "equal_game_CI95_pp": [
+          -0.9568064430244944,
+          3.4629539403620875
+        ],
+        "draws": 2000,
+        "seed": 20261140,
+        "bootstrap_unit": "game"
+      },
+      "overall_estimator": "pooled A over selected trade-mark observations, each counted once; game-cluster bootstrap resamples games and retains all selected marks within each sampled game",
+      "sampling_rule": "for each mark, use the first ESPN play-by-play timestamp at/after regulation clock reaches the mark; select the first eligible trade at/after that timestamp and within the following 60 wall-clock seconds, requiring its ESPN-assigned game clock to be at or below the mark; each game can contribute once per mark",
+      "per_mark": {
+        "300": {
+          "trades": 383,
+          "games": 383,
+          "pooled_A_pp": -0.1540469973890335,
+          "pooled_CI95_pp": [
+            -3.4334203655352473,
+            3.0684073107049588
+          ],
+          "equal_game_A_pp": -0.1540469973890335,
+          "equal_game_CI95_pp": [
+            -3.4334203655352473,
+            3.0684073107049588
+          ],
+          "draws": 2000,
+          "seed": 20261450,
+          "bootstrap_unit": "game"
+        },
+        "240": {
+          "trades": 352,
+          "games": 352,
+          "pooled_A_pp": -1.0085227272727273,
+          "pooled_CI95_pp": [
+            -4.372159090909091,
+            2.3296875
+          ],
+          "equal_game_A_pp": -1.008522727272727,
+          "equal_game_CI95_pp": [
+            -4.372159090909091,
+            2.3296875
+          ],
+          "draws": 2000,
+          "seed": 20261390,
+          "bootstrap_unit": "game"
+        },
+        "180": {
+          "trades": 347,
+          "games": 347,
+          "pooled_A_pp": 0.6195965417867436,
+          "pooled_CI95_pp": [
+            -2.7353746397694523,
+            3.919956772334291
+          ],
+          "equal_game_A_pp": 0.6195965417867436,
+          "equal_game_CI95_pp": [
+            -2.7353746397694523,
+            3.919956772334291
+          ],
+          "draws": 2000,
+          "seed": 20261330,
+          "bootstrap_unit": "game"
+        },
+        "120": {
+          "trades": 323,
+          "games": 323,
+          "pooled_A_pp": 4.272445820433436,
+          "pooled_CI95_pp": [
+            1.0526315789473681,
+            7.359133126934983
+          ],
+          "equal_game_A_pp": 4.272445820433436,
+          "equal_game_CI95_pp": [
+            1.0526315789473681,
+            7.359133126934983
+          ],
+          "draws": 2000,
+          "seed": 20261270,
+          "bootstrap_unit": "game"
+        },
+        "60": {
+          "trades": 290,
+          "games": 290,
+          "pooled_A_pp": 1.0068965517241375,
+          "pooled_CI95_pp": [
+            -2.914741379310344,
+            4.58025862068965
+          ],
+          "equal_game_A_pp": 1.0068965517241375,
+          "equal_game_CI95_pp": [
+            -2.914741379310344,
+            4.58025862068965
+          ],
+          "draws": 2000,
+          "seed": 20261210,
+          "bootstrap_unit": "game"
+        }
+      }
+    },
+    "without_Pstar": {
+      "overall_all_sampled_trades": {
+        "trades": 1879,
+        "games": 657,
+        "pooled_A_pp": 0.8238424693986162,
+        "pooled_CI95_pp": [
+          -1.5248414470842333,
+          3.1280876667081765
+        ],
+        "equal_game_A_pp": 0.8414764079147643,
+        "equal_game_CI95_pp": [
+          -1.3091330542871642,
+          2.881914003044139
+        ],
+        "draws": 2000,
+        "seed": 20261141,
+        "bootstrap_unit": "game"
+      },
+      "overall_estimator": "pooled A over selected trade-mark observations, each counted once; game-cluster bootstrap resamples games and retains all selected marks within each sampled game",
+      "sampling_rule": "for each mark, use the first ESPN play-by-play timestamp at/after regulation clock reaches the mark; select the first eligible trade at/after that timestamp and within the following 60 wall-clock seconds, requiring its ESPN-assigned game clock to be at or below the mark; each game can contribute once per mark",
+      "per_mark": {
+        "300": {
+          "trades": 420,
+          "games": 420,
+          "pooled_A_pp": -0.04285714285714263,
+          "pooled_CI95_pp": [
+            -3.3764285714285704,
+            2.8872023809523726
+          ],
+          "equal_game_A_pp": -0.042857142857142635,
+          "equal_game_CI95_pp": [
+            -3.3764285714285704,
+            2.8872023809523726
+          ],
+          "draws": 2000,
+          "seed": 20262450,
+          "bootstrap_unit": "game"
+        },
+        "240": {
+          "trades": 390,
+          "games": 390,
+          "pooled_A_pp": -0.9974358974358967,
+          "pooled_CI95_pp": [
+            -4.366794871794872,
+            2.074615384615383
+          ],
+          "equal_game_A_pp": -0.9974358974358966,
+          "equal_game_CI95_pp": [
+            -4.366794871794872,
+            2.074615384615383
+          ],
+          "draws": 2000,
+          "seed": 20262390,
+          "bootstrap_unit": "game"
+        },
+        "180": {
+          "trades": 380,
+          "games": 380,
+          "pooled_A_pp": 0.6578947368421056,
+          "pooled_CI95_pp": [
+            -2.6553289473684205,
+            3.8658552631578935
+          ],
+          "equal_game_A_pp": 0.6578947368421055,
+          "equal_game_CI95_pp": [
+            -2.6553289473684205,
+            3.8658552631578935
+          ],
+          "draws": 2000,
+          "seed": 20262330,
+          "bootstrap_unit": "game"
+        },
+        "120": {
+          "trades": 356,
+          "games": 356,
+          "pooled_A_pp": 3.783707865168539,
+          "pooled_CI95_pp": [
+            0.7575842696629205,
+            6.674367977528088
+          ],
+          "equal_game_A_pp": 3.7837078651685387,
+          "equal_game_CI95_pp": [
+            0.7575842696629205,
+            6.674367977528088
+          ],
+          "draws": 2000,
+          "seed": 20262270,
+          "bootstrap_unit": "game"
+        },
+        "60": {
+          "trades": 333,
+          "games": 333,
+          "pooled_A_pp": 1.0750750750750755,
+          "pooled_CI95_pp": [
+            -2.372597597597598,
+            4.240315315315316
+          ],
+          "equal_game_A_pp": 1.0750750750750753,
+          "equal_game_CI95_pp": [
+            -2.372597597597598,
+            4.240315315315316
+          ],
+          "draws": 2000,
+          "seed": 20262210,
+          "bootstrap_unit": "game"
+        }
+      }
+    }
+  },
+  "4a_NHL_final5_trade_counts_by_game_outcome": {
+    "no_winning_eligible_contract": {
+      "games": 625,
+      "mean_trades_per_game": 160.6064,
+      "median_trades_per_game": 112.0,
+      "eligible_trades": 100379
+    },
+    "contains_winning_eligible_contract": {
+      "games": 116,
+      "mean_trades_per_game": 110.78448275862068,
+      "median_trades_per_game": 46.5,
+      "eligible_trades": 12851
+    },
+    "overall": {
+      "trades": 113230,
+      "games": 741
+    }
+  },
+  "4b_NHL_461_paired_games_levels": {
+    "paired_games": 461,
+    "retrospective": {
+      "trades": 120686,
+      "games": 461,
+      "pooled_A_pp": 4.207364565898281,
+      "pooled_CI95_pp": [
+        0.05244236657947015,
+        7.388825473417125
+      ],
+      "equal_game_A_pp": 1.416641252426969,
+      "equal_game_CI95_pp": [
+        -0.9400186607859761,
+        3.6537858822806677
+      ],
+      "draws": 2000,
+      "seed": 20261160,
+      "bootstrap_unit": "game"
+    },
+    "final5_regulation": {
+      "trades": 71918,
+      "games": 461,
+      "pooled_A_pp": -1.9297950443560723,
+      "pooled_CI95_pp": [
+        -6.51872539559223,
+        2.203925989840029
+      ],
+      "equal_game_A_pp": -6.891435462641668,
+      "equal_game_CI95_pp": [
+        -10.423490409295235,
+        -3.3653670887518228
+      ],
+      "draws": 2000,
+      "seed": 20261161,
+      "bootstrap_unit": "game"
+    }
+  },
+  "4c_NHL_first_trade_per_game": {
+    "retrospective": {
+      "eligible_trades": 249296,
+      "first_trade_per_game": {
+        "trades": 841,
+        "games": 841,
+        "pooled_A_pp": -1.0237812128418553,
+        "pooled_CI95_pp": [
+          -3.1498216409036863,
+          1.2568370986920332
+        ],
+        "equal_game_A_pp": -1.0237812128418553,
+        "equal_game_CI95_pp": [
+          -3.1498216409036863,
+          1.2568370986920332
+        ],
+        "draws": 2000,
+        "seed": 20261162,
+        "bootstrap_unit": "game"
+      }
+    },
+    "final5_regulation": {
+      "eligible_trades": 113230,
+      "first_trade_per_game": {
+        "trades": 741,
+        "games": 741,
+        "pooled_A_pp": -1.916329284750338,
+        "pooled_CI95_pp": [
+          -4.466936572199732,
+          0.5562078272604569
+        ],
+        "equal_game_A_pp": -1.916329284750338,
+        "equal_game_CI95_pp": [
+          -4.466936572199732,
+          0.5562078272604569
+        ],
+        "draws": 2000,
+        "seed": 20261163,
+        "bootstrap_unit": "game"
+      }
+    }
+  },
+  "5_taker_side_split": {
+    "Kalshi_NBA_taker_side_available": true,
+    "final5_pooled_by_taker_side": {
+      "source_field": "buy_longshot; derived from taker outcome side in Kalshi trade records",
+      "sides": {
+        "bought_longshot": {
+          "trades": 981597,
+          "games": 681,
+          "pooled_A_pp": 1.8458501808787107,
+          "pooled_CI95_pp": [
+            -1.7395417172543923,
+            5.095111697372167
+          ],
+          "equal_game_A_pp": 4.01634585933385,
+          "equal_game_CI95_pp": [
+            2.3770117335375933,
+            5.59725051231523
+          ],
+          "draws": 2000,
+          "seed": 20261170,
+          "bootstrap_unit": "game"
+        },
+        "sold_longshot": {
+          "trades": 699936,
+          "games": 651,
+          "pooled_A_pp": 0.47750365747725537,
+          "pooled_CI95_pp": [
+            -3.2359353797111905,
+            3.8499901862406802
+          ],
+          "equal_game_A_pp": 3.0211557824720847,
+          "equal_game_CI95_pp": [
+            1.2992738707467781,
+            4.746936932962653
+          ],
+          "draws": 2000,
+          "seed": 20261171,
+          "bootstrap_unit": "game"
+        }
+      }
+    },
+    "quiet_stoppage_pooled_by_taker_side": {
+      "source_field": "buy_longshot; derived from taker outcome side in Kalshi trade records",
+      "sides": {
+        "bought_longshot": {
+          "trades": 178024,
+          "games": 375,
+          "pooled_A_pp": 1.5651316676403184,
+          "pooled_CI95_pp": [
+            -2.3428727237866394,
+            5.189763727514456
+          ],
+          "equal_game_A_pp": 2.5132315555204356,
+          "equal_game_CI95_pp": [
+            -0.310045359249589,
+            5.24770851354524
+          ],
+          "draws": 2000,
+          "seed": 20261172,
+          "bootstrap_unit": "game"
+        },
+        "sold_longshot": {
+          "trades": 131294,
+          "games": 347,
+          "pooled_A_pp": 1.0609395707343832,
+          "pooled_CI95_pp": [
+            -3.2320702488266613,
+            5.057767926568171
+          ],
+          "equal_game_A_pp": 1.7797040503714032,
+          "equal_game_CI95_pp": [
+            -1.0990989430683102,
+            4.569395883636494
+          ],
+          "draws": 2000,
+          "seed": 20261173,
+          "bootstrap_unit": "game"
+        }
+      }
+    },
+    "NHL_raw_Kalshi_trade_records_contain_taker_outcome_side": true,
+    "NHL_window_parquet_does_not_retain_taker_side": true
+  },
+  "prior_fresh_audit_reference": {
+    "path": "data/interim/phase5/fresh_results_audit_2026_11_10.json",
+    "included_keys": [
+      "10c_bin_market_remainder_fixed_prediction_bootstrap",
+      "10c_bin_market_remainder_refit_bootstrap_saved_output",
+      "A_convention",
+      "G1_final5_Pstar_first_entry",
+      "G1_final5_no_Pstar_first_entry",
+      "G1_full_game_first_entry",
+      "G2_trade_counts_per_game_final5_Pstar",
+      "G3_selection_reference_baseline",
+      "G4_overtime_stratified_paired_window_levels",
+      "N1_outcome_specific_window_entry_rates",
+      "N2_full_game_baseline",
+      "N3_window_sample_counts",
+      "N4_N5_paired_window_contrasts_A_final5_minus_retrospective",
+      "N6_final5_weighting_sensitivity",
+      "N7_across_game_dispersion",
+      "N8_selection_model_10c_bin_remainder",
+      "N9_polymarket_equal_game_fixed_OOF_decomposition",
+      "Prelec_beta_saved_fit",
+      "bootstrap_draws_saved_table_convention",
+      "bootstrap_seed_fresh_first_entry_and_game_summaries",
+      "polymarket_equal_game_remainder_fixed_prediction",
+      "sample_definitions_verified_from_source",
+      "units"
+    ],
+    "N1_to_N9_present": {
+      "N1": true,
+      "N2": true,
+      "N3": true,
+      "N4": true,
+      "N5": true,
+      "N6": true,
+      "N7": true,
+      "N8": true,
+      "N9": true
+    },
+    "Prelec_present": true
+  },
+  "prior_fresh_audit_results": {
+    "bootstrap_draws_saved_table_convention": 2000,
+    "bootstrap_seed_fresh_first_entry_and_game_summaries": 6102126,
+    "A_convention": "A = p - Y",
+    "units": "A in percentage points; price in cents",
+    "sample_definitions_verified_from_source": {
+      "Moshrefi_comparison_2524781_trades_1202_games": {
+        "source": "src/phase5a.py, version d_full_regular_season",
+        "population": "2025-26 Kalshi NBA regular-season trade records with settled YES/NO outcomes",
+        "price": "each traded contract market-YES price; all interior prices 0 < p < 1; not a folded longshot band",
+        "window": "[last timestamped ESPN play - 10 minutes, last timestamped ESPN play); excludes final play and later trades",
+        "filters": "block trades excluded; valid trade timestamps and ESPN last-play timestamp required; no P* support screen",
+        "trades": 2524781,
+        "games": 1202
+      },
+      "same_date_NBA_retrospective_933979_trades_581_games": {
+        "source": "src/nhl_window_analysis.py, load_nba_dates",
+        "population": "2025-26 NBA regular-season games on New York local dates 2025-10-07 through 2026-04-16 inclusive, matched to settled Kalshi team markets and ESPN summaries",
+        "price": "cheaper-side team contract (longshot_price), folded to its own YES/NO outcome; 5 to 20 cents inclusive",
+        "window": "[ESPN explicit Game End timestamp - 10 minutes, Game End timestamp); if no explicit marker, use maximum timestamped ESPN play; excludes endpoint and later trades",
+        "filters": "Phase 4 panel rows (block trades excluded upstream); settled YES/NO outcomes; no P* support screen",
+        "trades": 933979,
+        "games": 581
+      }
+    },
+    "G1_full_game_first_entry": {
+      "trades": 1219,
+      "games": 1219,
+      "eligible_trade_rows_in_full_game_population": 6989018,
+      "A_pp": -0.2608695652173942,
+      "CI95_pp": [
+        -2.4430885972108314,
+        1.7803527481542205
+      ],
+      "definition": "earliest in-game trade, cheaper-side (longshot) contract price 5-20 cents inclusive"
+    },
+    "N2_full_game_baseline": {
+      "trades": 6989018,
+      "games": 1219,
+      "trade_weighted_A_pp": 0.7452514788200572,
+      "trade_weighted_CI95_pp": [
+        -1.2103020101984965,
+        2.457968271776265
+      ],
+      "equal_game_A_pp": 3.8897585081544848,
+      "equal_game_CI95_pp": [
+        2.7118330168944156,
+        4.899308791189928
+      ],
+      "draws": 2000,
+      "seed": 9142026
+    },
+    "G1_final5_Pstar_first_entry": {
+      "eligible_trades": 961626,
+      "games": 658,
+      "first_entry_trades": 658,
+      "A_pp": -0.44680851063829824,
+      "CI95_pp": [
+        -3.1279255319148938,
+        2.19787234042553
+      ],
+      "draws": 2000,
+      "seed": 6102126,
+      "definition": "earliest timestamped eligible trade per game; market YES price 5-20 cents inclusive; market price and P* each in [3,97] cents; Q4/OT in-game rows before last ESPN play; final five regulation minutes"
+    },
+    "N1_outcome_specific_window_entry_rates": {
+      "reference_population": {
+        "trades": 1895558,
+        "games": 902,
+        "price_band": "market YES 5-20 cents inclusive; market and P* support [3,97] cents"
+      },
+      "by_outcome": {
+        "winning_contracts": {
+          "reference_trades": 217913,
+          "window_trades": 27538,
+          "share_entering_retrospective_10m": 0.1263715335936819,
+          "games": 183
+        },
+        "losing_contracts": {
+          "reference_trades": 1677645,
+          "window_trades": 504765,
+          "share_entering_retrospective_10m": 0.30087712239478553,
+          "games": 902
+        }
+      }
+    },
+    "G1_final5_no_Pstar_first_entry": {
+      "eligible_trades": 1681533,
+      "games": 684,
+      "first_entry_trades": 684,
+      "A_pp": -0.5964912280701761,
+      "CI95_pp": [
+        -3.1184576023391823,
+        1.9226242690058464
+      ],
+      "draws": 2000,
+      "seed": 6102126,
+      "definition": "earliest timestamped eligible trade per game in saved final-five sample; cheaper-side longshot price 5-20 cents inclusive; no P* support restriction"
+    },
+    "N3_window_sample_counts": {
+      "retrospective_10m_common_support": {
+        "trades": 532303,
+        "games": 561
+      },
+      "final5_Pstar_support": {
+        "trades": 961626,
+        "games": 658
+      },
+      "final5_no_Pstar_support": {
+        "trades": 1681533,
+        "games": 684
+      }
+    },
+    "G2_trade_counts_per_game_final5_Pstar": {
+      "no_winning_eligible_contract": {
+        "games": 533,
+        "mean_eligible_trades": 1339.9812382739212,
+        "median_eligible_trades": 919.0
+      },
+      "contains_winning_eligible_contract": {
+        "games": 125,
+        "mean_eligible_trades": 1979.328,
+        "median_eligible_trades": 1645.0
+      },
+      "sample": {
+        "trades": 961626,
+        "games": 658
+      }
+    },
+    "G3_selection_reference_baseline": {
+      "trades": 1895558,
+      "games": 902,
+      "mean_price_cents_and_A_percentage_points": {
+        "mean_price": {
+          "pooled": {
+            "estimate": 12.215526509872026,
+            "CI95": [
+              12.061449241519705,
+              12.363918852740776
+            ]
+          },
+          "equal_game": {
+            "estimate": 11.372987705579698,
+            "CI95": [
+              11.186522383512608,
+              11.55415011816396
+            ]
+          }
+        },
+        "A": {
+          "pooled": {
+            "estimate": 0.7195448517006604,
+            "CI95": [
+              -1.8891722146287693,
+              3.0490579742345782
+            ]
+          },
+          "equal_game": {
+            "estimate": 4.5711394492521515,
+            "CI95": [
+              3.237804565117957,
+              5.748049990859292
+            ]
+          }
+        }
+      }
+    },
+    "N6_final5_weighting_sensitivity": {
+      "Pstar_common_support_market_yes": {
+        "trades": 961626,
+        "games": 658,
+        "trade_weighted_A_pp": 1.1244298719044623,
+        "trade_weighted_CI95_pp": [
+          -2.831265927908256,
+          4.360533578643809
+        ],
+        "equal_game_A_pp": 3.5392548516179447,
+        "equal_game_CI95_pp": [
+          1.7691089930154211,
+          5.230729580302416
+        ],
+        "draws": 2000,
+        "seed": 9142026
+      },
+      "no_Pstar_folded_longshot": {
+        "trades": 1681533,
+        "games": 684,
+        "trade_weighted_A_pp": 1.2762776585413427,
+        "trade_weighted_CI95_pp": [
+          -2.3839181346214344,
+          4.446598958828923
+        ],
+        "equal_game_A_pp": 3.436119816359532,
+        "equal_game_CI95_pp": [
+          1.703896921737898,
+          5.0615144968336985
+        ],
+        "draws": 2000,
+        "seed": 9142026
+      }
+    },
+    "N7_across_game_dispersion": {
+      "quiet_primary_all_rows": {
+        "games": 390,
+        "trades": 309318,
+        "SD_game_mean_A_pp": 27.234995228710396
+      },
+      "quiet_primary_quote_valid_rows": {
+        "games": 376,
+        "trades": 251686,
+        "SD_game_mean_A_pp": 27.088943589808355
+      }
+    },
+    "G4_overtime_stratified_paired_window_levels": {
+      "paired_games": 557,
+      "overtime_games": 51,
+      "non_overtime_games": 506,
+      "levels": {
+        "non_overtime": {
+          "retrospectiveA": {
+            "games": 506,
+            "A_pp": 6.839911857216031,
+            "CI95_pp": [
+              5.576543067838693,
+              8.061192561598645
+            ]
+          },
+          "f5A": {
+            "games": 506,
+            "A_pp": 6.2846154242834755,
+            "CI95_pp": [
+              4.787258328075531,
+              7.738627715136942
+            ]
+          }
+        },
+        "overtime": {
+          "retrospectiveA": {
+            "games": 51,
+            "A_pp": 5.104619261901683,
+            "CI95_pp": [
+              -0.9219517454417769,
+              9.778955981333311
+            ]
+          },
+          "f5A": {
+            "games": 51,
+            "A_pp": -31.881817446629363,
+            "CI95_pp": [
+              -45.35524371537928,
+              -18.45393851219883
+            ]
+          }
+        }
+      }
+    },
+    "N4_N5_paired_window_contrasts_A_final5_minus_retrospective": {
+      "all_paired_games": {
+        "games": 557,
+        "estimate_pp": -3.8910022750430096,
+        "CI95_pp": [
+          -5.77135432898785,
+          -2.2362679883181875
+        ]
+      },
+      "non_overtime": {
+        "games": 506,
+        "estimate_pp": -0.5552964329325553,
+        "CI95_pp": [
+          -1.3133087601580669,
+          0.1550059430325463
+        ]
+      },
+      "overtime": {
+        "games": 51,
+        "estimate_pp": -36.986436708531045,
+        "CI95_pp": [
+          -51.71407816275546,
+          -22.23040605867667
+        ]
+      }
+    },
+    "10c_bin_market_remainder_fixed_prediction_bootstrap": {
+      "games": 561,
+      "trades": 532303,
+      "stored_coordinate": "Y - predicted selected probability",
+      "reported_coordinate": "A residual = predicted selected probability - Y (sign reversed)",
+      "A_trade_weighted_pp": -0.010004202683601348,
+      "CI95_A_trade_weighted_pp": [
+        -2.673243089957378,
+        2.186350859098396
+      ],
+      "A_equal_game_pp": 0.9635940382930334,
+      "CI95_A_equal_game_pp": [
+        -0.35976065333920865,
+        2.155476860070115
+      ],
+      "draws": 20000,
+      "seed": 334455,
+      "note": "Fixed-prediction bootstrap resamples game-level OOF residuals and conditions on fitted predictions; trade-weighted CI is the matching counterpart to the pooled-trade refit remainder."
+    },
+    "10c_bin_market_remainder_refit_bootstrap_saved_output": {
+      "trades": 532303,
+      "games": 561,
+      "A_percentage_points": -0.010004202683597332,
+      "CI95_A_percentage_points": [
+        -0.18458281047288724,
+        0.1141286254065643
+      ],
+      "draws": 2000,
+      "source": "data/interim/phase5/phase5_crossfit_selection_diagnostic.json; sign reversed from stored Y - predicted probability"
+    },
+    "N8_selection_model_10c_bin_remainder": {
+      "trades": 532303,
+      "games": 561,
+      "A_percentage_points": -0.010004202683597332,
+      "CI95_A_percentage_points": [
+        -0.18458281047288724,
+        0.1141286254065643
+      ],
+      "draws": 2000,
+      "source": "saved model-refit game-cluster bootstrap output; sign reversed from stored Y - predicted probability"
+    },
+    "polymarket_equal_game_remainder_fixed_prediction": {
+      "trades": 49659,
+      "games": 265,
+      "A_percentage_points": -2.8928179505610756,
+      "fresh_2000_draw_CI95_A_percentage_points": [
+        -6.197938789870223,
+        0.030460373751151293
+      ],
+      "fresh_draws": 2000,
+      "fresh_seed": 9142026,
+      "saved_20000_draw_CI95_A_percentage_points": [
+        -6.189429604921113,
+        0.12676591600365084
+      ],
+      "saved_draws": 20000,
+      "saved_seed": 334455,
+      "saved_source": "data/interim/phase5/phase5_selection_inference_audit.json; its stored Y - predicted probability interval is sign reversed to A."
+    },
+    "N9_polymarket_equal_game_fixed_OOF_decomposition": {
+      "observed_A": {
+        "estimate_pp": 3.1446045815072967,
+        "CI95_pp": [
+          0.01963486400508402,
+          6.00229727198762
+        ]
+      },
+      "predicted_A": {
+        "estimate_pp": 6.037422532068367,
+        "CI95_pp": [
+          5.805612039426897,
+          6.28140414011525
+        ]
+      },
+      "remainder_A": {
+        "estimate_pp": -2.8928179505610756,
+        "CI95_pp": [
+          -6.197938789870226,
+          0.030460373751149725
+        ]
+      },
+      "trades": 49659,
+      "games": 265,
+      "draws": 2000,
+      "seed": 9142026
+    },
+    "Prelec_beta_saved_fit": {
+      "trades": 2524781,
+      "games": 1202,
+      "raw": {
+        "beta": 1.196156951679851,
+        "CI95": [
+          1.0889337437920112,
+          1.357568444223874
+        ]
+      },
+      "isotonic": {
+        "beta": 1.196530143279372,
+        "CI95": [
+          1.089456270934928,
+          1.3731589361374845
+        ]
+      },
+      "draws": 2000,
+      "seed": 5132026,
+      "source": "data/interim/phase5/phase5a_bootstrap.json; saved fits, not freshly refit in this audit"
+    }
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "estimand": "A = market YES price minus realized market YES payoff",
+  "units": "percentage points",
+  "price_side": "market YES",
+  "price_band": {
+    "low": 0.05,
+    "high": 0.2,
+    "inclusive": true
+  },
+  "Pstar_support": {
+    "low": 0.03,
+    "high": 0.97,
+    "inclusive": true
+  },
+  "bootstrap": {
+    "unit": "game",
+    "draws": 2000,
+    "interval": "percentile 95% interval; resample games with replacement; recompute pooled trade-weighted and equal-game estimates in every draw"
+  },
+  "source": {
+    "sample_construction_code": "src/phase5_selection_formula.py:build_phase5_frames",
+    "window_and_support_application": "analysis/pstar_filter_gap_comparison_2026_11_16.py",
+    "saved_input": "data/interim/phase4/trade_panel/*.parquet plus saved ESPN PBP and market metadata; block trades excluded upstream",
+    "note": "Before-Pstar samples use the same market-YES 5\u201320 cent price band and window as after-Pstar samples. The after-Pstar samples additionally require P* in [0.03, 0.97]."
+  },
+  "samples": {
+    "retrospective_window_before_Pstar": {
+      "trades": 547725,
+      "games": 576,
+      "pooled_trade_weighted_A_pp": 6.252088182938518,
+      "pooled_trade_weighted_CI95_pp": [
+        3.745663980567243,
+        8.346001298208959
+      ],
+      "equal_game_weight_A_pp": 6.516303047786557,
+      "equal_game_weight_CI95_pp": [
+        5.349295483675359,
+        7.63353921492346
+      ],
+      "bootstrap_seed": 9142026
+    },
+    "retrospective_window_after_Pstar": {
+      "trades": 532303,
+      "games": 561,
+      "pooled_trade_weighted_A_pp": 6.243481626066358,
+      "pooled_trade_weighted_CI95_pp": [
+        3.64824606300051,
+        8.405895695409827
+      ],
+      "equal_game_weight_A_pp": 6.679159750416473,
+      "equal_game_weight_CI95_pp": [
+        5.347842912570948,
+        7.856692986003325
+      ],
+      "bootstrap_seed": 9142027
+    },
+    "final_five_regulation_minutes_before_Pstar": {
+      "trades": 996134,
+      "games": 681,
+      "pooled_trade_weighted_A_pp": 1.2466425199822515,
+      "pooled_trade_weighted_CI95_pp": [
+        -2.4762644363165935,
+        4.472412359067208
+      ],
+      "equal_game_weight_A_pp": 3.4497354316381306,
+      "equal_game_weight_CI95_pp": [
+        1.7209255292914525,
+        5.07885680021802
+      ],
+      "bootstrap_seed": 9142028
+    },
+    "final_five_regulation_minutes_after_Pstar": {
+      "trades": 961626,
+      "games": 658,
+      "pooled_trade_weighted_A_pp": 1.124429871904462,
+      "pooled_trade_weighted_CI95_pp": [
+        -2.892854567132506,
+        4.424364910369392
+      ],
+      "equal_game_weight_A_pp": 3.5392548516179447,
+      "equal_game_weight_CI95_pp": [
+        1.7499046320758784,
+        5.185539661772733
+      ],
+      "bootstrap_seed": 9142029
+    }
+  }
+}

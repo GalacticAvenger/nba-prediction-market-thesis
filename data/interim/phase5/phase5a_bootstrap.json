@@ -1,0 +1,513 @@
+{
+  "bootstrap_draws": 2000,
+  "seed": 5132026,
+  "reference_trades": 327473,
+  "versions": {
+    "d_paper_dates_including_playoffs": {
+      "trades": 958727,
+      "games": 394,
+      "price_bins": 99,
+      "bin_width_cents": 1,
+      "raw": {
+        "alpha": 1.4508930658949684,
+        "beta": 1.2686249698573515,
+        "boundary": false,
+        "sse": 3196.538469155735,
+        "bootstrap": {
+          "requested_draws": 2000,
+          "successful_draws": 2000,
+          "cluster": "game",
+          "seed": 5132026,
+          "alpha_ci95": [
+            1.0808473525264723,
+            2.2825592657735574
+          ],
+          "beta_ci95": [
+            1.068818790862765,
+            1.657410849931697
+          ]
+        }
+      },
+      "isotonic": {
+        "alpha": 1.4793826073044543,
+        "beta": 1.275715245244269,
+        "boundary": false,
+        "sse": 1400.8103095869983,
+        "bootstrap": {
+          "requested_draws": 2000,
+          "successful_draws": 2000,
+          "cluster": "game",
+          "seed": 5132026,
+          "alpha_ci95": [
+            1.1115196394923876,
+            2.2015553497171783
+          ],
+          "beta_ci95": [
+            1.0666258344917114,
+            1.636150299646548
+          ]
+        }
+      }
+    },
+    "d_full_season_including_playoffs": {
+      "trades": 3206677,
+      "games": 1279,
+      "price_bins": 99,
+      "bin_width_cents": 1,
+      "raw": {
+        "alpha": 1.399639796547609,
+        "beta": 1.1212179498069252,
+        "boundary": false,
+        "sse": 2332.3564953520154,
+        "bootstrap": {
+          "requested_draws": 2000,
+          "successful_draws": 2000,
+          "cluster": "game",
+          "seed": 5132026,
+          "alpha_ci95": [
+            1.212973517399847,
+            1.6937566020930237
+          ],
+          "beta_ci95": [
+            0.9994133763039715,
+            1.2921903621698199
+          ]
+        }
+      },
+      "isotonic": {
+        "alpha": 1.40410595847047,
+        "beta": 1.1213992445144323,
+        "boundary": false,
+        "sse": 1273.510806314446,
+        "bootstrap": {
+          "requested_draws": 2000,
+          "successful_draws": 2000,
+          "cluster": "game",
+          "seed": 5132026,
+          "alpha_ci95": [
+            1.2246804829000437,
+            1.7015812128008356
+          ],
+          "beta_ci95": [
+            1.0030383696310041,
+            1.2945448283298249
+          ]
+        }
+      }
+    },
+    "d_full_regular_season": {
+      "trades": 2524781,
+      "games": 1202,
+      "price_bins": 99,
+      "bin_width_cents": 1,
+      "raw": {
+        "alpha": 1.5238524831866582,
+        "beta": 1.196156951679851,
+        "boundary": false,
+        "sse": 1886.8358818285606,
+        "bootstrap": {
+          "requested_draws": 2000,
+          "successful_draws": 2000,
+          "cluster": "game",
+          "seed": 5132026,
+          "alpha_ci95": [
+            1.3058498006754637,
+            1.8371415783124503
+          ],
+          "beta_ci95": [
+            1.0889337437920112,
+            1.357568444223874
+          ]
+        }
+      },
+      "isotonic": {
+        "alpha": 1.5259800488671535,
+        "beta": 1.196530143279372,
+        "boundary": false,
+        "sse": 1534.2045567981227,
+        "bootstrap": {
+          "requested_draws": 2000,
+          "successful_draws": 2000,
+          "cluster": "game",
+          "seed": 5132026,
+          "alpha_ci95": [
+            1.3113816566891983,
+            1.856423187684402
+          ],
+          "beta_ci95": [
+            1.089456270934928,
+            1.3731589361374845
+          ]
+        }
+      }
+    },
+    "b_paper_dates_final10_regulation": {
+      "trades": 2069180,
+      "games": 336,
+      "price_bins": 99,
+      "bin_width_cents": 1,
+      "raw": {
+        "alpha": 1.118637718298459,
+        "beta": 0.9294699963317352,
+        "boundary": false,
+        "sse": 3931.35392573859,
+        "bootstrap": {
+          "requested_draws": 2000,
+          "successful_draws": 2000,
+          "cluster": "game",
+          "seed": 5132026,
+          "alpha_ci95": [
+            0.8655295005902914,
+            1.5067668520191873
+          ],
+          "beta_ci95": [
+            0.6615594567780714,
+            1.3412243070618943
+          ]
+        }
+      },
+      "isotonic": {
+        "alpha": 1.121748689660006,
+        "beta": 0.9301470950654938,
+        "boundary": false,
+        "sse": 2238.887759133417,
+        "bootstrap": {
+          "requested_draws": 2000,
+          "successful_draws": 2000,
+          "cluster": "game",
+          "seed": 5132026,
+          "alpha_ci95": [
+            0.8808786787096062,
+            1.5018713980112761
+          ],
+          "beta_ci95": [
+            0.6637365079530404,
+            1.3179901646673047
+          ]
+        }
+      }
+    },
+    "b_full_regular_season_final10_regulation": {
+      "trades": 7689937,
+      "games": 1211,
+      "price_bins": 99,
+      "bin_width_cents": 1,
+      "raw": {
+        "alpha": 1.0522902911248313,
+        "beta": 0.9444987080436947,
+        "boundary": false,
+        "sse": 3654.361370475413,
+        "bootstrap": {
+          "requested_draws": 2000,
+          "successful_draws": 2000,
+          "cluster": "game",
+          "seed": 5132026,
+          "alpha_ci95": [
+            0.9280461691187637,
+            1.1925841532574877
+          ],
+          "beta_ci95": [
+            0.8144393604037463,
+            1.0969408688806004
+          ]
+        }
+      },
+      "isotonic": {
+        "alpha": 1.052713431046588,
+        "beta": 0.9445515674838472,
+        "boundary": false,
+        "sse": 2891.2749522508457,
+        "bootstrap": {
+          "requested_draws": 2000,
+          "successful_draws": 2000,
+          "cluster": "game",
+          "seed": 5132026,
+          "alpha_ci95": [
+            0.9336500968926544,
+            1.2044943073319325
+          ],
+          "beta_ci95": [
+            0.8128418355641578,
+            1.100414268344685
+          ]
+        }
+      }
+    },
+    "a_paper_dates_close_window_existing_basis": {
+      "trades": 43167,
+      "games": 128,
+      "price_bins": 97,
+      "bin_width_cents": 1,
+      "raw": {
+        "alpha": 197.02719547928208,
+        "beta": 0.00010001473308359382,
+        "boundary": false,
+        "sse": 2.6780370429510647,
+        "bootstrap": {
+          "requested_draws": 2000,
+          "successful_draws": 2000,
+          "cluster": "game",
+          "seed": 5132026,
+          "alpha_ci95": [
+            7.71991338893028,
+            197.0302255669658
+          ],
+          "beta_ci95": [
+            0.00010000000000000026,
+            32.796901610765154
+          ]
+        }
+      },
+      "isotonic": {
+        "alpha": 29.068363748815685,
+        "beta": 0.313135898201628,
+        "boundary": false,
+        "sse": 1.5051910853008716,
+        "bootstrap": {
+          "requested_draws": 2000,
+          "successful_draws": 2000,
+          "cluster": "game",
+          "seed": 5132026,
+          "alpha_ci95": [
+            9.799999085779193,
+            29.825052228969664
+          ],
+          "beta_ci95": [
+            0.00010000000000000026,
+            33.36395594587461
+          ]
+        }
+      }
+    },
+    "a_full_season_close_window_existing_basis": {
+      "trades": 130988,
+      "games": 445,
+      "price_bins": 99,
+      "bin_width_cents": 1,
+      "raw": {
+        "alpha": 2.4861735921911556,
+        "beta": 1.0729268289458278,
+        "boundary": false,
+        "sse": 496.29170832678676,
+        "bootstrap": {
+          "requested_draws": 2000,
+          "successful_draws": 2000,
+          "cluster": "game",
+          "seed": 5132026,
+          "alpha_ci95": [
+            1.5349914113533114,
+            50.63495411056573
+          ],
+          "beta_ci95": [
+            0.13710653712309964,
+            5541.845340430515
+          ]
+        }
+      },
+      "isotonic": {
+        "alpha": 2.487821056522099,
+        "beta": 1.0583979296883943,
+        "boundary": false,
+        "sse": 255.06535800303428,
+        "bootstrap": {
+          "requested_draws": 2000,
+          "successful_draws": 2000,
+          "cluster": "game",
+          "seed": 5132026,
+          "alpha_ci95": [
+            1.632776728927335,
+            31.045973147379573
+          ],
+          "beta_ci95": [
+            0.19394809351082645,
+            3317.4151827244027
+          ]
+        }
+      }
+    },
+    "b_paper_dates_final10_regulation_5c": {
+      "trades": 2069180,
+      "games": 336,
+      "price_bins": 20,
+      "bin_width_cents": 5,
+      "raw": {
+        "alpha": 1.1198269838375035,
+        "beta": 0.9293951898929386,
+        "boundary": false,
+        "sse": 2304.1310489128596,
+        "bootstrap": {
+          "requested_draws": 2000,
+          "successful_draws": 2000,
+          "cluster": "game",
+          "seed": 5132026,
+          "alpha_ci95": [
+            0.8844020783376207,
+            1.5130705480516327
+          ],
+          "beta_ci95": [
+            0.6663913035155605,
+            1.350898580781498
+          ]
+        }
+      },
+      "isotonic": {
+        "alpha": 1.1200435221130323,
+        "beta": 0.9292529103956193,
+        "boundary": false,
+        "sse": 1624.9565930395627,
+        "bootstrap": {
+          "requested_draws": 2000,
+          "successful_draws": 2000,
+          "cluster": "game",
+          "seed": 5132026,
+          "alpha_ci95": [
+            0.895125455104439,
+            1.5132546637553583
+          ],
+          "beta_ci95": [
+            0.6628630564993395,
+            1.3372289978680607
+          ]
+        }
+      }
+    },
+    "b_full_regular_season_final10_regulation_5c": {
+      "trades": 7689937,
+      "games": 1211,
+      "price_bins": 20,
+      "bin_width_cents": 5,
+      "raw": {
+        "alpha": 1.052295920422283,
+        "beta": 0.944535171988672,
+        "boundary": false,
+        "sse": 2381.7434623260115,
+        "bootstrap": {
+          "requested_draws": 2000,
+          "successful_draws": 2000,
+          "cluster": "game",
+          "seed": 5132026,
+          "alpha_ci95": [
+            0.9282791996352714,
+            1.206137648530893
+          ],
+          "beta_ci95": [
+            0.8109255265337951,
+            1.1007628054221237
+          ]
+        }
+      },
+      "isotonic": {
+        "alpha": 1.052295920422283,
+        "beta": 0.944535171988672,
+        "boundary": false,
+        "sse": 2381.7434623260115,
+        "bootstrap": {
+          "requested_draws": 2000,
+          "successful_draws": 2000,
+          "cluster": "game",
+          "seed": 5132026,
+          "alpha_ci95": [
+            0.9359309749889062,
+            1.2070343951396225
+          ],
+          "beta_ci95": [
+            0.8112076115182965,
+            1.0926907604343772
+          ]
+        }
+      }
+    },
+    "a_paper_dates_close_window_existing_basis_5c": {
+      "trades": 43167,
+      "games": 128,
+      "price_bins": 20,
+      "bin_width_cents": 5,
+      "raw": {
+        "alpha": 20.8469266744028,
+        "beta": 0.24159121096134728,
+        "boundary": false,
+        "sse": 0.7763999409508486,
+        "bootstrap": {
+          "requested_draws": 2000,
+          "successful_draws": 2000,
+          "cluster": "game",
+          "seed": 5132026,
+          "alpha_ci95": [
+            9.6109494974524,
+            27.998267893965675
+          ],
+          "beta_ci95": [
+            0.00010000000000000026,
+            30.158379613374354
+          ]
+        }
+      },
+      "isotonic": {
+        "alpha": 20.714063103188977,
+        "beta": 0.24004115921758762,
+        "boundary": false,
+        "sse": 0.5939999050080705,
+        "bootstrap": {
+          "requested_draws": 2000,
+          "successful_draws": 2000,
+          "cluster": "game",
+          "seed": 5132026,
+          "alpha_ci95": [
+            9.635115022286499,
+            27.962566272053166
+          ],
+          "beta_ci95": [
+            0.00010000000000000026,
+            30.12783394278599
+          ]
+        }
+      }
+    },
+    "a_full_season_close_window_existing_basis_5c": {
+      "trades": 130988,
+      "games": 445,
+      "price_bins": 20,
+      "bin_width_cents": 5,
+      "raw": {
+        "alpha": 2.474202088318795,
+        "beta": 1.0695956077702393,
+        "boundary": false,
+        "sse": 284.2502771226786,
+        "bootstrap": {
+          "requested_draws": 2000,
+          "successful_draws": 2000,
+          "cluster": "game",
+          "seed": 5132026,
+          "alpha_ci95": [
+            1.5202477873350635,
+            23.067761433732702
+          ],
+          "beta_ci95": [
+            0.16678217190222822,
+            251.32308932020095
+          ]
+        }
+      },
+      "isotonic": {
+        "alpha": 2.44375583545537,
+        "beta": 1.049334721152376,
+        "boundary": false,
+        "sse": 250.22400256167595,
+        "bootstrap": {
+          "requested_draws": 2000,
+          "successful_draws": 2000,
+          "cluster": "game",
+          "seed": 5132026,
+          "alpha_ci95": [
+            1.621481732572798,
+            19.709717865881426
+          ],
+          "beta_ci95": [
+            0.1689680505108751,
+            108.39892966960359
+          ]
+        }
+      }
+    }
+  }
+}

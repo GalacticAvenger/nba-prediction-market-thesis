@@ -1,0 +1,13 @@
+group,estimator,window,estimate_pp,ci95_low_pp,ci95_high_pp,eligible_trade_rows,estimator_observations,games,simulation_mean_pp,sample_definition
+1,pooled trades,full game,0.7452514788200572,-1.2103020101984965,2.457968271776265,6989018,6989018,1219,-0.00614760032383011,saved full-game 5–20¢ longshot sample; no P* support screen
+1,pooled trades,final five regulation minutes,1.1244298719044623,-2.831265927908256,4.360533578643809,961626,961626,658,0.016549466853703405,final-five sample with P* common support
+1,pooled trades,quiet stoppages,1.3511208529733099,-2.58466665040117,4.92982949223493,309318,309318,390,,primary final-five quiet sample; market A; no fair-pricing simulation estimate
+1,first trade per game,full game,-0.2608695652173942,-2.4430885972108314,1.7803527481542205,6989018,1219,1219,-0.029705785707121558,saved full-game 5–20¢ longshot sample; no P* support screen; one first trade per game
+1,first trade per game,final five regulation minutes,-0.44680851063829824,-3.1279255319148938,2.19787234042553,961626,658,658,-0.02948256876341733,final-five sample with P* common support; one first trade per game
+1,first trade per game,quiet stoppages,1.15384615384615,-1.9153846153846101,4.12826923076923,309318,390,390,,primary final-five quiet sample; market A; one first trade per game; no fair-pricing simulation estimate
+1,fixed clock sampling,final five regulation minutes,0.8690265486725663,-1.7635299347954954,3.279919761133286,1695,1695,626,0.007566737638307511,final-five sample with P* common support; pooled sampled observations
+2,equal game weight,full game,3.8897585081544848,2.7118330168944156,4.899308791189928,6989018,1219,1219,0.8770948659856026,saved full-game 5–20¢ longshot sample; no P* support screen
+2,equal game weight,final five regulation minutes,3.5392548516179447,1.7691089930154211,5.230729580302416,961626,658,658,0.6308125608029369,final-five sample with P* common support
+2,equal game weight,quiet stoppages,2.33223053621099,-0.52722322530761,4.93670628724446,309318,390,390,,primary final-five quiet sample; market A; no fair-pricing simulation estimate
+3,pooled trades,retrospective window,6.243481626066358,3.6436845176419346,8.319058068087012,532303,532303,561,4.039746791139533,saved retrospective sample with market and P* common support
+3,equal game weight,retrospective window,6.679159750416469,5.415062609226506,7.836767116905083,532303,561,561,4.04700355596821,"saved retrospective sample with market and P* common support; newly computed 2,000-draw game bootstrap interval"

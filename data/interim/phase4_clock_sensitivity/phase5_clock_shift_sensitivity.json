@@ -1,0 +1,252 @@
+{
+  "method": "researcher-chosen constant shift sensitivity; not a lag estimate",
+  "offsets_seconds": [
+    -10,
+    -5,
+    0,
+    5,
+    10
+  ],
+  "bootstrap": {
+    "cluster": "game",
+    "draws": 2000,
+    "seed": 9142026
+  },
+  "results": [
+    {
+      "offset_seconds": -10,
+      "definition": "ESPN wall timestamps plus offset; Kalshi trade timestamps unchanged",
+      "primary_full_sample": {
+        "trades": 328526,
+        "games": 431,
+        "A": {
+          "estimate": 0.013472911282399372,
+          "ci95": [
+            -0.014211550328111971,
+            0.03857398381840282
+          ]
+        },
+        "A_upper95_one_sided": 0.03528546576970312
+      },
+      "quote_valid_coverage": {
+        "trades": 252748,
+        "games": 415,
+        "share_trades": 0.769339413014495
+      },
+      "primary_quote_valid_same_observation": {
+        "trades": 252748,
+        "games": 415,
+        "A": {
+          "estimate": 0.017281758925607963,
+          "ci95": [
+            -0.009916158209202669,
+            0.0419675301911619
+          ]
+        },
+        "taker_cost_including_half_spread": {
+          "estimate": 0.010398262528507483,
+          "ci95": [
+            0.010107150499808143,
+            0.010690798908486508
+          ]
+        },
+        "A_minus_cost": {
+          "estimate": 0.0068834963971004855,
+          "ci95": [
+            -0.02034191297908231,
+            0.03155073139126558
+          ],
+          "one_sided_p_net_gt_zero": 0.3155
+        }
+      }
+    },
+    {
+      "offset_seconds": -5,
+      "definition": "ESPN wall timestamps plus offset; Kalshi trade timestamps unchanged",
+      "primary_full_sample": {
+        "trades": 318593,
+        "games": 413,
+        "A": {
+          "estimate": 0.018331222206964863,
+          "ci95": [
+            -0.007370112111304228,
+            0.04399791768063459
+          ]
+        },
+        "A_upper95_one_sided": 0.03977301336284401
+      },
+      "quote_valid_coverage": {
+        "trades": 251556,
+        "games": 396,
+        "share_trades": 0.7895842030427536
+      },
+      "primary_quote_valid_same_observation": {
+        "trades": 251556,
+        "games": 396,
+        "A": {
+          "estimate": 0.01982691333484378,
+          "ci95": [
+            -0.007319394222336907,
+            0.04590180402883857
+          ]
+        },
+        "taker_cost_including_half_spread": {
+          "estimate": 0.010631411281067649,
+          "ci95": [
+            0.010343116215332642,
+            0.010923385728653269
+          ]
+        },
+        "A_minus_cost": {
+          "estimate": 0.009195502053776143,
+          "ci95": [
+            -0.017938819789757875,
+            0.03535519703456397
+          ],
+          "one_sided_p_net_gt_zero": 0.27
+        }
+      }
+    },
+    {
+      "offset_seconds": 0,
+      "definition": "ESPN wall timestamps plus offset; Kalshi trade timestamps unchanged",
+      "primary_full_sample": {
+        "trades": 309318,
+        "games": 390,
+        "A": {
+          "estimate": 0.023322305362109986,
+          "ci95": [
+            -0.005272232253076125,
+            0.049367062872444696
+          ]
+        },
+        "A_upper95_one_sided": 0.04513205013655819
+      },
+      "quote_valid_coverage": {
+        "trades": 251686,
+        "games": 376,
+        "share_trades": 0.813680419503553
+      },
+      "primary_quote_valid_same_observation": {
+        "trades": 251686,
+        "games": 376,
+        "A": {
+          "estimate": 0.022345259725116855,
+          "ci95": [
+            -0.00545891060364704,
+            0.04894073583311635
+          ]
+        },
+        "taker_cost_including_half_spread": {
+          "estimate": 0.010804894979558034,
+          "ci95": [
+            0.01050873575680916,
+            0.011100866457305883
+          ]
+        },
+        "A_minus_cost": {
+          "estimate": 0.011540364745558829,
+          "ci95": [
+            -0.01615775786781324,
+            0.03820192357930301
+          ],
+          "one_sided_p_net_gt_zero": 0.2065
+        }
+      }
+    },
+    {
+      "offset_seconds": 5,
+      "definition": "ESPN wall timestamps plus offset; Kalshi trade timestamps unchanged",
+      "primary_full_sample": {
+        "trades": 299959,
+        "games": 377,
+        "A": {
+          "estimate": 0.023409203479965918,
+          "ci95": [
+            -0.0037221049674345777,
+            0.05072628650610415
+          ]
+        },
+        "A_upper95_one_sided": 0.04617590488935684
+      },
+      "quote_valid_coverage": {
+        "trades": 249720,
+        "games": 369,
+        "share_trades": 0.8325137768828407
+      },
+      "primary_quote_valid_same_observation": {
+        "trades": 249720,
+        "games": 369,
+        "A": {
+          "estimate": 0.022455445336372643,
+          "ci95": [
+            -0.004462557765659814,
+            0.048558650739082256
+          ]
+        },
+        "taker_cost_including_half_spread": {
+          "estimate": 0.010871903059664097,
+          "ci95": [
+            0.010578575073606626,
+            0.011154787138954628
+          ]
+        },
+        "A_minus_cost": {
+          "estimate": 0.011583542276708563,
+          "ci95": [
+            -0.015327107616309994,
+            0.03766760552320237
+          ],
+          "one_sided_p_net_gt_zero": 0.214
+        }
+      }
+    },
+    {
+      "offset_seconds": 10,
+      "definition": "ESPN wall timestamps plus offset; Kalshi trade timestamps unchanged",
+      "primary_full_sample": {
+        "trades": 291383,
+        "games": 384,
+        "A": {
+          "estimate": 0.030780442497989568,
+          "ci95": [
+            0.0037127657308808435,
+            0.05509412600060968
+          ]
+        },
+        "A_upper95_one_sided": 0.05185963730438812
+      },
+      "quote_valid_coverage": {
+        "trades": 245792,
+        "games": 373,
+        "share_trades": 0.8435358274161499
+      },
+      "primary_quote_valid_same_observation": {
+        "trades": 245792,
+        "games": 373,
+        "A": {
+          "estimate": 0.02615629060081248,
+          "ci95": [
+            -0.0013480295509784837,
+            0.05172841893732346
+          ]
+        },
+        "taker_cost_including_half_spread": {
+          "estimate": 0.01092572471291815,
+          "ci95": [
+            0.010635624461304796,
+            0.011213358520756497
+          ]
+        },
+        "A_minus_cost": {
+          "estimate": 0.015230565887894325,
+          "ci95": [
+            -0.012288698042298013,
+            0.04067653325220474
+          ],
+          "one_sided_p_net_gt_zero": 0.132
+        }
+      }
+    }
+  ]
+}

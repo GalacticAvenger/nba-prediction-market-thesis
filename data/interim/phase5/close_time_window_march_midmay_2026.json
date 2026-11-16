@@ -1,0 +1,113 @@
+{
+  "scope": {
+    "league": "NBA",
+    "season": "2025-26",
+    "season_types": {
+      "2": "regular season",
+      "3": "playoffs"
+    },
+    "scheduled_game_dates_inclusive": [
+      "2026-03-01",
+      "2026-05-15"
+    ],
+    "game_date_rule": "Date parsed from the NBA Kalshi game ticker (scheduled game date).",
+    "requested_window": "last 10 minutes before each market's recorded close_time; close-10m < trade timestamp <= close",
+    "markets": "both team YES markets when available; market-YES price and settlement outcome",
+    "trade_unit": "trade rows, not contract quantity; block trades excluded; resolved markets only; regular-season postgame archive reused and missing playoff postgame rows fetched from the public Kalshi historical-trades endpoint",
+    "all_price_count_rule": "No price-band restriction; all recorded prices retained for the count and after-last-play share.",
+    "prelec_price_rule": "Same phase5a pipeline: one-cent bins, trade-weighted calibration; raw and isotonic two-parameter Prelec-II fits. Prices exactly 0 or 1 are omitted from the curve fit only, if present.",
+    "longshot_gap_rule": "A = p - Y for market-YES trades with 5c <= p <= 20c, pooled equally across trade rows.",
+    "gap_interval": "2,000 percentile bootstrap draws resampling games and recomputing the pooled trade-row mean."
+  },
+  "coverage": {
+    "eligible_market_rows": 794,
+    "eligible_games_with_espn_end_marker": 397,
+    "eligible_games_with_close_window_trades": 187,
+    "markets_with_trade_file_missing": [],
+    "markets_in_window_with_trades": 353
+  },
+  "close_window_all_prices": {
+    "trade_rows": 264244,
+    "games": 187,
+    "after_last_espn_play_rows": 13442,
+    "after_last_espn_play_share": 0.05086965077731188,
+    "after_last_espn_play_percent": 5.086965077731188,
+    "by_season_type": {
+      "regular_season": {
+        "trade_rows": 43126,
+        "games": 126,
+        "after_last_espn_play_rows": 6396,
+        "after_last_espn_play_percent": 14.830960441497009
+      },
+      "playoffs": {
+        "trade_rows": 221118,
+        "games": 61,
+        "after_last_espn_play_rows": 7046,
+        "after_last_espn_play_percent": 3.1865338868839266
+      }
+    }
+  },
+  "prelec_fit": {
+    "trades": 264244,
+    "games": 187,
+    "price_bins": 99,
+    "bin_width_cents": 1,
+    "raw": {
+      "alpha": 1.294788907626252,
+      "beta": 1.3139961151885484,
+      "boundary": false,
+      "sse": 2966.7613711704043,
+      "bootstrap": {
+        "requested_draws": 2000,
+        "successful_draws": 2000,
+        "cluster": "game",
+        "seed": 5132026,
+        "alpha_ci95": [
+          0.8490153945860374,
+          15.680278163455622
+        ],
+        "beta_ci95": [
+          1.0247307542068764,
+          147.03998520811595
+        ]
+      }
+    },
+    "isotonic": {
+      "alpha": 1.3727305948317758,
+      "beta": 1.3488111077506353,
+      "boundary": false,
+      "sse": 404.3999941396644,
+      "bootstrap": {
+        "requested_draws": 2000,
+        "successful_draws": 2000,
+        "cluster": "game",
+        "seed": 5132026,
+        "alpha_ci95": [
+          0.9491582695025671,
+          15.305998986038999
+        ],
+        "beta_ci95": [
+          1.0145408636176512,
+          130.50006534969603
+        ]
+      }
+    }
+  },
+  "longshot_pooled_gap": {
+    "trades": 56750,
+    "games": 31,
+    "mean_A": 0.08556511013215859,
+    "mean_A_percentage_points": 8.556511013215859,
+    "ci95_A": [
+      0.038513329848799994,
+      0.11542952666873947
+    ],
+    "ci95_percentage_points": [
+      3.8513329848799995,
+      11.542952666873948
+    ],
+    "bootstrap_draws": 2000,
+    "bootstrap_cluster": "game; pooled trade-row mean recomputed in each resample",
+    "bootstrap_seed": 5132026
+  }
+}

@@ -357,3 +357,43 @@ large-ticket group is sparse. Reproduce with `make
 phase6-wallet-execution-style-analysis` and `make
 phase6-wallet-execution-style-decomposition`; outputs are under
 `data/interim/phase6/prior_game_behavior/execution_style/`.
+
+## Final thesis extensions and decision chronology (2026-11-10 to 2026-11-16)
+
+The analyses and figures added after the November 4 repository snapshot are
+documented here so they are not mistaken for the original predictions or
+pre-specified analysis plan.
+
+1. **Additional estimands (November 10).** `analysis/additional_estimands_2026_11_10.py`
+   computes paired pooled-window estimates, equal-game-minus-pooled contrasts,
+   fixed-clock samples, first-entry sensitivities, and related NHL estimates.
+   The saved output is `data/interim/phase5/additional_estimands_2026_11_10.json`.
+   These are extensions and sensitivity analyses, not all part of the original
+   analysis plan.
+2. **Fair-pricing simulation (November 10).** The basketball and rare-scoring
+   hockey simulation and the six-cell basketball sensitivity sweep were added
+   after the empirical analysis. They use stylized score walks and exact
+   dynamic-programming win probabilities under those walks; their assumptions
+   are listed in Appendix B and saved in the simulation outputs.
+3. **NHL and close-time extensions.** The 2025–26 NHL window analysis is an
+   exploratory cross-sport extension. The March 1–May 15, 2026 Kalshi
+   market-close reconstruction is a timing diagnostic. Neither was part of the
+   original NBA estimand.
+4. **Estimator classification was post hoc.** The rule that sorts estimators
+   according to whether window inclusion and observation weight are determined
+   using only information available at the trade time was identified after the
+   empirical estimates had been inspected. The resulting distinction between
+   estimators that satisfy that rule and those that use later game information
+   is therefore an interpretive framework developed after seeing results, not
+   a pre-analysis prediction. It should not be described as pre-registered.
+5. **Final figures (November 16).** Figures 1–3 were built from saved outputs.
+   Figure 3 additionally computes the retrospective equal-game bootstrap
+   interval from the saved 561-game diagnostic file. The plotted data and
+   values are supplied under `figures/thesis/` and
+   `data/interim/phase5/retrospective_equal_game_ci_for_figures.json`.
+
+All final thesis outcome gaps are stated as price minus payoff, A = p − Y.
+Several earlier output files still store Y − p; their names and conversion
+rule are listed in `README.md`. Retaining those files preserves the original
+analysis outputs and does not change the convention used in the thesis tables
+or figures.
