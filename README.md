@@ -33,6 +33,7 @@ Each row maps the thesis item to the script and saved output containing its valu
 All three figures, their value CSVs, `figures/thesis/figure_values_manifest.json`, and the Figure 3 retrospective equal-game interval at `data/interim/phase5/retrospective_equal_game_ci_for_figures.json` are included. Figure 1 also depends on `phase5a_bootstrap_bins.csv`; Figure 3 additionally uses the saved cross-fit, inference-audit, weighting, and simulation outputs listed above. NHL game-level estimate and coverage CSVs are included so the NHL sample can be inspected without the trade-level panel.
 
 The close-time diagnostic is an additional analysis, not one of Tables 1–10: run `python src/phase5_close_time_moshrefi_window.py`; its saved results are in `data/interim/phase5/close_time_window_march_midmay_2026.json`.
+The P* filter comparison quoted in Section 5.2 of the thesis is saved in `data/interim/phase5/pstar_filter_gap_comparison_2026_11_16.json`; regenerate it with `python analysis/pstar_filter_gap_comparison_2026_11_16.py`.
 
 ## Data sources and reproduction
 
