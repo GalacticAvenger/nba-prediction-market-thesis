@@ -60,7 +60,7 @@ Install the pinned environment and use **Python 3.13.2**:
 python3 -m pip install -r requirements.txt
 ```
 
-`requirements.txt` pins: `requests==2.32.5`, `urllib3==2.5.0`, `pandas==2.2.3`, `pyarrow==21.0.0`, `numpy==2.3.5`, `scipy==1.16.1`, `scikit-learn==1.7.2`, `lightgbm==4.6.0`, `numba==0.62.0`, `llvmlite==0.45.0`, `matplotlib==3.10.7`, and `websockets==17.3`.
+`requirements.txt` pins: `requests==2.32.5`, `urllib3==2.5.0`, `pandas==2.2.3`, `pyarrow==21.0.0`, `numpy==2.3.5`, `scipy==1.16.1`, `statsmodels==0.14.5`, `scikit-learn==1.7.2`, `lightgbm==4.6.0`, `numba==0.62.0`, `llvmlite==0.45.0`, `matplotlib==3.10.7`, and `websockets==17.3`.
 
 The documented analysis rerun commands above use cached data. They do not all fetch raw inputs themselves. For the complete legacy Phase 1–5 workflow, see `ANALYSIS_README.md` and `Makefile`; `make phase5` runs the cached Phase 5 pipeline after its input preflight. A clone without the omitted data can inspect the compact JSON/CSV outputs and figures but cannot regenerate every estimate from source trades.
 
